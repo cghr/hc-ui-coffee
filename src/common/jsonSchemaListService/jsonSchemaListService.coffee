@@ -1,11 +1,14 @@
 do(app = angular.module 'myApp.jsonSchemaListService', []) ->
 
+
   app.factory 'JsonSchemaListService', ($http, $window, $log) ->
 
-    getEnv = -> (/900*/.test($window.location.href)) ? 'dev': 'prod'
+    getEnv = -> if (/900*/.test($window.location.href)) then 'dev' else 'prod'
+
     getServiceUrl = (appName)->
       env = getEnv()
-      "api/JsonSchemaService/#{env}/" + (env == 'dev' ? appName: '')
+      "api/JsonSchemaService/#{env}/" + if (env == 'dev') then appName else ''
+
 
     {
     getSchemaList: (appName) ->

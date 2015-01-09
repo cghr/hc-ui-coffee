@@ -1,7 +1,10 @@
 do(app = angular.module('myApp.fileUploadService', ['toaster'])) ->
+
+
   app.factory 'FileUploadService', ($http, toaster)->
+
     url = "api/file/fileStoreService"
-    config ={
+    config = {
       transformRequest: angular.identity,
       headers: {'Content-Type': undefined}
     }

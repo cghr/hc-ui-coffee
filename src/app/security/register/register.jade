@@ -1,0 +1,24 @@
+div(style='margin-top: 2%')
+   .col-md-2.column
+
+   .col-md-8.column
+      a(href='#/login')  « Back to Login
+
+      .panel.panel-primary
+         .panel-heading
+            h3.panel-title Sign Up
+
+         // Registration Form
+         .panel-body
+            form(ng-submit='register(user)', role='form')
+               .form-group
+                  label First Name
+                  input.form-control(type='text', ng-model='email', required='', autofocus='', placeholder='First Name')
+               .form-group
+                  label Last Name
+                  input.form-control(type='text', ng-model='email', required='', autofocus='', placeholder='Last Name')
+               .form-group
+                  label Email
+                  input.form-control(type='text', ng-model='email', required='', autofocus='', placeholder='Email')
+               button.btn.btn-primary(type='submit') Sign Up
+         // Ends

@@ -41,7 +41,7 @@ module.exports = function(grunt) {
             coffeeunit: [ 'src/**/*.spec.coffee' ],
 
             appTemplates: [ 'src/app/**/*.html','src/app/**/*.jade' ],
-            commonTemplates: [ 'src/common/**/*.tpl.html','src/common/**/*.jade' ],
+            commonTemplates: [ 'src/common/**/*.html','src/common/**/*.jade' ],
 
             html: [ 'src/index.html' ],
             less: 'src/less/main.less'
@@ -76,9 +76,14 @@ module.exports = function(grunt) {
          */
         vendor_files: {
             js: [
+                'vendor/gridLib/release/scripts/dhtmlx.js',
                 'vendor/jQuery/dist/jquery.js',
                 'vendor/lodash/dist/lodash.js',
                 'vendor/angular/angular.js',
+                'vendor/angular-md5/angular-md5.js',
+                'vendor/angular-cookies/angular-cookies.js',
+                'vendor/cgGrid/dist/cgGrid-tpls-0.1.0.js',
+                'vendor/cgForm/dist/cgForm-tpls-0.1.0.js',
                 'vendor/angular-animate/angular-animate.js',
                 'vendor/angu-fixed-header-table/angu-fixed-header-table.js',
                 'vendor/angularjs-toaster/toaster.js',
@@ -311,6 +316,7 @@ module.exports = function(grunt) {
                 'Gruntfile.js'
             ],
             options: {
+                asi:true,
                 curly: true,
                 immed: true,
                 newcap: true,

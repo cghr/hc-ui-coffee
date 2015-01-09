@@ -1,9 +1,11 @@
 do (app = angular.module "myApp") ->
 
+
   app.controller 'AppController', ($scope, $window, AppService) ->
 
+
     $scope.cleanup = ->
-      confirm = $window.confirm("Are you sure ?")
-      if(confirm)
+      confirmCleanup = $window.confirm("Are you sure ?")
+      if(confirmCleanup)
         AppService.cleanup()
 

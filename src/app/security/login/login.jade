@@ -1,0 +1,25 @@
+div(style='margin-top: 10%')
+   .col-md-4.column
+
+   .col-md-4.column
+
+      .panel.panel-primary
+         .panel-heading
+            h3.panel-title
+               strong Kickstart
+
+         // Login Form
+         .panel-body
+            form(role='form', ng-submit='loginCtrl.login(user)')
+               .form-group
+                  label Username
+                  input.form-control(type='text', ng-model='user.username', required='', autofocus='', placeholder='Enter Username')
+               .form-group
+                  label Password
+                  input.form-control(type='password', ng-model='user.password', required='', placeholder='Password')
+               button.btn.btn-primary(type='submit') Submit
+            div(style='margin-top: 10px')
+               a(href='#/register') Sing Up |
+
+               a(href='#/forgotPassword') Forgot Password
+         // Ends

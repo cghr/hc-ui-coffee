@@ -1,6 +1,11 @@
 do (app = angular.module('myApp.backSpaceNav', ['jQuery'])) ->
+
+
   app.directive 'keypressEvents', ($document, jQuery) ->
-    postLink = ()->
+
+
+    postLink = () ->
+
       $document.bind 'keypress', (e)->
         target = jQuery(e.target || e.srcElement)
         targetType = (target) ->

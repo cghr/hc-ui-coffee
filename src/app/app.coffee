@@ -1,30 +1,40 @@
 do (app = angular.module "myApp", [
-  'myApp.appService',
-  'myApp.idService',
-  'myApp.home',
-  'templates-app',
-  'templates-common',
-  'ui.router.state',
-  'ui.router',
+  'security'
+  'myApp.sync'
+  'myApp.module'
+  'myApp.appService'
+  'myApp.idService'
+  'myApp.home'
+  'myApp.jsonSchemaListService'
+  'myApp.schemaLoader'
+  'templates-app'
+  'templates-common'
+  'ui.router.state'
+  'ui.router'
   'anguFixedHeaderTable'
+  'cgForm'
 ]) ->
+
+
   app.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
-    isRESTRequest=(url) ->  "api/".test(url)
-    isDevEnv= ->  /900*/.test(window.location.href)
+    $urlRouterProvider.otherwise '/home'
+
+    isDevEnv = -> /900*/.test(window.location.href)
+
+    isRESTRequest = (url) -> /api*/.test(url)
 
     reqConfig = (config) ->
       if(isRESTRequest(config.url))
         config.url = 'http://localhost:8080/services/' + config.url
       return config
 
-    reqInterceptor = {request: reqConfig}
+    reqInterceptor = -> {request: reqConfig}
 
-    if(isDevEnv())
+    if isDevEnv()
       $httpProvider.interceptors.push(reqInterceptor)
 
 
-    $urlRouterProvider.otherwise '/home'
 
 
 
