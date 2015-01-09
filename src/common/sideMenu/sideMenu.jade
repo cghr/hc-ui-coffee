@@ -1,0 +1,7 @@
+.sidebar
+    ul
+        li(ng-repeat="menu in menuOptions")
+            span.heading {{menu.label}}
+            ul
+                li(ng-repeat="menuItem in menu.items")
+                    a(ng-href="#/report/{{menuItem.id}}") {{menuItem.label}}

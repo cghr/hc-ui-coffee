@@ -1,5 +1,6 @@
 do (app = angular.module "myApp", [
   'security'
+  'myApp.report'
   'myApp.sync'
   'myApp.module'
   'myApp.appService'
