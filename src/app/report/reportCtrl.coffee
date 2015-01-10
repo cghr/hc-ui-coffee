@@ -12,10 +12,9 @@ do(app = angular.module('myApp.report')) ->
 
     vm.reportMenu = [
       {
-        id: 1, label: 'Reports', items: [
-        {id: 11, label: 'Areas'},
-        {id: 12, label: 'Users'}
-      ]
+        id: 1, label: 'Reports',
+        items: [{id: 11, label: 'Areas'},
+          {id: 12, label: 'Users'}]
       }
     ]
 

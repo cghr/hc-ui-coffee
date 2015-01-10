@@ -16,7 +16,7 @@ do (app = angular.module('myApp.dashboard')) ->
 
     $interval (-> updateDashboard()), 200
 
-    updateDashboard = () ->
+    updateDashboard = ->
       ChartService.getPendingDownloads()
       .then (data)-> vm.pendingDowloads = data
 
