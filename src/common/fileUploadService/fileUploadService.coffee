@@ -1,7 +1,7 @@
 do(app = angular.module('myApp.fileUploadService', ['toaster'])) ->
 
 
-  app.factory 'FileUploadService', ($http, toaster)->
+  app.factory 'FileUploadService', ($http, toaster) ->
 
     url = "api/file/fileStoreService"
     config = {
@@ -10,9 +10,9 @@ do(app = angular.module('myApp.fileUploadService', ['toaster'])) ->
     }
 
 
-    {
+
     upload: (formData)->
       $http.post(url, formData, config)
-      .success -> toaster.pop 'success', '', 'Captured Successfully'
-      .error -> toaster.pop 'error', '', 'Error while uploading photo'
-    }
+      .success -> toaster.pop 'success', '', 'Uploaded Successfully'
+      .error -> toaster.pop 'error', '', 'Error while uploading'
+

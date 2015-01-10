@@ -9,12 +9,11 @@ do(app = angular.module('myApp.dashboard', [
 
   app.config ($stateProvider) ->
 
-
     $stateProvider.state('dashboard', {
       url: '/dashboard',
       templateUrl: 'dashboard/dashboard.jade',
       controller: 'DashboardCtrl',
-      controllerAs:'dashboard'
+      controllerAs: 'dashboard'
     })
 
 

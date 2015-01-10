@@ -14,7 +14,7 @@ do (app = angular.module('myApp.dashboard')) ->
       innerRadius: 0,
       lineLegend: "lineEnd"
 
-    $interval (-> updateDashboard()),200
+    $interval (-> updateDashboard()), 200
 
     updateDashboard = () ->
       ChartService.getPendingDownloads()

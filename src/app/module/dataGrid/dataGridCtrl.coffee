@@ -6,7 +6,7 @@ do (app = angular.module('myApp.dataGrid', [
 ])) ->
 
 
-  app.controller 'DataGridCtrl', ($scope,GridFactory,
+  app.controller 'DataGridCtrl', ($scope, GridFactory,
                                   $state, AppService,
                                   $stateParams) ->
 
@@ -17,7 +17,7 @@ do (app = angular.module('myApp.dataGrid', [
 
 
     GridFactory.getData()
-    .then ()->
+    .then  ->
       actualCount = (GridFactory.data).data.rows.length
       stateName = ($state.current.name).split('.')
       mapping = mappings[_.last(stateName)]

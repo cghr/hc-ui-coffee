@@ -1,10 +1,12 @@
 do (app = angular.module "myApp") ->
 
+
   app.run ($state, $stateParams, $rootScope,
            JsonSchemaListService,
-           SchemaLoader,_, $log,SchemaFactory) ->
+           SchemaLoader, _, $log, SchemaFactory) ->
 
     appName = 'kickstart'
+
     $rootScope.$state = $state
     $rootScope.$stateParams = $stateParams
 

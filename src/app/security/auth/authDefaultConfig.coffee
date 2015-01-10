@@ -1,7 +1,7 @@
-do (app=angular.module('authDefaultConfig', [])) ->
+do (app = angular.module('authDefaultConfig', [])) ->
 
-  app.factory 'AuthDefaultConfig',()->
 
+  app.factory 'AuthDefaultConfig', ()->
 
     authUrl: 'api/security/auth'
     registerUrl: 'api/user'
