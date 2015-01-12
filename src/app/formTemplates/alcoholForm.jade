@@ -1,0 +1,22 @@
+form(ng-submit='onSubmit(data)', action='javascript:void(0)')
+    input(ng-repeat='elm in schema.hiddenElements', type='hidden', value='{{elm.value}}', ng-model='data[elm.name]')
+    div
+        table.table.table-striped.table-bordered
+            thead
+                tr(style='background-color:darkgrey;color:#f5f5f5', ng-init="headings=['Product','Days per week 1 to 7(actual no of days)','Quantity (On a typical day)']")
+                    th(ng-repeat='heading in headings') {{heading}}
+            tbody
+                tr(ng-repeat='(mainIndex,alcohol) in schema.properties', ng-init="unit=['gls','shot','btle','gls']")
+                    td(ng-if="alcohol.type!='heading'") {{alcohol.label}}
+                    td(ng-if="alcohol.type!='heading'")
+                        input.input.input-mini(focus='{{mainIndex==1}}', type='text', ng-model="data[alcohol.name+'_frequency']", data-bvalidator='between[0:7],required', ng-focus='alcoholFreqFocus(data)', ng-blur='alcoholFreqFocus(data)')
+                    td(ng-if="alcohol.type!='heading'", ng-repeat="day in ['typicalDay']")
+                        label
+                            input.input.input-mini(ng-model="data[alcohol.name+'_'+day]", type='text', value='', data-bvalidator='between[0:10],required', ng-disabled="data[alcohol.name+'_frequency']==0")
+                            |  {{unit[mainIndex-1]}}
+        b
+            | Note: The quantity of alcohol consumption to be added: *Unit: Beer; bottle = 750 ml, 1 bottle=2 cans, 1
+            | bottle = 4 glasses, Spirit; shot = 50 ml, 1 bottle=15 shots
+    .controls
+        button.btn.btn-primary(type='submit', data-plus-as-tab='false')
+            | Save

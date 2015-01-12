@@ -1,0 +1,10 @@
+.col-md-2.column(ng-init='childStates=$state.current.data.children;parent=$state.current.data.thisState;prev=$state.current.data.prev;')
+   a(ng-click='$state.go(prev.name,$stateParams)', href='') « Back to {{prev.title}}
+   .well.sidebar-nav.sidebar-nav-fixed
+      ul.nav.nav-list
+         li.nav-header
+         li(ui-sref-active='active', ng-repeat='childState in childStates')
+            a(ui-sref='{{parent.name}}.{{childState.name}}')
+               | {{childState.title}}
+.col-md-10.column
+   div(ui-view='')

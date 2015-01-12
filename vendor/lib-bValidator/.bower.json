@@ -1,0 +1,36 @@
+{
+  "name": "lib-bValidator",
+  "version": "0.0.2",
+  "authors": [
+    "bmauser@gmail.com <https://code.google.com/p/bvalidator/> "
+  ],
+  "description": "bower package for bvalidator jquery library",
+  "main": "./release/scripts/jquery.bvalidator.js",
+  "keywords": [
+    "jquery",
+    "bvalidator",
+    "validation"
+  ],
+  "license": "MIT",
+  "homepage": "https://code.google.com/p/bvalidator/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "1.8.2"
+  },
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "f4399e0122ea85473cfcacfee86c48501b211659"
+  },
+  "_source": "git://github.com/ravitez/lib-bValidator.git",
+  "_target": "~0.0.2",
+  "_originalSource": "lib-bValidator",
+  "_direct": true
+}

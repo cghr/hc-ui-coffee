@@ -78,8 +78,13 @@ module.exports = function(grunt) {
             js: [
                 'vendor/gridLib/release/scripts/dhtmlx.js',
                 'vendor/jQuery/dist/jquery.js',
+                'vendor/lib-bValidator/release/scripts/jquery.bvalidator.js',
                 'vendor/lodash/dist/lodash.js',
                 'vendor/angular/angular.js',
+                'vendor/d3/d3.js',
+                'vendor/angular-charts/dist/angular-charts.js',
+                'vendor/angular-camera/dist/angular-camera.js',
+                'vendor/angular-loading-bar/build/loading-bar.js',
                 'vendor/angular-md5/angular-md5.js',
                 'vendor/angular-cookies/angular-cookies.js',
                 'vendor/cgGrid/dist/cgGrid-tpls-0.1.0.js',

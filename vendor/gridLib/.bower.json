@@ -1,0 +1,27 @@
+{
+  "name": "gridLib",
+  "version": "0.0.1",
+  "authors": [
+    ""
+  ],
+  "description": "Grid Lib",
+  "main": "",
+  "license": "GPL",
+  "homepage": "https://github.com/zetivar/gridLib",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "f7d7c7da5423a7bfa0d739ab035506ad1807b59d"
+  },
+  "_source": "git://github.com/zetivar/gridLib.git",
+  "_target": "~0.0.1",
+  "_originalSource": "gridLib",
+  "_direct": true
+}

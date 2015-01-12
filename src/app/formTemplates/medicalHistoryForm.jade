@@ -1,0 +1,24 @@
+form(ng-submit='onSubmit(data)', action='javascript:void(0)')
+    input(ng-repeat='elm in schema.hiddenElements', type='hidden', value='{{elm.value}}', ng-model='data[elm.name]')
+    table.table.table-striped.table-bordered
+        thead
+            tr(style='background-color:darkgrey;color:#f5f5f5', ng-init="headings=['Person','Stroke','Heart Attack','Diabetes','Cancer']")
+                th(ng-repeat='heading in headings') {{heading}}
+        tbody
+            tr(ng-repeat='(mainIndex,person) in schema.properties')
+                td(ng-if="person.type!='heading'") {{person.label}}
+                td(ng-if="person.type!='heading'", ng-repeat="disease in ['stroke','heartAttack','diabetes','cancer']")
+                    label.radio
+                        input(name='{{person.name}}_{{disease}}', data-bvalidator='required', focus='{{mainIndex==1 && $index==0}}', value='Yes', type='radio', ng-model="data[person.name+'_'+disease]")
+                        | Yes
+                    label.radio
+                        input(name='{{person.name}}_{{disease}}', value='No', type='radio', ng-model="data[person.name+'_'+disease]")
+                        | No
+                    label.radio
+                        input(name='{{person.name}}_{{disease}}', value='Unknown', type='radio', ng-model="data[person.name+'_'+disease]")
+                        | Unknown
+                    div(ng-if="person.name=='siblings' || person.name=='children'", ng-show="data[person.name+'_'+disease]=='Yes'")
+                        input.input.input-small(type='text', placeholder='How many ?', ng-model="data[person.name+'_'+disease+'_count']", data-bvalidator='between[1:10],required')
+    .controls
+        button.btn.btn-primary(type='submit', data-plus-as-tab='false')
+            | Save

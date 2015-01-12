@@ -4,20 +4,28 @@ do (app = angular.module('myApp.dataGrid', [
   'myApp.appService',
   'myApp.lodash'
 ])) ->
-
-
   app.controller 'DataGridCtrl', ($scope, GridFactory,
                                   $state, AppService,
                                   $stateParams) ->
-
     $scope.canAddMore = true
     mappings = {
-      '': {entity: '', obj: '', next: '', variable: ''}
+      'member': {
+        entity: 'household', obj: 'household',
+        variable: 'totalMembers', next: 'enum.householdDetail.commonQs'
+      },
+      'hosp': {
+        entity: 'hospInf', obj: 'hospInf',
+        variable: 'hospCount', next: 'enum.householdDetail.deathInf'
+      },
+      'death': {
+        entity: 'deathInf', obj: 'deathInf',
+        variable: 'deathCount', next: 'enum.householdDetail.contact'
+      }
     }
 
 
     GridFactory.getData()
-    .then  ->
+    .then ->
       actualCount = (GridFactory.data).data.rows.length
       stateName = ($state.current.name).split('.')
       mapping = mappings[_.last(stateName)]
