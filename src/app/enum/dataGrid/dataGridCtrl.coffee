@@ -26,6 +26,7 @@ do (app = angular.module('myApp.dataGrid', [
 
     GridFactory.getData()
     .then ->
+      console.log GridFactory.data
       actualCount = (GridFactory.data).data.rows.length
       stateName = ($state.current.name).split('.')
       mapping = mappings[_.last(stateName)]

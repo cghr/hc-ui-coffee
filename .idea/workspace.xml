@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac3ada71-5dfc-4d22-84bb-3de1c17463aa" name="Default" comment="chore(code): cleanup and refactor code">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/imgs/skin_modern_header.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dashboard/chartService/chartDataTransformer.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dashboard/chartService/test/chartDataTransformer.spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/tpls/dataGridCentered.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.coffee" afterPath="$PROJECT_DIR$/src/app/app.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/appRun.coffee" afterPath="$PROJECT_DIR$/src/app/appRun.coffee" />
+    <list default="true" id="ac3ada71-5dfc-4d22-84bb-3de1c17463aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" afterPath="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cgGrid/dist/cgGrid-tpls-0.1.0.js" afterPath="$PROJECT_DIR$/vendor/cgGrid/dist/cgGrid-tpls-0.1.0.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/tpls/dataGrid.jade" afterPath="$PROJECT_DIR$/src/app/tpls/dataGrid.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/enum/enum.coffee" afterPath="$PROJECT_DIR$/src/app/enum/enum.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/enum/enumRoutes.js" afterPath="$PROJECT_DIR$/src/app/enum/enumRoutes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/hc/hc.coffee" afterPath="$PROJECT_DIR$/src/app/hc/hc.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/hc/hcRoutes.js" afterPath="$PROJECT_DIR$/src/app/hc/hcRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee" afterPath="$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/jsonSchemaListService/jsonSchemaListService.coffee" afterPath="$PROJECT_DIR$/src/common/jsonSchemaListService/jsonSchemaListService.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/security/login/login.coffee" afterPath="$PROJECT_DIR$/src/app/security/login/login.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/security/login/login.jade" afterPath="$PROJECT_DIR$/src/app/security/login/login.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/security/login/loginCtrl.coffee" afterPath="$PROJECT_DIR$/src/app/security/login/loginCtrl.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/main.less" afterPath="$PROJECT_DIR$/src/less/main.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/tpls/pageDetail.jade" afterPath="$PROJECT_DIR$/src/app/tpls/pageDetail.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" afterPath="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/routeConfigHandler/routeConfigHandler.coffee" afterPath="$PROJECT_DIR$/src/common/routeConfigHandler/routeConfigHandler.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ui.iws" />
@@ -47,82 +33,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pageDetail.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetail.jade">
+      <file leaf-file-name="hcRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/hc/hcRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="4470">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageDetailNavDisabled.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade">
+      <file leaf-file-name="dataGrid.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGrid.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataGridCentered.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGridCentered.jade">
+      <file leaf-file-name="cgForm-tpls-0.1.0.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backSpaceNav.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/backSpaceNav/backSpaceNav.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fileUploadService.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/fileUploadService/fileUploadService.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="focus.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/focus/focus.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/security/login/login.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/security/login/login.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.529148" vertical-offset="4" max-vertical-offset="450">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14145">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1421840182619" expanded="true" signature="35115:35131" placeholder="..." />
+                <marker date="1421840182619" expanded="true" signature="35681:35697" placeholder="..." />
+                <marker date="1421840182619" expanded="true" signature="38603:38617" placeholder="..." />
+                <marker date="1421840182619" expanded="true" signature="38952:38968" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,8 +72,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.375" vertical-offset="336" max-vertical-offset="840">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+            <state vertical-scroll-proportion="-9.75" vertical-offset="336" max-vertical-offset="840">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,8 +82,48 @@
       <file leaf-file-name="main.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/less/main.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2448978" vertical-offset="351" max-vertical-offset="795">
-              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state vertical-scroll-proportion="-1.1020408" vertical-offset="411" max-vertical-offset="915">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageDetail.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetail.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageDetailNavDisabled.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="470">
+              <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataGrid.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataGridCtrl.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="720">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -155,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/common/idService/idService.coffee" />
         <option value="$PROJECT_DIR$/src/common/backSpaceNav/backSpaceNav.coffee" />
         <option value="$PROJECT_DIR$/src/common/fileUploadService/fileUploadService.coffee" />
         <option value="$PROJECT_DIR$/src/common/focus/focus.coffee" />
@@ -175,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/app/hc/hcCtrl.coffee" />
         <option value="$PROJECT_DIR$/src/app/appCtrl.coffee" />
         <option value="$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade" />
-        <option value="$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee" />
         <option value="$PROJECT_DIR$/src/app/stateTransitions/stateTransitions.coffee" />
         <option value="$PROJECT_DIR$/src/app/tpls/alcoholFormDirective.jade" />
         <option value="$PROJECT_DIR$/src/app/tpls/ffqFormDirective.html" />
@@ -192,20 +172,22 @@
         <option value="$PROJECT_DIR$/src/app/security/login/login.coffee" />
         <option value="$PROJECT_DIR$/src/app/security/login/loginCtrl.coffee" />
         <option value="$PROJECT_DIR$/vendor/cgGrid/dist/cgGrid-tpls-0.1.0.js" />
-        <option value="$PROJECT_DIR$/src/app/tpls/dataGrid.jade" />
         <option value="$PROJECT_DIR$/src/common/schemaLoader/schemaLoader.coffee" />
         <option value="$PROJECT_DIR$/src/app/appRun.coffee" />
-        <option value="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" />
         <option value="$PROJECT_DIR$/src/app/enum/enumRoutes.js" />
         <option value="$PROJECT_DIR$/src/app/app.coffee" />
         <option value="$PROJECT_DIR$/src/app/hc/hc.coffee" />
         <option value="$PROJECT_DIR$/src/app/hc/hcRoutes.js" />
-        <option value="$PROJECT_DIR$/src/less/main.less" />
-        <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/app/tpls/pageDetail.jade" />
-        <option value="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" />
         <option value="$PROJECT_DIR$/src/app/tpls/dataGridCentered.jade" />
         <option value="$PROJECT_DIR$/src/app/security/login/login.jade" />
+        <option value="$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee" />
+        <option value="$PROJECT_DIR$/src/assets/jsonSchema/enum.visitDetail.basicInf.json" />
+        <option value="$PROJECT_DIR$/src/app/tpls/dataGrid.jade" />
+        <option value="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/less/main.less" />
+        <option value="$PROJECT_DIR$/src/app/tpls/pageDetail.jade" />
+        <option value="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" />
       </list>
     </option>
   </component>
@@ -432,7 +414,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="less" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,11 +432,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="focus" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,11 +450,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fileUploadService" />
+              <option name="myItemId" value="tpls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,11 +472,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="backSpaceNav" />
+              <option name="myItemId" value="enum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataGrid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -610,7 +614,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420916309159</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="chore(cgForm): update cgForm with Bootstrap3 widgets">
+      <created>1421833239557</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1421833239557</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -638,8 +648,9 @@
     <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21359223" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17475729" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -653,7 +664,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.407767" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -663,7 +673,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21359223" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3802589" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -702,20 +712,14 @@
     <MESSAGE value="chore(modules): Add common modules" />
     <MESSAGE value="chore(sideMenu): Add sidemenu for reports" />
     <MESSAGE value="refactor(code): cleanup and refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(code): cleanup and refactor code" />
+    <MESSAGE value="chore(cgForm): update cgForm with Bootstrap3 widgets" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(cgForm): update cgForm with Bootstrap3 widgets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/dashboard/dashboardCtrl.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4989605" vertical-offset="0" max-vertical-offset="481">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/angular-loading-bar/build/loading-bar.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
@@ -832,6 +836,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.119521916" vertical-offset="0" max-vertical-offset="502">
           <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,6 +844,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32868525" vertical-offset="0" max-vertical-offset="525">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -882,14 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="705">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/enum/enum.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
@@ -913,14 +911,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGrid.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="6" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,28 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14145">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1421827318239" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421827318239" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421827318239" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421827318239" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/enum/enumRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1579" max-vertical-offset="3075">
-          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/hc/hc.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
@@ -1010,65 +978,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/hc/hcRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7298475" vertical-offset="10" max-vertical-offset="4470">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29411766" vertical-offset="0" max-vertical-offset="459">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2448978" vertical-offset="351" max-vertical-offset="795">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.375" vertical-offset="336" max-vertical-offset="840">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetail.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGridCentered.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/backSpaceNav/backSpaceNav.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+        <state vertical-scroll-proportion="0.19607843" vertical-offset="0" max-vertical-offset="459">
           <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
           <folding />
         </state>
@@ -1084,7 +996,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/focus/focus.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state vertical-scroll-proportion="0.45751634" vertical-offset="0" max-vertical-offset="459">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
@@ -1092,7 +1004,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/security/login/login.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+        <state vertical-scroll-proportion="0.45751634" vertical-offset="0" max-vertical-offset="459">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
@@ -1100,8 +1012,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/security/login/login.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.529148" vertical-offset="4" max-vertical-offset="450">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.29372197" vertical-offset="4" max-vertical-offset="450">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGridCentered.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03267974" vertical-offset="0" max-vertical-offset="459">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/enum/enumRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1869" max-vertical-offset="3075">
+          <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/jsonSchema/enum.visitDetail.basicInf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51724136" vertical-offset="0" max-vertical-offset="2055">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/hc/hcRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="4470">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="720">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGrid.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.75" vertical-offset="336" max-vertical-offset="840">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14145">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1421840182619" expanded="true" signature="35115:35131" placeholder="..." />
+            <marker date="1421840182619" expanded="true" signature="35681:35697" placeholder="..." />
+            <marker date="1421840182619" expanded="true" signature="38603:38617" placeholder="..." />
+            <marker date="1421840182619" expanded="true" signature="38952:38968" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1020408" vertical-offset="411" max-vertical-offset="915">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetail.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="470">
+          <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
           <folding />
         </state>
       </provider>

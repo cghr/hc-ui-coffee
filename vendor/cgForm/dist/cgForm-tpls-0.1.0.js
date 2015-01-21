@@ -837,7 +837,7 @@ angular.module('template/formElement/dynamic_dropdown.html', []).run([
 angular.module('template/formElement/gps.html', []).run([
     '$templateCache',
     function ($templateCache) {
-        $templateCache.put('template/formElement/gps.html', '<label>Latitude</label>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '        <input class="form-control" type="text" ng-model="data[config.name+\'_latitude\']"\n' + '               readonly="readonly"/>\n' + '    </div>\n' + '</div>\n' + '<label>Longitude</label>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '        <input class="form-control" type="text"\n' + '               ng-model="data[config.name+\'_longitude\']"\n' + '               readonly="readonly"/>\n' + '    </div>\n' + '</div>\n' + '<br>\n' + '<a class="btn btn-danger btn-small" href="" ng-click="getGps()">Get GPS</a>\n' + '');
+        $templateCache.put('template/formElement/gps.html', '<label>Latitude</label>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '        <input class="form-control" type="text" ng-model="data[config.name+\'_latitude\']"\n' + '               readonly="readonly"/>\n' + '    </div>\n' + '</div>\n' + '<label>Longitude</label>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '        <input class="form-control" type="text"\n' + '               ng-model="data[config.name+\'_longitude\']"\n' + '               readonly="readonly"/> &nbsp;\n' + '\n' + '    </div>\n' + '    <a class="btn btn-danger btn-small" href="" ng-click="getGps()">Get GPS</a>\n' + '</div>\n' + '');
     }
 ]);
 angular.module('template/formElement/hidden.html', []).run([
