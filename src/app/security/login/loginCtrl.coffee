@@ -5,7 +5,10 @@ do (app = angular.module('login')) ->
                                $location, $window,
                                Auth, toaster, md5) ->
 
-    this.login = (data) ->
+
+    vm=$scope
+    vm.user={username:'demo',password:'demo'}
+    vm.login = (data) ->
       user = {username: data.username, password: md5.createHash(data.password)}
       success = (resp) ->
         $rootScope.user = resp

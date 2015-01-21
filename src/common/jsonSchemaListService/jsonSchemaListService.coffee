@@ -10,12 +10,10 @@ do(app = angular.module 'myApp.jsonSchemaListService', []) ->
       "api/JsonSchemaService/#{env}/" + if (env == 'dev') then appName else ''
 
 
-
     getSchemaList: (appName) ->
       serviceUrl = getServiceUrl(appName)
       $http.get(serviceUrl)
-      .success (data) -> return data
-      .error ()-> $log.error 'Failed to get json schema list'
+      .then ((resp)->  resp.data),(-> $log.error('Failed to load json schema'))
 
 
 

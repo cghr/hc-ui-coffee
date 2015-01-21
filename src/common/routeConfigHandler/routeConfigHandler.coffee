@@ -1,11 +1,9 @@
-do(app = angular.module 'myApp.routeConfigHandler', [
-  'ui.router',
-  'myApp.lodash']) ->
+do(app = angular.module 'myApp.routeConfigHandler', []) ->
   app.constant('RouteConfigHandler',
 
-    configRoutesForChildren: ($stateProvider, parentState, children, _) ->
+    configRoutesForChildren: ($stateProvider, parentState, children) ->
       self = this
-      _.each(children, (child)->
+      angular.forEach(children, (child)->
 
         getChildrenData = (child) ->
           if(child.children)
@@ -13,7 +11,8 @@ do(app = angular.module 'myApp.routeConfigHandler', [
           else
             {}
 
-        getAbstractState = (child)-> child.children.length > 0
+        getAbstractState = (child)->
+          child.children?.length > 0
 
         childrenData = getChildrenData(child)
         abstract = getAbstractState(child)
@@ -30,7 +29,7 @@ do(app = angular.module 'myApp.routeConfigHandler', [
         })
 
         if(child.children)
-          self.configureRoutesForChildren(
+          self.configRoutesForChildren(
             $stateProvider, parentState + '.' + child.name, child.children)
       )
 

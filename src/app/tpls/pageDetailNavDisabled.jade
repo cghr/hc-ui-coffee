@@ -1,4 +1,4 @@
-.col-md-10.column(ng-init='childStates=$state.current.data.children;parent=$state.current.data.thisState;prev=$state.current.data.prev;')
+.col-md-2.column(ng-init='childStates=$state.current.data.children;parent=$state.current.data.thisState;prev=$state.current.data.prev;')
    a(ui-sref='{{prev.name}}({{$stateParams}})', href='') « Back to {{prev.title}}
    .well.sidebar-nav.sidebar-nav-fixed(style='height:500px ;overflow: scroll')
       ul.nav.nav-list
@@ -6,5 +6,6 @@
          li(ng-class="{active:$state.includes(parent.name+'.'+childState.name)}", ng-repeat='childState in childStates')
             a
                | {{childState.title}}
-.col-md-10.column
+.col-md-9.column(style="padding-top:15px")
    div(ui-view='')
+.col-md-1.column

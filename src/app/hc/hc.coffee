@@ -5,13 +5,13 @@ do(app = angular.module('hc', ['ui.router',
 
   app.config ($stateProvider, hcRoutes, RouteConfigHandler) ->
 
-    $stateProvider.stat(hcRoutes.name, {
+    $stateProvider.state(hcRoutes.name, {
       url: hcRoutes.url,
       templateUrl: hcRoutes.tpl
     })
 
     RouteConfigHandler
-    .configureRoutesForChildren($stateProvider,hcRoutes.name, hcRoutes.children)
+    .configRoutesForChildren($stateProvider,hcRoutes.name, hcRoutes.children)
 
 
 

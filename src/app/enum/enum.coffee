@@ -5,13 +5,13 @@ do(app = angular.module('enum', ['ui.router',
 
   app.config ($stateProvider, enumRoutes, RouteConfigHandler) ->
 
-    $stateProvider.stat(enumRoutes.name, {
+    $stateProvider.state(enumRoutes.name, {
       url: enumRoutes.url,
       templateUrl: enumRoutes.tpl
     })
 
     RouteConfigHandler
-    .configureRoutesForChildren($stateProvider,
+    .configRoutesForChildren($stateProvider,
       enumRoutes.name, enumRoutes.children)
 
 

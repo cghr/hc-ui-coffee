@@ -7,7 +7,7 @@ angular.module('enumRoutes', [])
             {
                 name: 'area',
                 url: '/area',
-                tpl: 'tpls/dataGrid.jade',
+                tpl: 'tpls/dataGridCentered.jade',
                 title: 'Areas',
                 msg: 'Select an Area',
                 children: []
@@ -78,7 +78,7 @@ angular.module('enumRoutes', [])
                     {
                         name: 'member',
                         url: '/member',
-                        tpl: 'enum/dataGrid/dataGridCustom.jade',
+                        tpl: 'enum/dataGrid/dataGrid.jade',
                         title: 'Members',
                         addNew: true
                     },
@@ -103,7 +103,7 @@ angular.module('enumRoutes', [])
                     {
                         name: 'hosp',
                         url: '/hosp',
-                        tpl: 'enum/dataGrid/dataGridCustom.jade',
+                        tpl: 'enum/dataGrid/dataGrid.jade',
                         title: 'Hospitalization',
                         addNew: true
                     },
@@ -116,7 +116,7 @@ angular.module('enumRoutes', [])
                     {
                         name: 'death',
                         url: '/death',
-                        tpl: 'enum/dataGrid/dataGridCustom.jade',
+                        tpl: 'enum/dataGrid/dataGrid.jade',
                         title: 'Deaths',
                         addNew: true
                     },

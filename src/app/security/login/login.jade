@@ -5,18 +5,18 @@ div(style='margin-top: 10%')
       .panel.panel-info
          .panel-heading
             h3.panel-title
-               strong Kickstart
+               strong ISHA
 
          // Login Form
          .panel-body
-            form(role='form', ng-submit='loginCtrl.login(user)')
+            form(role='form', ng-submit='login(user)')
                .form-group
                   //label Username
                   input.form-control(type='text', ng-model='user.username', required='', autofocus='', placeholder='Enter Username')
                .form-group
                   //label Password
                   input.form-control(type='password', ng-model='user.password', required='', placeholder='Password')
-               button.btn.btn-info(type='submit') Submit
+               button.btn.btn-info(type='submit') Login
             div(style='margin-top: 10px')
                a(href='#/register') Sing Up |
 

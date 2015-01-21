@@ -4,7 +4,8 @@ do (app = angular.module "myApp", [
   'myApp.stateTransitions'
   'myApp.report'
   'myApp.sync'
-  'myApp.module'
+  'enum'
+  'hc'
   'myApp.appService'
   'myApp.idService'
   'myApp.home'
@@ -21,7 +22,7 @@ do (app = angular.module "myApp", [
 
   app.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
-    $urlRouterProvider.otherwise '/home'
+    $urlRouterProvider.otherwise '/enum/area'
 
     isDevEnv = -> /900*/.test(window.location.href)
 

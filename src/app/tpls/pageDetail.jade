@@ -6,5 +6,6 @@
          li(ui-sref-active='active', ng-repeat='childState in childStates')
             a(ui-sref='{{parent.name}}.{{childState.name}}')
                | {{childState.title}}
-.col-md-10.column
+.col-md-9.column(style="padding-top:15px")
    div(ui-view='')
+.col-md-1.column

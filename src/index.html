@@ -9,6 +9,9 @@
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>"/>
     <% }); %>
+    <link rel="stylesheet" type="text/css" href="assets/dhtmlx/dhtmlx.css">
+    <link rel="stylesheet" type="text/css" href="assets/dhtmlx/skins/dhtmlxgrid_dhx_skyblue.css">
+
 
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script>
@@ -18,17 +21,30 @@
 <header>
     <nav class="container navbar-default" ng-controller="NavCtrl as NavCtrl" access-level="accessLevels.user">
         <ul class="nav navbar-nav">
-            <li ui-sref-active="active">
-                <a ui-sref="home">Home</a>
+            <li>
+                <a class="navbar-brand" href="#">ISHA</a>
+            </li>
+            <li ng-class="{active:$state.includes('enum')}">
+                <a ui-sref="enum.area">enum</a>
+            </li>
+            <li ng-class="{active:$state.includes('hc')}">
+                <a ui-sref="hc.area">Household Questionnaire</a>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="" ng-click="NavCtrl.logout()">Logout</a>
             </li>
 
         </ul>
     </nav>
 </header>
 
-<div class="container">
-    <div class="row clearfix" ui-view=""></div>
-</div>
+<div class="row clearfix" ui-view=""></div>
+<!--<div class="container">-->
+    <!---->
+<!--</div>-->
 
 </body>
 </html>

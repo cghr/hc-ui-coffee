@@ -5,17 +5,19 @@ do (app = angular.module "myApp") ->
            JsonSchemaListService,
            SchemaLoader, _, $log, SchemaFactory) ->
 
-    appName = 'kickstart'
+    appName = 'hc'
 
     $rootScope.$state = $state
     $rootScope.$stateParams = $stateParams
 
     JsonSchemaListService.getSchemaList(appName)
-    .then (schemaNames) -> loadSchemas(schemaNames)
+    .then (schemas) ->
+      loadSchemas(schemas)
 
     loadSchemas = (schemaNames) ->
       SchemaLoader.loadAllSchemas(schemaNames, 'assets/jsonSchema/')
-      .then (schemas)-> cacheSchemas(schemaNames, schemas)
+      .then (schemas) ->
+        cacheSchemas(schemaNames, schemas)
 
     cacheSchemas = (schemaNames, schemas) ->
       _.each(schemas, (schema, index)->

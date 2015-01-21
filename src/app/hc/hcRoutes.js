@@ -7,7 +7,7 @@ angular.module('hcRoutes', [])
             {
                 name: 'area',
                 url: '/area',
-                tpl: 'tpls/dataGrid.jade',
+                tpl: 'tpls/dataGridCentered.jade',
                 title: 'Areas',
                 msg: 'Select an Area',
                 children: []

@@ -12,7 +12,6 @@ do (app = angular.module('login', [
     $stateProvider.state('login', {
       url: "/login",
       controller: "LoginCtrl",
-      controllerAs: 'loginCtrl',
       templateUrl: "security/login/login.jade",
       access: access.anon
     })
