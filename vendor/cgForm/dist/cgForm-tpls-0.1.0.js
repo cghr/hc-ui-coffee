@@ -2,7 +2,7 @@
  * cgForm
  * 
 
- * Version: 0.1.0 - 2015-01-21
+ * Version: 0.1.0 - 2015-01-22
  * License: MIT
  */
 angular.module('cgForm', [
@@ -52,8 +52,8 @@ angular.module('cgForm.tpls', [
 angular.module('cgForm.lodash', []).constant('_', window._);
 angular.module('cgForm.formConfig', ['cgForm.lodash']).factory('FormConfig', function () {
     return {
-        submitUrl: 'api/data/dataStoreService/',
-        resourceBaseUrl: 'api/data/dataAccessService/',
+        submitUrl: 'api/entity/',
+        resourceBaseUrl: 'api/entity/',
         lookupBaseUrl: 'api/LookupService/',
         crossFlowBaseUrl: 'api/CrossFlowService',
         crossCheckBaseUrl: 'api/CrossCheckService',
@@ -217,7 +217,9 @@ angular.module('cgForm.formService', [
             return getData(dataUrl);
         }
         function postResource(data) {
-            return postData(FormConfig.submitUrl, data);
+            var entityName = data.datastore;
+            delete data.datastore;
+            return postData(FormConfig.submitUrl + entityName, data);
         }
         function getLookupData(reqData) {
             reqData.refId = $stateParams[reqData.ref];
@@ -891,13 +893,13 @@ angular.module('template/formElement/readonly.html', []).run([
 angular.module('template/formElement/select_singletext.html', []).run([
     '$templateCache',
     function ($templateCache) {
-        $templateCache.put('template/formElement/select_singletext.html', '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '        <select class="input-small" data-bvalidator="required" data-bvalidator-msg="Please select an option"\n' + '                ng-model="data[config.name+\'_unit\']" init-focus="{{config.initFocus}}">\n' + '            <option value=""></option>\n' + '            <option ng-repeat="item in config.items" value="{{item.value}}">{{item.text}}</option>\n' + '        </select>\n' + '    </div>\n' + '</div>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '        <input class="form-control" type="text" data-bvalidator="{{config.valdn}}"\n' + '               ng-model="data[config.name+\'_value\']" class="input-medium"/>\n' + '    </div>\n' + '</div>\n' + '');
+        $templateCache.put('template/formElement/select_singletext.html', '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '        <select class="form-control" data-bvalidator="required" data-bvalidator-msg="Please select an option"\n' + '                ng-model="data[config.name+\'_unit\']" init-focus="{{config.initFocus}}">\n' + '            <option value=""></option>\n' + '            <option ng-repeat="item in config.items" value="{{item.value}}">{{item.text}}</option>\n' + '        </select>\n' + '    </div>\n' + '</div>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '        <input class="form-control" type="text" data-bvalidator="{{config.valdn}}"\n' + '               ng-model="data[config.name+\'_value\']" class="input-medium"/>\n' + '    </div>\n' + '</div>\n' + '');
     }
 ]);
 angular.module('template/formElement/select_text.html', []).run([
     '$templateCache',
     function ($templateCache) {
-        $templateCache.put('template/formElement/select_text.html', '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '    <select class="input-small" data-bvalidator="required" data-bvalidator-msg="Please select an option"\n' + '        ng-model="data[config.name+\'_unit\']" init-focus="{{config.initFocus}}">\n' + '    <option value=""></option>\n' + '    <option ng-repeat="item in config.items" value="{{item.value}}">{{item.text}}</option>\n' + '</select>\n' + '        </div></div>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '<span ng-repeat="item in config.items">\n' + '    <input class="form-control" type="text" data-bvalidator="{{item.valdn}}"\n' + '           ng-model="data[config.name+\'_value\']" class="input-medium" ng-if="data[config.name+\'_unit\']==item.value"\n' + '           placeholder="{{item.value}}"/>\n' + '</span>\n' + '        </div></div>\n' + '');
+        $templateCache.put('template/formElement/select_text.html', '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '    <select class="form-control" data-bvalidator="required" data-bvalidator-msg="Please select an option"\n' + '        ng-model="data[config.name+\'_unit\']" init-focus="{{config.initFocus}}">\n' + '    <option value=""></option>\n' + '    <option ng-repeat="item in config.items" value="{{item.value}}">{{item.text}}</option>\n' + '</select>\n' + '        </div></div>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '<span ng-repeat="item in config.items">\n' + '    <input class="form-control" type="text" data-bvalidator="{{item.valdn}}"\n' + '           ng-model="data[config.name+\'_value\']" class="input-medium" ng-if="data[config.name+\'_unit\']==item.value"\n' + '           placeholder="{{item.value}}"/>\n' + '</span>\n' + '        </div></div>\n' + '');
     }
 ]);
 angular.module('template/formElement/suggest.html', []).run([
@@ -915,7 +917,7 @@ angular.module('template/formElement/text.html', []).run([
 angular.module('template/formElement/text_select.html', []).run([
     '$templateCache',
     function ($templateCache) {
-        $templateCache.put('template/formElement/text_select.html', '<span ng-repeat="item in config.items">\n' + '\n' + '    <div class="row">\n' + '        <div class="col-lg-3">\n' + '\n' + '        <input class="form-control" type="text" data-bvalidator="{{item.valdn}}"\n' + '           ng-model="data[config.name+\'_value\']" class="input-medium" ng-if="data[config.name+\'_unit\']==item.value"\n' + '           placeholder="{{item.value}}" />\n' + '            </div></div>\n' + '</span>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '<select class="input-small" data-bvalidator="required" data-bvalidator-msg="Please select an option"\n' + '        ng-model="data[config.name+\'_unit\']" init-focus="{{config.initFocus}}">\n' + '    <option value=""></option>\n' + '    <option ng-repeat="item in config.items" value="{{item.value}}">{{item.text}}</option>\n' + '</select>\n' + '        </div></div>\n' + '\n' + '');
+        $templateCache.put('template/formElement/text_select.html', '<span ng-repeat="item in config.items">\n' + '\n' + '    <div class="row">\n' + '        <div class="col-lg-3">\n' + '\n' + '            <input class="form-control" type="text" data-bvalidator="{{item.valdn}}"\n' + '                   ng-model="data[config.name+\'_value\']" class="input-medium"\n' + '                   ng-if="data[config.name+\'_unit\']==item.value"\n' + '                   placeholder="{{item.value}}"/>\n' + '        </div>\n' + '    </div>\n' + '</span>\n' + '<div class="row">\n' + '    <div class="col-lg-3">\n' + '\n' + '        <select class="form-control" data-bvalidator="required" data-bvalidator-msg="Please select an option"\n' + '                ng-model="data[config.name+\'_unit\']" init-focus="{{config.initFocus}}">\n' + '            <option value=""></option>\n' + '            <option ng-repeat="item in config.items" value="{{item.value}}">{{item.text}}</option>\n' + '        </select>\n' + '    </div>\n' + '</div>\n' + '\n' + '');
     }
 ]);
 angular.module('template/formElement/textarea.html', []).run([
@@ -933,6 +935,6 @@ angular.module('template/standardForm/standardForm.html', []).run([
 angular.module('template/surveyForm/surveyForm.html', []).run([
     '$templateCache',
     function ($templateCache) {
-        $templateCache.put('template/surveyForm/surveyForm.html', '<form class="well" role="form" ng-enter="showNext()">\n' + '\n' + '    <div class="form-group" ng-repeat="element in flow.properties">\n' + '        <form-element config="{{element}}"></form-element>\n' + '    </div>\n' + '\n' + '\n' + '    <button class="btn btn-small btn-primary" ng-click="showNext()">\n' + '        Next &#187;\n' + '    </button>\n' + '\n' + '\n' + '</form>\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '');
+        $templateCache.put('template/surveyForm/surveyForm.html', '<div class="well"  ng-enter="showNext()">\n' + '\n' + '    <div class="form-group" ng-repeat="element in flow.properties">\n' + '        <form-element config="{{element}}"></form-element>\n' + '    </div>\n' + '\n' + '\n' + '    <button class="btn btn-small btn-primary" ng-click="showNext()">\n' + '        Next &#187;\n' + '    </button>\n' + '\n' + '\n' + '</div>\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '');
     }
 ]);

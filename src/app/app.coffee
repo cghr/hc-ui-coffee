@@ -1,5 +1,5 @@
 do (app = angular.module "myApp", [
-  'security'
+  #'security'
   'myApp.dashboard'
   'myApp.stateTransitions'
   'myApp.report'

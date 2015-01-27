@@ -78,6 +78,8 @@ module.exports = function(grunt) {
             js: [
                 'vendor/gridLib/release/scripts/dhtmlx.js',
                 'vendor/jQuery/dist/jquery.js',
+                'vendor/lib-plusAsTab/release/scripts/emulatetab.joelpurra.js',
+                'vendor/lib-plusAsTab/release/scripts/plusastab.joelpurra.js',
                 'vendor/lib-bValidator/release/scripts/jquery.bvalidator.js',
                 'vendor/lodash/dist/lodash.js',
                 'vendor/angular/angular.js',

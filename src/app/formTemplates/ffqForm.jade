@@ -9,15 +9,15 @@ form(ng-submit='onSubmit(data)', action='javascript:void(0)')
             tr(ng-repeat='(mainIndex,element) in schema.properties')
                 td {{element.label}}
                 td(ng-repeat='item in [0,1,2,3,4,5,6,7,8]')
-                    label.radio.inline
+                    label.radio-inline
                         div(ng-if='$index==0')
                             input(focus='{{$index==0 && mainIndex==0}}', type='radio', data-bvalidator='required', data-bvalidator-msg='Please select an option', value='{{item}}', ng-model="data[element.name+'_frequency']", name='{{element.name}}')
                         div(ng-if='$index!=0')
                             input(type='radio', value='{{item}}', ng-model="data[element.name+'_frequency']", name='{{element.name}}')
                 td
-                    input.input.input-mini(type='text', placeholder='Measure', data-bvalidator='between[1:99],required', ng-model="data[element.name+'_measure']", ng-disabled="data[element.name+'_frequency']==0")
+                    input.form-control(type='text', placeholder='Measure', data-bvalidator='between[1:99],required', ng-model="data[element.name+'_measure']", ng-disabled="data[element.name+'_frequency']==0")
                 td
-                    select.input-medium(data-bvalidator='required', ng-model="data[element.name+'_unit']", data-bvalidator-msg='Please select an option', ng-disabled="data[element.name+'_frequency']==0")
+                    select.form-control(data-bvalidator='required', ng-model="data[element.name+'_unit']", data-bvalidator-msg='Please select an option', ng-disabled="data[element.name+'_frequency']==0")
                         option(value='')
                         option(ng-repeat='item in element.items', value='{{item.value}}') {{item.text}}
     .controls

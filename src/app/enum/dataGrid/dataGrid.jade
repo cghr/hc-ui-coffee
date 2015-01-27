@@ -2,7 +2,7 @@ div(ng-controller='DataGridCtrl')
     // Grid Heading
     h4
         span(ng-show='$state.current.addNew', ng-if='canAddMore')
-            button.btn.btn-info.btn-small(ng-click='addNew()', focus='true')
+            button.btn.btn-info.btn-small(ng-click='appRoot.addNew()', focus='true')
                 i.icon-plus-sign.icon-white
                 |  Add
         |         {{$state.current.title}}

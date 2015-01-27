@@ -19,8 +19,9 @@
 </head>
 <body>
 <header>
-    <nav class="container navbar-default" ng-controller="NavCtrl as NavCtrl" access-level="accessLevels.user">
-        <ul class="nav navbar-nav">
+    <nav class="container navbar-default ">
+    <!--<nav class="container navbar-default" ng-controller="NavCtrl as NavCtrl" access-level="accessLevels.user">-->
+        <ul class="nav navbar-nav ">
             <li>
                 <a class="navbar-brand" href="#">ISHA</a>
             </li>
@@ -34,17 +35,17 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a href="" ng-click="NavCtrl.logout()">Logout</a>
+                <!--<a href="" ng-click="NavCtrl.logout()">Logout</a>-->
+                <a href="">Logout</a>
             </li>
 
         </ul>
     </nav>
 </header>
 
-<div class="row clearfix" ui-view=""></div>
-<!--<div class="container">-->
-    <!---->
-<!--</div>-->
+<div class="row clearfix" ui-view="">
+
+</div>
 
 </body>
 </html>
