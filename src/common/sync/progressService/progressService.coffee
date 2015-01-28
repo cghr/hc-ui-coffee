@@ -14,7 +14,7 @@ do (app = angular.module('myApp.progressService', ['toaster'])) ->
 
 
     getNetworkStatus: () ->
-      $http.get('api/NetworkStatus')
+      $http.get('api/sync/networkStatus')
       .success (networkStatus) -> return networkStatus
       .error -> error
 

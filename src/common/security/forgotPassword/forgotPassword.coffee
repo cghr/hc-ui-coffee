@@ -7,7 +7,7 @@ do (app = angular.module('forgotPassword', ['ui.router', 'auth'])) ->
 
     $stateProvider.state('forgotPassword', {
       url: '/forgotPassword',
-      templateUrl: 'security/forgotPassword/forgotPassword.jade',
+      templateUrl: '..//forgotPassword/forgotPassword.jade',
       controller: 'ForgotPasswordCtrl',
       controllerAs: 'forgotPassword',
       access: access.anon

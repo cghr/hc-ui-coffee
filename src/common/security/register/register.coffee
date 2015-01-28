@@ -7,6 +7,6 @@ do (app=angular.module('register',['ui.router', 'auth', 'toaster'])) ->
     $stateProvider.state('register', {
       url: "/register",
       controller: "RegisterCtrl",
-      templateUrl: "security/register/register.jade",
+      templateUrl: "..//register/register.jade",
       access: access.anon
     })

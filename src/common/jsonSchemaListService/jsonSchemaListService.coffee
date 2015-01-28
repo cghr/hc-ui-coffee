@@ -7,7 +7,7 @@ do(app = angular.module 'myApp.jsonSchemaListService', []) ->
 
     getServiceUrl = (appName) ->
       env = getEnv()
-      "api/JsonSchemaService/#{env}/" + if (env == 'dev') then appName else ''
+      "api/survey/jsonSchemaList/#{env}/" + if (env == 'dev') then appName else ''
 
 
     getSchemaList: (appName) ->
