@@ -1,28 +1,40 @@
-do (app = angular.module('myApp.progressService', ['toaster'])) ->
+do (app = angular.module('progressService', ['toaster'])) ->
 
 
-  app.factory 'ProgressService', ($http, $log, toaster) ->
+  app.factory 'ProgressService', ($http, $log, toaster, $rootScope) ->
 
-    error = -> toaster.pop('error', '', 'Failed.Try again later')
+    error = (msg) -> toaster.pop('error', '', msg)
+
+    getErrMsg = (role)->
+      if(role == 'user')
+        "Team leader Not Available.Failed"
+      else
+        "Failed.Check Internet Connection"
+
+    syncErrMsg = getErrMsg($rootScope.user.role.title)
 
 
-    startSync: () ->
+    startSync: ->
       $http.get('api/sync/dataSync')
-      .success -> toaster.pop('success', '', 'Sync Completed')
-      .error -> error
+      .then ->
+        toaster.pop('success', '', 'Sync Successful')
+      , ->
+        toaster.pop('error', '', syncErrMsg)
 
 
 
-    getNetworkStatus: () ->
+    getNetworkStatus: ->
       $http.get('api/sync/networkStatus')
-      .success (networkStatus) -> return networkStatus
-      .error -> error
+      .then (resp) ->
+        return resp.data.status
+      , -> toaster.pop('error', '', 'Failed to get Network status')
 
 
 
     getStatus: (statusType) ->
       $http.get("api/sync/status/#{statusType}")
-      .success (data) -> return data
-      .error -> error
+      .then (resp) ->
+        return resp.data
+      , -> toaster.pop('error', '', 'Failed to get status of' + statusType)
 
 

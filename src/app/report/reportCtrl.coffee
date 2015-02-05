@@ -1,9 +1,7 @@
 do(app = angular.module('myApp.report')) ->
+  app.controller 'ReportCtrl', ($window, $scope) ->
+    vm = $scope
 
-
-  app.controller 'ReportCtrl', ($window) ->
-
-    vm = this
     vm.reportOptions = {
       skin: 'dhx_skyblue',
       width: $window.innerWidth * 0.8 + 'px',
@@ -12,10 +10,16 @@ do(app = angular.module('myApp.report')) ->
 
     vm.reportMenu = [
       {
-        id: 1, label: 'Reports',
+        id: 1, label: 'Enumeration',
         items: [{id: 11, label: 'Areas'},
-          {id: 12, label: 'Users'}]
+          {id: 12, label: 'Houses'}, {id: 13, label: 'Households'}
+        , {id: 14, label: 'Members'}]
+      },
+      {
+        id: 2, label: 'HHQ',
+        items: [{id: 21, label: 'Members'}]
       }
+
     ]
 
 

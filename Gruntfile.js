@@ -85,6 +85,7 @@ module.exports = function(grunt) {
                 'vendor/angular/angular.js',
                 'vendor/d3/d3.js',
                 'vendor/angular-charts/dist/angular-charts.js',
+                'vendor/angular-ui-grid/ui-grid.js',
                 'vendor/angular-camera/dist/angular-camera.js',
                 'vendor/angular-loading-bar/build/loading-bar.js',
                 'vendor/angular-md5/angular-md5.js',
@@ -95,7 +96,7 @@ module.exports = function(grunt) {
                 'vendor/angu-fixed-header-table/angu-fixed-header-table.js',
                 'vendor/angularjs-toaster/toaster.js',
                 
-                'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
+                'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
                 'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
                 'vendor/angular-ui-router/release/angular-ui-router.js',
                 'vendor/angular-ui-utils/modules/route/route.js'
@@ -421,7 +422,7 @@ module.exports = function(grunt) {
         express: {
             devServer: {
                 options: {
-                    port: 9000,
+                    port: 7000,
                     hostname: 'localhost',
                     serverreload: false,
                     bases: 'build',

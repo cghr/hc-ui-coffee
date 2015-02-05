@@ -1,0 +1,402 @@
+{
+"schemaName":"hc.ffqDetail.pls",
+"onSave":"hc.ffqDetail.veg",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqPulses",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"aamtiM",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Moongdal (Aamti)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"mokaliM",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Moongdal (Mokali)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"varanT",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Toordal (Varan)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"aamtiT",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Toordal (Aamti)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"mokaliT",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Toordal (Mokali)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"matki",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Matki (Mokali)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"patal",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Matki (Patal)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pithale",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Besan (Pithale)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"dalmirchi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Dal Mirchi Ghatt",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

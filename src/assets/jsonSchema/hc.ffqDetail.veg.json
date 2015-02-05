@@ -1,0 +1,492 @@
+{
+"schemaName":"hc.ffqDetail.veg",
+"onSave":"hc.ffqDetail.raw",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqVeg",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sukhi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Batata (Sukhi)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sarbarit",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Wange (Sarbarit)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"dodkePatal",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Dodke (Patal)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"gawarseng",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Gawar seng",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"vegMethi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Methi",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pattakobi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Patta Kobi",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"palakbhaji",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Palak Bhaji",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chukapalak",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Chuka Palak",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"harbharabhaji",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Harbhara Bhaji",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ghewdyachiseng",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Ghewdyachi seng",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sevgyachiseng",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Sevgyachi seng",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Spoon (Big)","value":"Spoon (Big)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

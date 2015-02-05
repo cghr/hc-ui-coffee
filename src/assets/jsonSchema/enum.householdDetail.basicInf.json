@@ -1,0 +1,420 @@
+{
+"schemaName":"enum.householdDetail.basicInf",
+"onSave":"enum.householdDetail.member",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"household",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"houseId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.houseId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"areaId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.areaId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surveyor",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"user.id",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"required",
+        "label":"Now, I would like to ask you few details about your household",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"religion",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Religion followed in the household",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Hinduism","value":"Hinduism","valdn":""},
+        
+            {"text":"Islam","value":"Islam","valdn":""},
+        
+            {"text":"Christianity","value":"Christianity","valdn":""},
+        
+            {"text":"Sikhism","value":"Sikhism","valdn":""},
+        
+            {"text":"Buddhism","value":"Buddhism","valdn":""},
+        
+            {"text":"Jainism","value":"Jainism","valdn":""},
+        
+            {"text":"Others-Specify","value":"Others-Specify","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherReligion",
+        "type":"text",
+        "valdn":"required",
+        "label":"Specify any other religion followed if not specified in previous question",
+        "flow":"data.religion=='Others-Specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"caste",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Specify the caste of the household",
+        "flow":"data.religion=='Hinduism'",
+        "value":"",
+        "items":[
+        
+            {"text":"Maratha","value":"Maratha","valdn":""},
+        
+            {"text":"Brahman","value":"Brahman","valdn":""},
+        
+            {"text":"Dhangar","value":"Dhangar","valdn":""},
+        
+            {"text":"Lingayat","value":"Lingayat","valdn":""},
+        
+            {"text":"Mahar","value":"Mahar","valdn":""},
+        
+            {"text":"Mali","value":"Mali","valdn":""},
+        
+            {"text":"Mang","value":"Mang","valdn":""},
+        
+            {"text":"Others-Specify","value":"Others-Specify","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherCaste",
+        "type":"text",
+        "valdn":"required",
+        "label":"Specify any other caste followed if not specified in previous question",
+        "flow":"data.caste=='Others-Specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"benefitGovtScheme",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"Is the household receiving from any Government sponsored scheme?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"None","value":"None","valdn":""},
+        
+            {"text":"Below Poverty Line (BPL) Card Holder","value":"Below Poverty Line (BPL) Card Holder","valdn":""},
+        
+            {"text":"Rajiv Gandhi Health Insurance Scheme","value":"Rajiv Gandhi Health Insurance Scheme","valdn":""},
+        
+            {"text":"Janani Suraksha Yojana (JSY)","value":"Janani Suraksha Yojana (JSY)","valdn":""},
+        
+            {"text":"Mahatma Gandhi National Rural Employment Guarantee Act (NREGA)","value":"Mahatma Gandhi National Rural Employment Guarantee Act (NREGA)","valdn":""},
+        
+            {"text":"Pradhan MantriRozgarYojna(PMRY)","value":"Pradhan MantriRozgarYojna(PMRY)","valdn":""},
+        
+            {"text":"Others- Specify","value":"Others- Specify","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherGovtScheme",
+        "type":"text",
+        "valdn":"required",
+        "label":"If any other Government scheme then please specify",
+        "flow":"data.benefitGovtScheme!='None' && data.benefitGovtScheme=='Others- Specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"totalMembers",
+        "type":"text",
+        "valdn":"between[1:99],required",
+        "label":"Total Number of members living together in a household",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

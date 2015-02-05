@@ -2,30 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3ada71-5dfc-4d22-84bb-3de1c17463aa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/home/home.spec.coffee" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/auth/accessLevel.js" afterPath="$PROJECT_DIR$/src/common/security/auth/accessLevel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/auth/auth.coffee" afterPath="$PROJECT_DIR$/src/common/security/auth/auth.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/auth/authDefaultConfig.coffee" afterPath="$PROJECT_DIR$/src/common/security/auth/authDefaultConfig.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/auth/authService.js" afterPath="$PROJECT_DIR$/src/common/security/auth/authService.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/auth/routingConfig.js" afterPath="$PROJECT_DIR$/src/common/security/auth/routingConfig.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/forgotPassword/forgotPassword.coffee" afterPath="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/forgotPassword/forgotPassword.jade" afterPath="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/forgotPassword/forgotPasswordCtrl.coffee" afterPath="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPasswordCtrl.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/login/login.coffee" afterPath="$PROJECT_DIR$/src/common/security/login/login.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/login/login.jade" afterPath="$PROJECT_DIR$/src/common/security/login/login.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/login/loginCtrl.coffee" afterPath="$PROJECT_DIR$/src/common/security/login/loginCtrl.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/navigation/navigation.js" afterPath="$PROJECT_DIR$/src/common/security/navigation/navigation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/register/register.coffee" afterPath="$PROJECT_DIR$/src/common/security/register/register.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/register/register.jade" afterPath="$PROJECT_DIR$/src/common/security/register/register.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/register/registerCtrl.coffee" afterPath="$PROJECT_DIR$/src/common/security/register/registerCtrl.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/security.js" afterPath="$PROJECT_DIR$/src/common/security/security.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/security/security.spec.js" afterPath="$PROJECT_DIR$/src/common/security/security.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/pics/female.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/pics/male.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/ui-grid.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/ui-grid.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboardService/dashboardService.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ngcamera/ngcamera.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ngcamera/ngcamera.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/photoConsent/photoConsent.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/photoConsent/photoConsent.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/ui-grid.svg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/dashboard/chartService/chartDataTransformer.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/dashboard/chartService/chartService.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/dashboard/chartService/test/chartDataTransformer.spec.coffee" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/app/camera/DataUrlToBlob.coffee" afterPath="$PROJECT_DIR$/src/app/ngcamera/DataUrlToBlob.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.coffee" afterPath="$PROJECT_DIR$/src/app/app.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/appCtrl.coffee" afterPath="$PROJECT_DIR$/src/app/appCtrl.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" afterPath="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.coffee" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.jade" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/dashboard/dashboardCtrl.coffee" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboardCtrl.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade" afterPath="$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/enum/enumRoutes.js" afterPath="$PROJECT_DIR$/src/app/enum/enumRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/formTemplates/ffqForm.jade" afterPath="$PROJECT_DIR$/src/app/formTemplates/ffqForm.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/fileUploadService/fileUploadService.coffee" afterPath="$PROJECT_DIR$/src/common/fileUploadService/fileUploadService.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.coffee" afterPath="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.jade" afterPath="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/hc/hcRoutes.js" afterPath="$PROJECT_DIR$/src/app/hc/hcRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/idService/idService.coffee" afterPath="$PROJECT_DIR$/src/common/idService/idService.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/jsonSchemaListService/jsonSchemaListService.coffee" afterPath="$PROJECT_DIR$/src/common/jsonSchemaListService/jsonSchemaListService.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/security/login/login.coffee" afterPath="$PROJECT_DIR$/src/common/security/login/login.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/security/login/login.jade" afterPath="$PROJECT_DIR$/src/common/security/login/login.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/security/login/loginCtrl.coffee" afterPath="$PROJECT_DIR$/src/common/security/login/loginCtrl.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/main.less" afterPath="$PROJECT_DIR$/src/less/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/tpls/pageDetail.jade" afterPath="$PROJECT_DIR$/src/app/tpls/pageDetail.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" afterPath="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/sync/progressService/progressService.coffee" afterPath="$PROJECT_DIR$/src/common/sync/progressService/progressService.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/security/register/register.coffee" afterPath="$PROJECT_DIR$/src/common/security/register/register.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/security/register/register.jade" afterPath="$PROJECT_DIR$/src/common/security/register/register.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/report/report.coffee" afterPath="$PROJECT_DIR$/src/app/report/report.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/report/report.jade" afterPath="$PROJECT_DIR$/src/app/report/report.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/report/reportCtrl.coffee" afterPath="$PROJECT_DIR$/src/app/report/reportCtrl.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/sideMenu/sideMenu.coffee" afterPath="$PROJECT_DIR$/src/common/sideMenu/sideMenu.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/stateTransitions/stateTransitions.coffee" afterPath="$PROJECT_DIR$/src/app/stateTransitions/stateTransitions.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/sync/sync.coffee" afterPath="$PROJECT_DIR$/src/common/sync/sync.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/sync/sync.jade" afterPath="$PROJECT_DIR$/src/common/sync/sync.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/sync/syncCtrl.coffee" afterPath="$PROJECT_DIR$/src/common/sync/syncCtrl.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ui.iws" />
@@ -50,22 +77,112 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sync.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/sync/sync.coffee">
+      <file leaf-file-name="login.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/security/login/login.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sync.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/sync/sync.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <caret line="4" column="49" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="progressService.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/sync/progressService/progressService.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginCtrl.coffee" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/common/security/login/loginCtrl.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3288364" vertical-offset="0" max-vertical-offset="593">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/report/report.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reportCtrl.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/report/reportCtrl.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ffqForm.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/formTemplates/ffqForm.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageDetailNavDisabled.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ffqFormDirective.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tpls/ffqFormDirective.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stateTransitions.coffee" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/stateTransitions/stateTransitions.coffee">
+      <file leaf-file-name="templates-app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/templates-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5311973" vertical-offset="0" max-vertical-offset="720">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1384" max-vertical-offset="4875">
+              <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
+              <folding>
+                <marker date="1423158837619" expanded="true" signature="2892:2931" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="5262:5303" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="8100:8141" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="10917:10956" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="16823:16839" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="17489:17505" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="17824:17840" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="18131:18161" placeholder="..." />
+                <marker date="1423158837619" expanded="true" signature="18549:18565" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,57 +195,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/dashboard/dashboardCtrl.coffee" />
-        <option value="$PROJECT_DIR$/src/app/home/home.coffee" />
-        <option value="$PROJECT_DIR$/src/app/hc/hcCtrl.js" />
-        <option value="$PROJECT_DIR$/src/app/formTemplates/medicalHistoryForm.jade" />
-        <option value="$PROJECT_DIR$/src/app/hc/hc.jade" />
-        <option value="$PROJECT_DIR$/src/app/hc/hcCtrl.coffee" />
-        <option value="$PROJECT_DIR$/src/app/appCtrl.coffee" />
-        <option value="$PROJECT_DIR$/src/app/stateTransitions/stateTransitions.coffee" />
-        <option value="$PROJECT_DIR$/src/app/tpls/ffqFormDirective.html" />
-        <option value="$PROJECT_DIR$/src/app/tpls/ffqOtherFormDirective.html" />
-        <option value="$PROJECT_DIR$/src/app/tpls/fmhDiseaseFormDirective.html" />
-        <option value="$PROJECT_DIR$/src/app/tpls/resampling.html" />
-        <option value="$PROJECT_DIR$/src/app/camera/DataUrlToBlob.coffee" />
-        <option value="$PROJECT_DIR$/src/app/dashboard/chartService/chartDataTransformer.coffee" />
-        <option value="$PROJECT_DIR$/src/app/dashboard/chartService/test/chartDataTransformer.spec.coffee" />
-        <option value="$PROJECT_DIR$/src/app/dashboard/chartService/chartService.coffee" />
-        <option value="$PROJECT_DIR$/src/app/enum/enum.coffee" />
-        <option value="$PROJECT_DIR$/src/common/routeConfigHandler/routeConfigHandler.coffee" />
-        <option value="$PROJECT_DIR$/src/app/security/login/login.coffee" />
-        <option value="$PROJECT_DIR$/src/app/security/login/loginCtrl.coffee" />
-        <option value="$PROJECT_DIR$/vendor/cgGrid/dist/cgGrid-tpls-0.1.0.js" />
-        <option value="$PROJECT_DIR$/src/common/schemaLoader/schemaLoader.coffee" />
-        <option value="$PROJECT_DIR$/src/app/appRun.coffee" />
-        <option value="$PROJECT_DIR$/src/app/enum/enumRoutes.js" />
-        <option value="$PROJECT_DIR$/src/app/hc/hc.coffee" />
-        <option value="$PROJECT_DIR$/src/app/tpls/dataGridCentered.jade" />
-        <option value="$PROJECT_DIR$/src/app/security/login/login.jade" />
-        <option value="$PROJECT_DIR$/src/assets/jsonSchema/enum.visitDetail.basicInf.json" />
+        <option value="$PROJECT_DIR$/src/common/security/register/register.coffee" />
+        <option value="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.coffee" />
         <option value="$PROJECT_DIR$/src/app/tpls/dataGrid.jade" />
-        <option value="$PROJECT_DIR$/src/less/main.less" />
         <option value="$PROJECT_DIR$/src/app/tpls/pageDetail.jade" />
-        <option value="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" />
-        <option value="$PROJECT_DIR$/src/common/backSpaceNav/backSpaceNav.coffee" />
-        <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/app/app.coffee" />
-        <option value="$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee" />
-        <option value="$PROJECT_DIR$/src/app/appService.coffee" />
         <option value="$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade" />
-        <option value="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/src/app/tpls/ffqFormDirective.jade" />
-        <option value="$PROJECT_DIR$/src/app/tpls/ffqOtherFormDirective.jade" />
-        <option value="$PROJECT_DIR$/src/app/tpls/alcoholFormDirective.jade" />
-        <option value="$PROJECT_DIR$/src/app/tpls/fmhDiseaseFormDirective.jade" />
-        <option value="$PROJECT_DIR$/src/app/hc/hcRoutes.js" />
-        <option value="$PROJECT_DIR$/src/app/formTemplates/alcoholForm.jade" />
-        <option value="$PROJECT_DIR$/src/app/formTemplates/ffqOtherForm.jade" />
-        <option value="$PROJECT_DIR$/src/app/formTemplates/ffqForm.jade" />
+        <option value="$PROJECT_DIR$/src/common/security/forgotPassword/forgotPassword.jade" />
+        <option value="$PROJECT_DIR$/src/common/security/register/register.jade" />
+        <option value="$PROJECT_DIR$/src/common/focus/focus.coffee" />
+        <option value="$PROJECT_DIR$/src/app/enum/enumRoutes.js" />
+        <option value="$PROJECT_DIR$/src/app/stateTransitions/stateTransitions.coffee" />
+        <option value="$PROJECT_DIR$/src/common/idService/idService.coffee" />
+        <option value="$PROJECT_DIR$/src/app/appCtrl.coffee" />
+        <option value="$PROJECT_DIR$/src/app/camera/cameraDialog.jade" />
+        <option value="$PROJECT_DIR$/src/app/camera/camera.coffee" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/ngcamera/DataUrlToBlob.coffee" />
+        <option value="$PROJECT_DIR$/src/app/ngcamera/ngcamera.coffee" />
+        <option value="$PROJECT_DIR$/src/app/photoConsent/photoConsent.jade" />
         <option value="$PROJECT_DIR$/src/common/fileUploadService/fileUploadService.coffee" />
+        <option value="$PROJECT_DIR$/src/app/photoConsent/photoConsent.coffee" />
+        <option value="$PROJECT_DIR$/src/assets/jsonSchema/hc.ffqDetail.invitationCard.json" />
+        <option value="$PROJECT_DIR$/src/app/hc/hcRoutes.js" />
+        <option value="$PROJECT_DIR$/src/app/report/report.jade" />
+        <option value="$PROJECT_DIR$/src/common/sideMenu/sideMenu.coffee" />
+        <option value="$PROJECT_DIR$/src/common/sideMenu/sideMenu.jade" />
+        <option value="$PROJECT_DIR$/src/app/report/report.coffee" />
         <option value="$PROJECT_DIR$/src/common/jsonSchemaListService/jsonSchemaListService.coffee" />
+        <option value="$PROJECT_DIR$/src/app/dashboard/chartService/chartDataTransformer.coffee" />
+        <option value="$PROJECT_DIR$/src/app/dashboard/chartService/chartService.coffee" />
+        <option value="$PROJECT_DIR$/src/less/main.less" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/src/app/dashboard/dashboard.less" />
+        <option value="$PROJECT_DIR$/build/src/app/dashboard/dashboardService/dashboardService.js" />
+        <option value="$PROJECT_DIR$/src/app/dashboard/dashboard.jade" />
+        <option value="$PROJECT_DIR$/src/app/dashboard/dashboard.coffee" />
+        <option value="$PROJECT_DIR$/src/app/dashboard/dashboardCtrl.coffee" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js" />
+        <option value="$PROJECT_DIR$/src/app/dashboard/dashboardService/dashboardService.coffee" />
+        <option value="$PROJECT_DIR$/src/common/dataSync/progressService/progressService.coffee" />
+        <option value="$PROJECT_DIR$/src/common/dataSync/sync.coffee" />
+        <option value="$PROJECT_DIR$/src/app/app.coffee" />
+        <option value="$PROJECT_DIR$/src/common/sync/sync.coffee" />
+        <option value="$PROJECT_DIR$/src/common/sync/syncCtrl.coffee" />
+        <option value="$PROJECT_DIR$/src/common/security/login/login.jade" />
+        <option value="$PROJECT_DIR$/src/common/sync/sync.jade" />
         <option value="$PROJECT_DIR$/src/common/sync/progressService/progressService.coffee" />
+        <option value="$PROJECT_DIR$/src/app/report/reportCtrl.coffee" />
+        <option value="$PROJECT_DIR$/src/app/formTemplates/ffqForm.jade" />
+        <option value="$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade" />
+        <option value="$PROJECT_DIR$/src/common/security/login/loginCtrl.coffee" />
       </list>
     </option>
   </component>
@@ -355,7 +472,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,6 +493,10 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formTemplates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -394,24 +515,23 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/assets/pics" />
       <recent name="$PROJECT_DIR$/src/assets/imgs" />
       <recent name="$PROJECT_DIR$/src/app/security/forgotPassword" />
       <recent name="$PROJECT_DIR$/src/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/dataSync" />
       <recent name="$PROJECT_DIR$/src/common" />
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -419,6 +539,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -503,7 +627,13 @@
       <option name="project" value="LOCAL" />
       <updated>1422356405270</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore(project structure): Move security module to common">
+      <created>1422420413331</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1422420413331</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -532,26 +662,49 @@
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18387097" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28870967" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.407767" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28870967" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.407767" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -575,350 +728,394 @@
     <MESSAGE value="chore(cgForm): update cgForm with Bootstrap3 widgets" />
     <MESSAGE value="chore(styles): change styles for templates" />
     <MESSAGE value="chore(styles): Add bootstrap classes for form elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore(styles): Add bootstrap classes for form elements" />
+    <MESSAGE value="chore(project structure): Move security module to common" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(project structure): Move security module to common" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/hc/hc.coffee">
+    <entry file="file://$PROJECT_DIR$/src/common/security/login/loginCtrl.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4248366" vertical-offset="0" max-vertical-offset="459">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/security/login/login.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45751634" vertical-offset="0" max-vertical-offset="459">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="360">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/security/login/login.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29372197" vertical-offset="4" max-vertical-offset="450">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="450">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/enum/enumRoutes.js">
+    <entry file="file://$PROJECT_DIR$/src/common/security/login/login.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1869" max-vertical-offset="3075">
-          <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/jsonSchema/enum.visitDetail.basicInf.json">
+    <entry file="file://$PROJECT_DIR$/node_modules/grunt-express/node_modules/connect/node_modules/serve-index/public/icons/page_key.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ngcamera/DataUrlToBlob.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51724136" vertical-offset="0" max-vertical-offset="2055">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+    <entry file="file://$PROJECT_DIR$/src/app/ngcamera/ngcamera.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12162162" vertical-offset="411" max-vertical-offset="915">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.21276596" vertical-offset="0" max-vertical-offset="423">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/jsonSchema/enum.deathDetail.basicInf.json">
+    <entry file="file://$PROJECT_DIR$/src/common/fileUploadService/fileUploadService.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3075">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/vendor/angularjs-toaster/toaster.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67741936" vertical-offset="240" max-vertical-offset="855">
-          <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.6976744" vertical-offset="0" max-vertical-offset="3555">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGridCtrl.coffee">
+    <entry file="file://$PROJECT_DIR$/src/app/photoConsent/photoConsent.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8588957" vertical-offset="0" max-vertical-offset="720">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.17201835" vertical-offset="0" max-vertical-offset="436">
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/enum/dataGrid/dataGrid.jade">
+    <entry file="file://$PROJECT_DIR$/src/app/ngcamera/ngcamera.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30674848" vertical-offset="0" max-vertical-offset="489">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.7912844" vertical-offset="0" max-vertical-offset="675">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js">
+    <entry file="file://$PROJECT_DIR$/src/app/photoConsent/photoConsent.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31512606" vertical-offset="0" max-vertical-offset="14175">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state vertical-scroll-proportion="1.1697248" vertical-offset="0" max-vertical-offset="600">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/vendor/angularjs-toaster/toaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72164947" vertical-offset="1015" max-vertical-offset="10380">
-          <caret line="91" column="58" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/alcoholFormDirective.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGrid.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/dataGridCentered.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/ffqFormDirective.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
-          <caret line="0" column="51" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/ffqOtherFormDirective.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/fmhDiseaseFormDirective.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
-          <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.47990543" vertical-offset="2602" max-vertical-offset="3180">
+          <caret line="187" column="33" selection-start-line="187" selection-start-column="33" selection-end-line="187" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetail.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/resampling.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/standardFormDirective.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tpls/surveyFormDirective.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
-          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+          <caret line="1" column="66" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/hc/hcRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5281837" vertical-offset="1712" max-vertical-offset="4470">
-          <caret line="131" column="44" selection-start-line="131" selection-start-column="44" selection-end-line="131" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/formTemplates/alcoholForm.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4828326" vertical-offset="0" max-vertical-offset="466">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3730" max-vertical-offset="4485">
+          <caret line="258" column="41" selection-start-line="258" selection-start-column="41" selection-end-line="258" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/formTemplates/ffqOtherForm.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38841203" vertical-offset="14" max-vertical-offset="480">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/formTemplates/medicalHistoryForm.jade">
+    <entry file="file://$PROJECT_DIR$/src/common/sideMenu/sideMenu.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77253217" vertical-offset="0" max-vertical-offset="466">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="436">
+          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/formTemplates/ffqForm.jade">
+    <entry file="file://$PROJECT_DIR$/src/common/sideMenu/sideMenu.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45064378" vertical-offset="0" max-vertical-offset="466">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.coffee">
+    <entry file="file://$PROJECT_DIR$/src/common/sideMenu/sideMenu.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.19027483" vertical-offset="0" max-vertical-offset="473">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.spec.coffee">
+    <entry file="file://$PROJECT_DIR$/src/app/report/report.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/appCtrl.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.09513742" vertical-offset="0" max-vertical-offset="473">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/appRun.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/appService.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/backSpaceNav/backSpaceNav.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/focus/focus.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/idService/idService.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/fileUploadService/fileUploadService.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/jquery/jquery.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/appCtrl.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jQuery/src/ajax/jsonp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/jsonSchemaListService/jsonSchemaListService.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/lodash/lodash.coffee">
+    <entry file="file://$PROJECT_DIR$/vendor/angular-ui-grid/ui-grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="262770">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6145833" vertical-offset="49" max-vertical-offset="930">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4295612" vertical-offset="1119" max-vertical-offset="10395">
+          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/angular-ui-grid/ui-grid.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="13.77551" vertical-offset="720" max-vertical-offset="18675">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/angular-ui-grid/ui-grid.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dashboard/dashboard.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08302583" vertical-offset="0" max-vertical-offset="542">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7083333" vertical-offset="241" max-vertical-offset="1080">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dashboard/dashboard.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/jsonSchema/enum.houseDetail.basicInf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4074074" vertical-offset="1359" max-vertical-offset="2775">
+          <caret line="106" column="8" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/jsonSchema/enum.householdDetail.basicInf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06137184" vertical-offset="1796" max-vertical-offset="6375">
+          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/cgForm/dist/cgForm-tpls-0.1.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="14190">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dashboard/dashboardService/dashboardService.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40966386" vertical-offset="0" max-vertical-offset="476">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dashboard/dashboard.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22058824" vertical-offset="0" max-vertical-offset="476">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/dashboard/dashboardCtrl.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46700507" vertical-offset="159" max-vertical-offset="750">
+          <caret line="29" column="5" selection-start-line="26" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/sync/sync.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35413152" vertical-offset="0" max-vertical-offset="593">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/schemaLoader/schemaLoader.coffee">
+    <entry file="file://$PROJECT_DIR$/src/common/security/login/login.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22765599" vertical-offset="0" max-vertical-offset="593">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/sync/sync.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/sync/syncCtrl.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="915">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1050">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/sync/sync.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/security/login/login.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/sync/progressService/progressService.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45531198" vertical-offset="0" max-vertical-offset="593">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/routeConfigHandler/routeConfigHandler.coffee">
+    <entry file="file://$PROJECT_DIR$/src/app/report/report.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/report/reportCtrl.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/templates-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1384" max-vertical-offset="4875">
+          <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
+          <folding>
+            <marker date="1423158837619" expanded="true" signature="2892:2931" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="5262:5303" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="8100:8141" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="10917:10956" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="16823:16839" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="17489:17505" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="17824:17840" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="18131:18161" placeholder="..." />
+            <marker date="1423158837619" expanded="true" signature="18549:18565" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tpls/ffqFormDirective.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/sync/sync.coffee">
+    <entry file="file://$PROJECT_DIR$/src/app/formTemplates/ffqForm.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="593">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/stateTransitions/stateTransitions.coffee">
+    <entry file="file://$PROJECT_DIR$/src/app/tpls/pageDetailNavDisabled.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5311973" vertical-offset="0" max-vertical-offset="720">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/security/login/loginCtrl.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3288364" vertical-offset="0" max-vertical-offset="593">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

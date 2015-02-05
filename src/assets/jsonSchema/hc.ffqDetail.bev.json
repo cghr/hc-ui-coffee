@@ -1,0 +1,204 @@
+{
+"schemaName":"hc.ffqDetail.bev",
+"onSave":"hc.ffqDetail.cls",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqBeverages",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"milkCow",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Milk",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Glass","value":"Glass","valdn":""},
+        
+            {"text":"Cup (Big)","value":"Cup (Big)","valdn":""},
+        
+            {"text":"Cup (Medium)","value":"Cup (Medium)","valdn":""},
+        
+            {"text":"Cup (Small)","value":"Cup (Small)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tea",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Tea",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Glass","value":"Glass","valdn":""},
+        
+            {"text":"Cup (Big)","value":"Cup (Big)","valdn":""},
+        
+            {"text":"Cup (Medium)","value":"Cup (Medium)","valdn":""},
+        
+            {"text":"Cup (Small)","value":"Cup (Small)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"coffee",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Coffee",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Glass","value":"Glass","valdn":""},
+        
+            {"text":"Cup (Big)","value":"Cup (Big)","valdn":""},
+        
+            {"text":"Cup (Medium)","value":"Cup (Medium)","valdn":""},
+        
+            {"text":"Cup (Small)","value":"Cup (Small)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

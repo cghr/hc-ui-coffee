@@ -73,7 +73,7 @@ angular.module('hcRoutes', [])
             },
             {
                 name: 'visitDetail',
-                url: '/area/:areaId/house/:houseId/household/:householdId/visit',
+                url: '/area/:areaId/house/:houseId/household/:householdId/visit/:visitId',
                 tpl: 'tpls/pageDetail.jade',
                 title: '',
                 prevState: {name: 'hc.householdDetail.visit', title: 'Visits'},
@@ -171,17 +171,18 @@ angular.module('hcRoutes', [])
                         title: '12.Daily Physical Activities'
                     },
                     {
-                        name: 'bp2',
-                        url: '/bp2',
-                        tpl: 'tpls/surveyFormDirective.jade',
-                        title: '13.Repetition of Bio measurements'
-                    },
-                    {
                         name: 'mood',
                         url: '/mood',
                         tpl: 'tpls/surveyFormDirective.jade',
-                        title: '14.General Mood participants'
+                        title: '13.General Mood participants'
+                    },
+                    {
+                        name: 'bp2',
+                        url: '/bp2',
+                        tpl: 'tpls/surveyFormDirective.jade',
+                        title: '14.Repetition of Bio measurements'
                     }
+
 
 
                 ]
@@ -191,7 +192,7 @@ angular.module('hcRoutes', [])
                 url: '/area/:areaId/house/:houseId/household/:householdId/ffq/:memberId',
                 tpl: 'tpls/pageDetailNavDisabled.jade',
                 title: 'FFQ Detail',
-                prevState: {name: 'hc.householdDetail.ffq', title: 'FFQ'},
+                prevState: {name: '', title: 'FFQ'},
                 children: [
                     {
                         name: 'general',
@@ -268,7 +269,7 @@ angular.module('hcRoutes', [])
                     {
                         name: 'others',
                         url: '/others',
-                        tpl: 'tpls/ffqOtherFormDirective.jade',
+                        tpl: 'tpls/surveyFormDirective.jade',
                         title: '13.Other Items'
                     },
                     {

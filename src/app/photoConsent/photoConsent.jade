@@ -1,0 +1,7 @@
+.well(ng-controller='PhotoConsentCtrl')
+    ol
+        li(ng-repeat='capture in photoCaptures')
+            a(href='', ng-click='open(capture.type)') {{capture.msg}}
+            span.label.label-success(ng-show='memberImage[capture.type]')  Completed
+            span.label.label-danger(ng-hide='memberImage[capture.type]')   Pending
+    a.btn.btn-primary(ui-sref='hc.memberDetail.photo') Next &raquo;

@@ -1,6 +1,6 @@
 {
   "name": "myApp",
-  "version": "0.0.1",
+  "version": "0.0.1-rc3",
   "author": "ravitejvaranasi@gmail.com",
     "devDependencies": {
       "grunt": "~0.4.2",

@@ -1,0 +1,232 @@
+{
+"schemaName":"hc.ffqDetail.nonveg",
+"onSave":"hc.ffqDetail.sweets",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqNonVeg",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"egg",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Egg Burgi/Omlet/Curry",
+        "flow":"data.typeFood!='Veg' ",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"mutton",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Mutton",
+        "flow":"data.typeFood!='Veg' ",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fish",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Fish",
+        "flow":"data.typeFood!='Veg' ",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chicken",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Chicken",
+        "flow":"data.typeFood!='Veg' ",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

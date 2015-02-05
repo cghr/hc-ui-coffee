@@ -1,14 +1,16 @@
 do (app = angular.module "myApp", [
-  #'security'
-  'myApp.dashboard'
+  'photoConsent'
+  'ngcamera'
+  'dashboard'
+  'security'
+  'myApp.focus'
   'myApp.stateTransitions'
   'myApp.report'
-  'myApp.sync'
+  'sync'
   'enum'
   'hc'
   'myApp.appService'
   'myApp.idService'
-  'myApp.home'
   'myApp.jsonSchemaListService'
   'myApp.schemaLoader'
   'templates-app'
@@ -24,7 +26,7 @@ do (app = angular.module "myApp", [
 
     $urlRouterProvider.otherwise '/enum/area'
 
-    isDevEnv = -> /900*/.test(window.location.href)
+    isDevEnv = -> /7000/.test(window.location.href)
 
     isRESTRequest = (url) -> /api*/.test(url)
 

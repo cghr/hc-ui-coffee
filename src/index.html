@@ -17,27 +17,42 @@
     <script type="text/javascript" src="<%= file %>"></script>
     <% }); %>
 </head>
-<body>
+
+<body oncopy="return false" oncut="return false" onpaste="return false">
+
+<h4 access-level="accessLevels.anon" align="center">Version 1.0</h4>
+<!-- Div for displaying toast messages -->
+<toaster-container toaster-options="{'time-out': 4000}"></toaster-container>
 <header>
-    <nav class="container navbar-default ">
-    <!--<nav class="container navbar-default" ng-controller="NavCtrl as NavCtrl" access-level="accessLevels.user">-->
+    <!--<nav class="container navbar-default ">-->
+    <nav class="container navbar-default" ng-controller="NavCtrl as NavCtrl" access-level="accessLevels.user">
         <ul class="nav navbar-nav ">
             <li>
                 <a class="navbar-brand" href="#">ISHA</a>
             </li>
             <li ng-class="{active:$state.includes('enum')}">
-                <a ui-sref="enum.area">Enum</a>
+                <a ui-sref="enum.area">Enumeration</a>
             </li>
             <li ng-class="{active:$state.includes('hc')}">
                 <a ui-sref="hc.area">Household Questionnaire</a>
+            </li>
+            <li ng-class="{active:$state.includes('dashboard')}">
+                <a href="#/dashboard">Dashboard</a>
+            </li>
+            <li ng-class="{active:$state.includes('report')}">
+                <a href="#/report/11">Reports</a>
             </li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <!--<a href="" ng-click="NavCtrl.logout()">Logout</a>-->
-                <a href="">Logout</a>
+                <a href="#/sync">Synchronize</a>
             </li>
+            <li>
+                <a href="" ng-click="NavCtrl.logout()">Logout</a>
+                <!--<a href="">Logout</a>-->
+            </li>
+
 
         </ul>
     </nav>

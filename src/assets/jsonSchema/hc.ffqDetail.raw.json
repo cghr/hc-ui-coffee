@@ -1,0 +1,256 @@
+{
+"schemaName":"hc.ffqDetail.raw",
+"onSave":"hc.ffqDetail.fruits",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqRaw",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"rawMethi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Methi",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"gawarisheng",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Gawari sheng",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kakadi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Kakadi",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kande",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Kande",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"lasun",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Lasun",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

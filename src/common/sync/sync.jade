@@ -1,26 +1,23 @@
-div(ng-hide="alert.type")
-   alert(type="'info'")
-    i.icon.icon-refresh Checking Wifi Connectivity
-
-div(ng-show="alert.type")
-   alert(type="alert.type")
-    i(class="icon {{alert.icon}}") {{alert.msg}}
-
-div
-   button(ng-click="startSync()",ng-show="alert.type=='success'",class="btn btn-primary")
-    i(class="icon icon-refresh icon-white")
-      span Synchronize
-
-p Download
-progressbar(class="progress-striped active",value="pending.download",max="total.download",type="info")
- i {{progress.download}}
+.container(style="margin-top:10px")
 
 
-p Upload
-progressbar(class="progress-striped active",value="pending.upload",max="total.upload",type="info")
-   i {{progress.upload}}
+    //Network status
+    div.alert.alert-danger(ng-hide="networkStatus") Wifi Network Not Connected
+    div.alert.alert-success(ng-show="networkStatus") Wifi Connected Successfully
+
+    div
+        button.btn.btn-primary(ng-click="startSync()",ng-disabled="syncRequestActive",ng-show="networkStatus || user.role.title =='manager' ") Synchronize
 
 
-p FileUpload
-progressbar(class="progress-striped active",value="pending.fileupload",max="total.fileupload",type="info")
-   i {{progress.fileupload}}
+    div(style="margin-top:10px")
+        p Download
+        progressbar.progress-striped.active(value="progress.download",type="info") {{progress.download}}
+
+        p Upload
+        progressbar.progress-striped.active(value="progress.upload",type="info") {{progress.upload}}
+
+        p FileUpload
+        progressbar.progress-striped.active(value="progress.fileupload",type="info") {{progress.fileupload}}
+
+
+    h4 Pending Uploads({{pendingUploads}})

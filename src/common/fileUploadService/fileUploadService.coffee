@@ -1,4 +1,4 @@
-do(app = angular.module('myApp.fileUploadService', ['toaster'])) ->
+do(app = angular.module('fileUploadService', ['toaster'])) ->
 
 
   app.factory 'FileUploadService', ($http, toaster) ->
@@ -12,6 +12,9 @@ do(app = angular.module('myApp.fileUploadService', ['toaster'])) ->
 
     upload: (formData, entity)->
       $http.post(url + entity, formData, config)
-      .success -> toaster.pop 'success', '', 'Uploaded Successfully'
-      .error -> toaster.pop 'error', '', 'Error while uploading'
+      .success ->
+        console.log('success')
+        toaster.pop 'success', '', 'Uploaded Successfully'
+      .error ->
+        toaster.pop 'error', '', 'Error while uploading'
 

@@ -1,0 +1,266 @@
+{
+"schemaName":"hc.ffqDetail.sweets",
+"onSave":"hc.ffqDetail.spicemix",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqSweets",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"gulwani",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Gulwani",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"Jalebi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Jalebi",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ladubundhi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Ladu Bundhi",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pooranpoli",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Pooran Poli",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"shira",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Shira",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Dish","value":"Dish","valdn":""},
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

@@ -1,0 +1,400 @@
+{
+"schemaName":"hc.memberDetail.basicInf",
+"onSave":"",
+"condition":"data.consentStatus=='Yes'",
+"success":"hc.memberDetail.cam",
+"fail":"hc.householdDetail.member",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"hcMember",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surveyor",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"user.id",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"basicInf",
+        "type":"heading",
+        "valdn":"",
+        "label":"Basic Information",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"consentStatus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Detailed consent form signed",
+        "flow":"data.hhVisit=='Available'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":""},
+        
+            {"text":"No","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"noConsent",
+        "type":"text",
+        "valdn":"required",
+        "label":"If no, please provide a reason for no consent",
+        "flow":"data.consentStatus=='No'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationship",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Relationship with the head of the Family: ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Self","value":"Self","valdn":""},
+        
+            {"text":"Spouse","value":"Spouse","valdn":""},
+        
+            {"text":"Son","value":"Son","valdn":""},
+        
+            {"text":"Brother","value":"Brother","valdn":""},
+        
+            {"text":"Father","value":"Father","valdn":""},
+        
+            {"text":"Grandson","value":"Grandson","valdn":""},
+        
+            {"text":"Son-in-law","value":"Son-in-law","valdn":""},
+        
+            {"text":"Others","value":"Others","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"hcMember","field":"count(*) headCount","ref":"householdId","condition":"headCount==0","whereCondition":"relationship='Self'"},
+        
+        {"entity":"member","field":"gender","ref":"memberId","condition":"gender=='Male'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationship",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Relationship with the head of the Family: ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spouse","value":"Spouse","valdn":""},
+        
+            {"text":"Son","value":"Son","valdn":""},
+        
+            {"text":"Brother","value":"Brother","valdn":""},
+        
+            {"text":"Father","value":"Father","valdn":""},
+        
+            {"text":"Grandson","value":"Grandson","valdn":""},
+        
+            {"text":"Son-in-law","value":"Son-in-law","valdn":""},
+        
+            {"text":"Others","value":"Others","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"hcMember","field":"count(*) headCount","ref":"householdId","condition":"headCount!=0","whereCondition":"relationship='Self'"},
+        
+        {"entity":"member","field":"gender","ref":"memberId","condition":"gender=='Male'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationship",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Relationship with the head of the Family: ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Self","value":"Self","valdn":""},
+        
+            {"text":"Spouse","value":"Spouse","valdn":""},
+        
+            {"text":"Daughter","value":"Daughter","valdn":""},
+        
+            {"text":"Sister","value":"Sister","valdn":""},
+        
+            {"text":"Mother","value":"Mother","valdn":""},
+        
+            {"text":"Granddaughter","value":"Granddaughter","valdn":""},
+        
+            {"text":"Daughter-in-law","value":"Daughter-in-law","valdn":""},
+        
+            {"text":"Others","value":"Others","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"hcMember","field":"count(*) headCount","ref":"householdId","condition":"headCount==0","whereCondition":"relationship='Self'"},
+        
+        {"entity":"member","field":"gender","ref":"memberId","condition":"gender=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationship",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Relationship with the head of the Family: ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spouse","value":"Spouse","valdn":""},
+        
+            {"text":"Daughter","value":"Daughter","valdn":""},
+        
+            {"text":"Sister","value":"Sister","valdn":""},
+        
+            {"text":"Mother","value":"Mother","valdn":""},
+        
+            {"text":"Granddaughter","value":"Granddaughter","valdn":""},
+        
+            {"text":"Daughter-in-law","value":"Daughter-in-law","valdn":""},
+        
+            {"text":"Others","value":"Others","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"hcMember","field":"count(*) headCount","ref":"householdId","condition":"headCount!=0","whereCondition":"relationship='Self'"},
+        
+        {"entity":"member","field":"gender","ref":"memberId","condition":"gender=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

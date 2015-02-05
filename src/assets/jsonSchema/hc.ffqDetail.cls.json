@@ -1,0 +1,232 @@
+{
+"schemaName":"hc.ffqDetail.cls",
+"onSave":"hc.ffqDetail.pls",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqCereals",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"jwari",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Bhakari (Jwari)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"makka",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Bhakari (Makka)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chapati",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Chapati",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"rice",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Rice",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Number","value":"Number","valdn":""},
+        
+            {"text":"Wati","value":"Wati","valdn":""},
+        
+            {"text":"Dish","value":"Dish","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

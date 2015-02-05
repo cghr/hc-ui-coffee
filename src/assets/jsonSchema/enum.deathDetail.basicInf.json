@@ -1,0 +1,200 @@
+{
+"schemaName":"enum.deathDetail.basicInf",
+"onSave":"enum.householdDetail.death",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"householdDeath",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"name",
+        "type":"text",
+        "valdn":"alpha,minlength[3],required",
+        "label":"Name(s) of the deceased?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"age",
+        "type":"select_text",
+        "valdn":"between[1:99],required",
+        "label":"Age at the time of death? (in completed years)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:30],required"},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required"},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:99],required"}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"gender",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Gender of the deceased?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Male","value":"Male","valdn":""},
+        
+            {"text":"Female","value":"Female","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"reasonWomenDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If female, was this death for any of the following reasons?",
+        "flow":"data.gender=='Female' && data.age_value>10 && data.age_unit=='Years'",
+        "value":"",
+        "items":[
+        
+            {"text":"Pregnant when she died","value":"Pregnant when she died","valdn":""},
+        
+            {"text":"Had a child birth","value":"Had a child birth","valdn":""},
+        
+            {"text":"Had an abortion","value":"Had an abortion","valdn":""},
+        
+            {"text":"Died within 42 days of childbirth","value":"Died within 42 days of childbirth","valdn":""},
+        
+            {"text":"None of the above","value":"None of the above","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

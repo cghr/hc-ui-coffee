@@ -1,55 +1,64 @@
-do (app = angular.module('myApp.sync')) ->
+do(app = angular.module('sync')) ->
+  app.controller 'SyncCtrl', ($scope, ProgressService, $q, $timeout, $log) ->
+    vm = $scope
 
+    pollingFreq = {
+      networkStatus: 2000,
+      progress: 1000
+    }
 
-  app.controller 'SyncCtrl', ($scope, ProgressService,
-                              $interval, toaster, $timeout) ->
-    $scope.total = {}
-    $scope.pending = {}
-    $scope.progress = {}
-
-
-    $scope.networkStatusUpdater = $interval (-> updateNetworkStatus() ), 1000
-
-
-    killUpdater=(promise) -> $interval.cancel(promise)
-
-    networkStatusMsg = (status) ->
-      if(status)
-        {icon: 'icon-ok', type: 'success', msg: 'Wifi Connected Successfully!'}
-      else
-        {icon: 'icon-remove', type: 'danger', msg: 'Wifi Not Connected'}
+    networkStatusPolling = undefined
+    progressPolling = undefined
 
     updateNetworkStatus = ->
       ProgressService.getNetworkStatus()
       .then (networkStatus) ->
-        networkStatusMsg(networkStatus)
-        if(networkStatus) then  killUpdater($scope.networkStatusUpdater)
+        vm.networkStatus = networkStatus
+        if(!networkStatus)
+          networkStatusPolling =
+            $timeout(updateNetworkStatus, pollingFreq.networkStatus)
 
-    updateProgress= ->
-      updateStatusOf('download')
-      updateStatusOf('upload')
-      updateStatusOf('fileupload')
+    updateNetworkStatus()
 
-    updateStatusOf=(statusType) ->
-      ProgressService.getStatus()
-      .then(data) ->
-        if !$scope.total[statusType]
-          $scope.total[statusType]=data
-        else
-          $scope.pending[statusType]=$scope.total[statusType]-data
-          $scope.progress[statusType]=
-            ($scope.total[statusType]-($scope.pending[statusType]))/100
+    killNetworkStatusPolling = ->
+      $timeout.cancel(networkStatusPolling)
+
+    contexts = ['download', 'upload', 'fileupload']
+    vm.total = {download: undefined, upload: undefined, fileupload: undefined}
+    vm.progress = {download: 0, upload: 0, fileupload: 0}
+    vm.pendingUploads=undefined
+
+    calcProgress = (total, current)->
+      (total - current) * 100 / total
+
+    updateProgress = ->
+      promises = contexts.map((context)->
+        ProgressService.getStatus(context))
+      $q.all(promises)
+      .then (responses)->
+        responses.forEach((response, index)->
+          if(!vm.total[contexts[index]])
+            vm.total[contexts[index]] = response
+          vm.progress[contexts[index]] =
+            calcProgress(vm.total[contexts[index]], response)
+          vm.pendingUploads=responses[1]
+        )
+        progressPolling = $timeout(updateProgress, pollingFreq.progress)
 
 
+    killPolling = ->
+      console.log 'sync completed'
+      vm.syncRequestActive = false
+      $timeout.cancel(networkStatusPolling)
+      $timeout.cancel(progressPolling)
 
-    $scope.progressUpdater= $interval (-> updateProgress()),1500
-    syncSuccess= -> killUpdater($scope.progressUpdater)
-    $scope.startSync=->
+
+    vm.startSync = ->
+      vm.syncRequestActive = true
+      updateProgress()
       ProgressService.startSync()
-      .then syncSuccess
+      .then(killPolling, killPolling)
 
-
-
-
+    $scope.$on "$destroy", killPolling
 
 

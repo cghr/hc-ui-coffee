@@ -1,0 +1,133 @@
+{
+"schemaName":"enum.householdDetail.hospInf",
+"onSave":"",
+"condition":"data.hospStatus == 'Yes'",
+"success":"enum.householdDetail.hosp",
+"fail":"enum.householdDetail.deathInf",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"hospInf",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hospStatus",
+        "type":"radio",
+        "valdn":"required ",
+        "label":"Was any usually residing adult (30-69 years) household member admitted to the hospital during last year?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":""},
+        
+            {"text":"No","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hospCount",
+        "type":"text",
+        "valdn":"between[1:20],required",
+        "label":"If yes, how many adults were admitted?",
+        "flow":"data.hospStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"household",
+            "field":"totalMembers",
+            "ref":"householdId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

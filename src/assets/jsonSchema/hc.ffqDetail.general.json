@@ -1,0 +1,548 @@
+{
+"schemaName":"hc.ffqDetail.general",
+"onSave":"hc.ffqDetail.bev",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqGeneral",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"typeFood",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Are you vegetarian or non-vegetarian?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Veg","value":"Veg","valdn":""},
+        
+            {"text":"Veg using eggs","value":"Veg using eggs","valdn":""},
+        
+            {"text":"Non-veg","value":"Non-veg","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"Report the diet practiced one year before the date of interview. Consider the respondent as vegetarian if he/she eats egg rarely such as utmost 3 times in year or has eaten mistakenly or eats bakery product that contains egg. If respondent eats bakery product she/she will be considered vegetarian. In such cases do not report frequency of egg consumption"
+        },
+
+
+
+        {
+        "name":"veg",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Have you been a vegetarian for your whole life?",
+        "flow":"data.typeFood=='Veg' || data.typeFood=='Veg using eggs'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":""},
+        
+            {"text":"No","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"It encompasses the practice of following plant-based diet (fruits, vegetables, etc.) without the inclusion of eggs and meat (redmeat, poultry, and seafood)."
+        },
+
+
+
+        {
+        "name":"nonveg",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Have you been a non-vegetarian for your whole life?",
+        "flow":"data.typeFood=='Non-veg'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":""},
+        
+            {"text":"No","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"It encompasses the practice of consuming meat (redmeat, poultry, and seafood) or egg."
+        },
+
+
+
+        {
+        "name":"fastStatusLastWeek",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the last week did you fast?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":""},
+        
+            {"text":"No","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"Report fasting details one year before the date of interview."
+        },
+
+
+
+        {
+        "name":"noDaysFast",
+        "type":"text",
+        "valdn":"between[1:7],required",
+        "label":"In the last week how many days did you fast? ",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"Report the number of days respondent fasts (according to study definition) per week"
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"In which of these following days did you fast ? (No.of hours for each day)",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"monday",
+        "type":"text",
+        "valdn":"between[0:24],required",
+        "label":"Monday",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tuesday",
+        "type":"text",
+        "valdn":"between[0:24],required",
+        "label":"Tuesday",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"wednesday",
+        "type":"text",
+        "valdn":"between[0:24],required",
+        "label":"Wednesday",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"thursday",
+        "type":"text",
+        "valdn":"between[0:24],required",
+        "label":"Thursday",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"friday",
+        "type":"text",
+        "valdn":"between[0:24],required",
+        "label":"Friday",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"saturday",
+        "type":"text",
+        "valdn":"between[0:24],required",
+        "label":"Saturday",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sunday",
+        "type":"text",
+        "valdn":"between[0:24],required",
+        "label":"Sunday",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fastDiet",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If you fast then do you:",
+        "flow":"data.fastStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Eat nothing during fasting","value":"Eat nothing during fasting","valdn":""},
+        
+            {"text":"Eat only fruits","value":"Eat only fruits","valdn":""},
+        
+            {"text":"Eat only dry fruits","value":"Eat only dry fruits","valdn":""},
+        
+            {"text":"Eat once/day","value":"Eat once/day","valdn":""},
+        
+            {"text":"Eat Twice a day","value":"Eat Twice a day","valdn":""},
+        
+            {"text":"Fast with Sabut Dana","value":"Fast with Sabut Dana","valdn":""},
+        
+            {"text":"Other","value":"Other","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherfastDiet",
+        "type":"text",
+        "valdn":"required",
+        "label":"If others, please specify your fasting diet",
+        "flow":"data.fastDiet=='Others'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

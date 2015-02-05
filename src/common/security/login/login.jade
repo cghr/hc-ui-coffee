@@ -9,16 +9,16 @@ div(style='margin-top: 10%')
 
          // Login Form
          .panel-body
-            form(role='form', ng-submit='login(user)')
+            form(role='form', ng-submit='login(username,password)')
                .form-group
                   //label Username
-                  input.form-control(type='text', ng-model='user.username', required='', autofocus='', placeholder='Enter Username')
+                  input.form-control(type='text', ng-model='username', required='', autofocus='', placeholder='Enter Username')
                .form-group
                   //label Password
-                  input.form-control(type='password', ng-model='user.password', required='', placeholder='Password')
+                  input.form-control(type='password', ng-model='password', required='', placeholder='Password')
                button.btn.btn-info(type='submit') Login
-            div(style='margin-top: 10px')
-               a(href='#/register') Sing Up |
-
-               a(href='#/forgotPassword')  Forgot Password
+            //div(style='margin-top: 10px')
+            //   a(href='#/register') Sing Up |
+            //
+            //   a(href='#/forgotPassword')  Forgot Password
          // Ends

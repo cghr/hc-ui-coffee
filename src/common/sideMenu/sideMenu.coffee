@@ -1,4 +1,4 @@
-do (app = angular.module('sideMenu', [])) ->
+do (app = angular.module('sideMenu', ['ui.router'])) ->
 
 
   app.directive 'sideMenu', ->
@@ -6,6 +6,6 @@ do (app = angular.module('sideMenu', [])) ->
 
     {
     restrict: 'E'
-    scope: {config: '='}
-    templateUrl: 'sideMenu/sideMenu.html'
+    scope: {menuOptions: '=config'}
+    templateUrl: 'sideMenu/sideMenu.jade'
     }

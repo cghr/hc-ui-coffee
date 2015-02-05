@@ -1,25 +1,44 @@
-do (app = angular.module('myApp.dashboard')) ->
+do (app = angular.module('dashboard')) ->
 
 
-  app.controller 'DashboardCtrl', (ChartService, $interval) ->
+  app.controller 'Dashboard', ($scope, $timeout,
+                               DashboardService, $q, _, $log) ->
 
-    vm = this
-    chartType = 'bar'
-    pendingDownloadsConfig = getChartConfig('Pending Downloads')
+    vm = $scope
 
-    getChartConfig = (title) ->
-      labels: false
-      title: title
-      legend: {display: true, position: "right"}
-      innerRadius: 0,
-      lineLegend: "lineEnd"
+    vm.progress = {}
+    contexts = ['enum', 'hhq', 'downloads']
 
-    $interval (-> updateDashboard()), 200
+    liveUpdate = undefined
 
     updateDashboard = ->
-      ChartService.getPendingDownloads()
-      .then (data)-> vm.pendingDowloads = data
+      promises = contexts
+      .map((context) -> DashboardService.progressOf(context))
+
+      $q.all(promises)
+      .then (responses)->
+        responses.forEach((resp, index)->
+          vm.progress[contexts[index]] = resp
+        )
+        liveUpdate = $timeout(updateDashboard, 5000)
+
+    updateDashboard()
+
+    $scope.$on "$destroy", (->
+      $log.info('killed dashboard live update')
+      $timeout.cancel(liveUpdate)
+    )
 
 
-    isEquals = (json1, json2) ->
-      JSON.stringify(json1) == JSON.stringify(json2)
+
+
+
+
+
+
+
+
+
+
+
+

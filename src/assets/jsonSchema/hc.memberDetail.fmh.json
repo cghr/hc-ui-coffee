@@ -1,0 +1,651 @@
+{
+"schemaName":"hc.memberDetail.fmh",
+"onSave":"hc.memberDetail.fmhDisease",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"memberFamilyMedicalHistory",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Family Background & Medical History ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"I.Family History ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"noOfBrothers",
+        "type":"text",
+        "valdn":"between[0:20],required",
+        "label":"How many brothers dead or alive have you ever had? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"noOfSisters",
+        "type":"text",
+        "valdn":"between[0:20],required",
+        "label":"How many sisters dead or alive have you ever had? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"noOfSons",
+        "type":"text",
+        "valdn":"between[1:10],required",
+        "label":"How many children (son) do you have?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"memberBp1","field":"mstatus","ref":"memberId","condition":"mstatus=='Married' ","whereCondition":""},
+        
+        {"entity":"memberReproductiveHistory","field":"noTimesPregnantPast","ref":"memberId","condition":"noTimesPregnantPast>0","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"noOfDaugthers",
+        "type":"text",
+        "valdn":"between[1:10],required",
+        "label":"How many children (daugthers) do you have?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"memberBp1","field":"mstatus","ref":"memberId","condition":"mstatus=='Married' ","whereCondition":""},
+        
+        {"entity":"memberReproductiveHistory","field":"noTimesPregnantPast","ref":"memberId","condition":"noTimesPregnantPast>0","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherName",
+        "type":"text",
+        "valdn":"alpha,minlength[3],required",
+        "label":"What is your mother's name?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherState",
+        "type":"dropdown",
+        "valdn":"required",
+        "label":"What is the state of origin of your mother?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Maharashtra","value":"1","valdn":""},
+        
+            {"text":"Madhya Pradesh","value":"2","valdn":""},
+        
+            {"text":"Karnataka","value":"3","valdn":""},
+        
+            {"text":"Andhra Pradesh","value":"4","valdn":""},
+        
+            {"text":"Gujarat","value":"5","valdn":""},
+        
+            {"text":"Rajasthan","value":"6","valdn":""},
+        
+            {"text":"Uttar Pradesh","value":"7","valdn":""},
+        
+            {"text":"Orissa","value":"8","valdn":""},
+        
+            {"text":"Bihar","value":"9","valdn":""},
+        
+            {"text":"West Bengal","value":"10","valdn":""},
+        
+            {"text":"Uttarakhand","value":"11","valdn":""},
+        
+            {"text":"Jharkhand","value":"12","valdn":""},
+        
+            {"text":"Manipur","value":"13","valdn":""},
+        
+            {"text":"Meghalaya","value":"14","valdn":""},
+        
+            {"text":"Mizoram","value":"15","valdn":""},
+        
+            {"text":"Nagaland","value":"16","valdn":""},
+        
+            {"text":"Arunachal Pradesh","value":"17","valdn":""},
+        
+            {"text":"Assam","value":"18","valdn":""},
+        
+            {"text":"Chhattisgarh","value":"19","valdn":""},
+        
+            {"text":"Sikkim","value":"20","valdn":""},
+        
+            {"text":"Punjab","value":"21","valdn":""},
+        
+            {"text":"Haryana","value":"22","valdn":""},
+        
+            {"text":"Himachal Pradesh","value":"23","valdn":""},
+        
+            {"text":"Jammu & Kashmir","value":"24","valdn":""},
+        
+            {"text":"Tripura","value":"25","valdn":""},
+        
+            {"text":"Kerala","value":"26","valdn":""},
+        
+            {"text":"Tamil Nadu","value":"27","valdn":""},
+        
+            {"text":"Delhi","value":"28","valdn":""},
+        
+            {"text":"Chandigarh","value":"29","valdn":""},
+        
+            {"text":"Dadra & Nagar Haveli","value":"30","valdn":""},
+        
+            {"text":"Daman & Diu","value":"31","valdn":""},
+        
+            {"text":"Goa","value":"32","valdn":""},
+        
+            {"text":"Pondicherry","value":"33","valdn":""},
+        
+            {"text":"Andaman & Nicobar Islands","value":"34","valdn":""},
+        
+            {"text":"Lakshadweep","value":"35","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherdistrict",
+        "type":"dynamic_dropdown",
+        "valdn":"required",
+        "label":"What is the district of origin of your mother?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                    "entity":"district",
+                    "field":"name",
+                    "ref":"state",
+                    "refValue":"data.motherState"
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherAliveStatus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Is your mother still alive?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":""},
+        
+            {"text":"No","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherAge",
+        "type":"text",
+        "valdn":"between[30:99],required",
+        "label":"If Yes, what is her current age",
+        "flow":"data.motherAliveStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"member",
+            "field":"age_value",
+            "ref":"memberId",
+            "condition":"between[{value}:100],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherDeathAge",
+        "type":"text",
+        "valdn":"required",
+        "label":"If No then age at death",
+        "flow":"data.motherAliveStatus=='No'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"compareMotherHeight",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Compared to other mothers of the same age was your mother's height?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Shorter the average","value":"Shorter the average","valdn":""},
+        
+            {"text":"Average","value":"Average","valdn":""},
+        
+            {"text":"Taller than averrage","value":"Taller than averrage","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fatherAliveStatus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Is your father still alive?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":""},
+        
+            {"text":"No","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fatherAge",
+        "type":"text",
+        "valdn":"between[30:99],required",
+        "label":"If Yes, what is his current age",
+        "flow":"data.fatherAliveStatus=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"member",
+            "field":"age_value",
+            "ref":"memberId",
+            "condition":"between[{value}:100],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fatherDeathAge",
+        "type":"text",
+        "valdn":"required",
+        "label":"If No then age at death",
+        "flow":"data.fatherAliveStatus=='No'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

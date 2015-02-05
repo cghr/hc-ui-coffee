@@ -131,7 +131,7 @@ angular.module('enumRoutes', [])
             },
             {
                 name: 'visitDetail',
-                url: '/area/:areaId/house/:houseId/household/:householdId/visit/',
+                url: '/area/:areaId/house/:houseId/household/:householdId/visit/:visitId',
                 tpl: 'tpls/pageDetail.jade',
                 title: '',
                 prevState: {name: 'enum.householdDetail.visit', title: 'Visits'},

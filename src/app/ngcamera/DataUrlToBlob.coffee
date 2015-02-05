@@ -4,6 +4,7 @@ do(app=angular.module('dataUrltoBlob',['myApp.lodash'])) ->
 
     convert:(dataURL) ->
 
+      console.log dataURL
       # Decode the dataURL
       binary = atob(dataURL.split(',')[1])
 

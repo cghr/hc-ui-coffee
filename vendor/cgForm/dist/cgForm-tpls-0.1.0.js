@@ -2,7 +2,7 @@
  * cgForm
  * 
 
- * Version: 0.1.0 - 2015-01-22
+ * Version: 0.1.0 - 2015-02-04
  * License: MIT
  */
 angular.module('cgForm', [
@@ -54,10 +54,10 @@ angular.module('cgForm.formConfig', ['cgForm.lodash']).factory('FormConfig', fun
     return {
         submitUrl: 'api/entity/',
         resourceBaseUrl: 'api/entity/',
-        lookupBaseUrl: 'api/LookupService/',
-        crossFlowBaseUrl: 'api/CrossFlowService',
-        crossCheckBaseUrl: 'api/CrossCheckService',
-        dynamicDropdownBaseUrl: 'api/dynamicDropdownService',
+        lookupBaseUrl: 'api/survey/lookup/',
+        crossFlowBaseUrl: 'api/survey/crossFlow',
+        crossCheckBaseUrl: 'api/survey/crossCheck',
+        dynamicDropdownBaseUrl: 'api/survey/dynamicDropdown',
         gpsServiceUrl: 'api/gps',
         submitLabel: 'Save',
         style: 'well'
@@ -548,6 +548,7 @@ angular.module('cgForm.surveyForm', [
                 FormService.getResource(scope.datastore).then(function (resp) {
                     delete resp.data.timelog;
                     delete resp.data.endtime;
+                    delete resp.data.surveyor;
                     angular.extend(scope.data, resp.data);
                 });
                 /* Bind Validation to form */

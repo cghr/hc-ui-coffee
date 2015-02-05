@@ -1,20 +1,13 @@
-do(app = angular.module('myApp.dashboard', [
-  'ui.router'
-  'angularCharts'
-  'myApp.lodash'
-  'myApp.chartService'
-
-])) ->
-
-
+do (app = angular.module('dashboard', ['ui.grid', 'dashboardService',
+                                       'myApp.lodash'])) ->
   app.config ($stateProvider) ->
-
     $stateProvider.state('dashboard', {
       url: '/dashboard',
       templateUrl: 'dashboard/dashboard.jade',
-      controller: 'DashboardCtrl',
-      controllerAs: 'dashboard'
+      controller: 'Dashboard'
     })
+
+
 
 
 

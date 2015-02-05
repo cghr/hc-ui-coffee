@@ -1,0 +1,132 @@
+{
+"schemaName":"enum.visitDetail.basicInf",
+"onSave":"",
+"condition":"data.hhAvailability == 'Respondents available'",
+"success":"enum.householdDetail.basicInf",
+"fail":"enum.houseDetail.household",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"enumVisit",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surveyor",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"user.id",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hhAvailability",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Household Availability",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Respondents available","value":"Respondents available","valdn":""},
+        
+            {"text":"Door temporarily locked","value":"Door temporarily locked","valdn":""},
+        
+            {"text":"Door permanently locked","value":"Door permanently locked","valdn":""},
+        
+            {"text":"Refused to participate","value":"Refused to participate","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

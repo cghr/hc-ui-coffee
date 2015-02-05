@@ -38,6 +38,6 @@ do(app = angular.module('myApp.stateTransitions', [])) ->
 
     "hc.householdDetail.visit": {
       to: "hc.visitDetail.basicInf",
-      param: ""
+      param: "visitId"
     }
   }

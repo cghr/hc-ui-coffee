@@ -1,7 +1,8 @@
-do (app = angular.module('myApp.sync', [
+do (app = angular.module('sync', [
   'ui.router',
-  'myApp.progressService',
-  'toaster'
+  'progressService',
+  'toaster',
+  'ui.bootstrap'
 ])) ->
 
 
@@ -9,6 +10,6 @@ do (app = angular.module('myApp.sync', [
 
     $stateProvider.state('sync', {
       url: '/sync',
-      templateUrl: '/sync.html',
-      controller: 'syncCtrl'
+      templateUrl: 'sync/sync.jade',
+      controller: 'SyncCtrl'
     })

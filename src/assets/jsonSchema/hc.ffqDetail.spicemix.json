@@ -1,0 +1,384 @@
+{
+"schemaName":"hc.ffqDetail.spicemix",
+"onSave":"hc.ffqDetail.snacks",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"ffqSpiceMix",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chatani",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Chatani",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"jawa",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Jawa",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kairi",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Kairi",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"lasunSheng",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Lasun and Sheng",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sengdana",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Sengdana",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tomato",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Tomato",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"thecha",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Thecha",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pickleAmba",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Pickles (Amba)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pickleLimbu",
+        "type":"ffq",
+        "valdn":"",
+        "label":"Pickles (Limbu)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Spoon (Small)","value":"Spoon (Small)","valdn":""},
+        
+            {"text":"Spoon (Medium)","value":"Spoon (Medium)","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}
