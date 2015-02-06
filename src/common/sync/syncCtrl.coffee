@@ -3,7 +3,7 @@ do(app = angular.module('sync')) ->
     vm = $scope
 
     pollingFreq = {
-      networkStatus: 2000,
+      networkStatus: 10000,
       progress: 1000
     }
 
@@ -23,13 +23,20 @@ do(app = angular.module('sync')) ->
     killNetworkStatusPolling = ->
       $timeout.cancel(networkStatusPolling)
 
+
+
     contexts = ['download', 'upload', 'fileupload']
     vm.total = {download: undefined, upload: undefined, fileupload: undefined}
     vm.progress = {download: 0, upload: 0, fileupload: 0}
-    vm.pendingUploads=undefined
+    vm.pendingUploads = undefined
+    vm.pendingFileUploads = undefined
+
+
 
     calcProgress = (total, current)->
       (total - current) * 100 / total
+
+
 
     updateProgress = ->
       promises = contexts.map((context)->
@@ -41,23 +48,34 @@ do(app = angular.module('sync')) ->
             vm.total[contexts[index]] = response
           vm.progress[contexts[index]] =
             calcProgress(vm.total[contexts[index]], response)
-          vm.pendingUploads=responses[1]
+          vm.pendingUploads = responses[1]
+          vm.pendingFileUploads = responses[2]
         )
         progressPolling = $timeout(updateProgress, pollingFreq.progress)
 
 
+
+
     killPolling = ->
-      console.log 'sync completed'
+      $log.info('Polling killed')
       vm.syncRequestActive = false
       $timeout.cancel(networkStatusPolling)
       $timeout.cancel(progressPolling)
+
+
+
+    syncSuccess = ->
+      vm.syncRequestActive = false
+      $log.info('Sync completed')
+      $timeout(killPolling, 3000)
 
 
     vm.startSync = ->
       vm.syncRequestActive = true
       updateProgress()
       ProgressService.startSync()
-      .then(killPolling, killPolling)
+      .then(syncSuccess, killPolling)
+
 
     $scope.$on "$destroy", killPolling
 

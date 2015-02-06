@@ -65,6 +65,34 @@
 
 
         {
+        "name":"surveyor",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"user.id",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
         "name":"",
         "type":"heading",
         "valdn":"",

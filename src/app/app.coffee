@@ -1,4 +1,5 @@
 do (app = angular.module "myApp", [
+  'angular-loading-bar'
   'photoConsent'
   'ngcamera'
   'dashboard'

@@ -191,7 +191,7 @@
 
 
         {
-        "name":"fastStatusLastWeek",
+        "name":"fastStatus",
         "type":"radio",
         "valdn":"required",
         "label":"During the last week did you fast?",

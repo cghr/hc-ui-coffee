@@ -11,13 +11,17 @@
 
     div(style="margin-top:10px")
         p Download
-        progressbar.progress-striped.active(value="progress.download",type="info") {{progress.download}}
+        progressbar(value="progress.download",type="info")
+            b {{progress.download}} %
 
         p Upload
-        progressbar.progress-striped.active(value="progress.upload",type="info") {{progress.upload}}
+        progressbar(value="progress.upload",type="info")
+            b {{progress.upload}} %
 
         p FileUpload
-        progressbar.progress-striped.active(value="progress.fileupload",type="info") {{progress.fileupload}}
+        progressbar(value="progress.fileupload",type="info")
+            b {{progress.fileupload}} %
 
 
-    h4 Pending Uploads({{pendingUploads}})
+    h4 Pending Uploads      - {{pendingUploads}}
+    h4 Pending File Uploads - {{pendingFileUploads}}
