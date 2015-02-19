@@ -375,7 +375,7 @@
         {
         "name":"secondPersonMobile",
         "type":"text",
-        "valdn":"number,rangelength[10:10]",
+        "valdn":"number,rangelength[10:10],required",
         "label":"What is the second contact person’s permanent contact Mobile Number?",
         "flow":"",
         "value":"",

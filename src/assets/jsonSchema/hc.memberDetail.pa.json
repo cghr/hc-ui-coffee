@@ -1462,7 +1462,7 @@
         "name":"hrsSleepAfterEat",
         "type":"text",
         "valdn":"between[0:12],required",
-        "label":"How may hours after eating in the evening do you go to sleep?",
+        "label":"How many hours after eating in the evening do you go to sleep?",
         "flow":"",
         "value":"",
         "items":[

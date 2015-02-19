@@ -96,7 +96,7 @@
         "name":"ffqOthers",
         "type":"radio",
         "valdn":"required",
-        "label":"Is that anything else you consume once a week?",
+        "label":"Is there anything else you consume once a week?",
         "flow":"",
         "value":"",
         "items":[

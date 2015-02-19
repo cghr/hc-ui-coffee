@@ -24,7 +24,6 @@ do(app = angular.module('sync')) ->
       $timeout.cancel(networkStatusPolling)
 
 
-
     contexts = ['download', 'upload', 'fileupload']
     vm.total = {download: undefined, upload: undefined, fileupload: undefined}
     vm.progress = {download: 0, upload: 0, fileupload: 0}
@@ -32,10 +31,8 @@ do(app = angular.module('sync')) ->
     vm.pendingFileUploads = undefined
 
 
-
     calcProgress = (total, current)->
-      (total - current) * 100 / total
-
+      Math.floor((total - current) * 100 / total)
 
 
     updateProgress = ->
@@ -54,8 +51,6 @@ do(app = angular.module('sync')) ->
         progressPolling = $timeout(updateProgress, pollingFreq.progress)
 
 
-
-
     killPolling = ->
       $log.info('Polling killed')
       vm.syncRequestActive = false
@@ -63,16 +58,15 @@ do(app = angular.module('sync')) ->
       $timeout.cancel(progressPolling)
 
 
-
     syncSuccess = ->
       vm.syncRequestActive = false
       $log.info('Sync completed')
       $timeout(killPolling, 3000)
 
+    updateProgress()
 
     vm.startSync = ->
       vm.syncRequestActive = true
-      updateProgress()
       ProgressService.startSync()
       .then(syncSuccess, killPolling)
 

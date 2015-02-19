@@ -37,6 +37,34 @@
 
 
         {
+        "name":"houseId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.houseId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
         "name":"householdId",
         "type":"hidden",
         "valdn":"",

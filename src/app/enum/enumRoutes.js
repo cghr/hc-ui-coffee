@@ -56,7 +56,7 @@ angular.module('enumRoutes', [])
             {
                 name: 'householdDetail',
                 url: '/area/:areaId/house/:houseId/household/:householdId',
-                tpl: 'tpls/pageDetailNavDisabled.jade',
+                tpl: 'tpls/pageDetail.jade',
                 defaultState: 'member',
                 title: 'Members',
                 prevState: {name: 'enum.houseDetail.household', title: 'Households'},

@@ -1,4 +1,4 @@
-do (app = angular.module('myApp.backSpaceNav', ['jQuery'])) ->
+do (app = angular.module('myApp.backSpaceNav', ['myApp.jQuery'])) ->
 
 
   app.directive 'keypressEvents', ($document, jQuery) ->

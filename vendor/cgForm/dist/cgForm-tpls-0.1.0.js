@@ -2,7 +2,7 @@
  * cgForm
  * 
 
- * Version: 0.1.0 - 2015-02-04
+ * Version: 0.1.0 - 2015-02-07
  * License: MIT
  */
 angular.module('cgForm', [
@@ -194,13 +194,13 @@ angular.module('cgForm.formService', [
             getGPS: getGPS
         };
         function getGPS() {
-            return $http.get(FormConfig.gpsServiceUrl).success(function (resp) {
+            return $http.get(FormConfig.gpsServiceUrl).then(function (resp) {
                 var gps = resp.data;
                 if (gps.latitude === 0 || gps.longitude === 0)
                     alert('GPS Not Fixed.Check whether the device is inserted properly and device light is blinking and Try Again');
                 else
                     return gps;
-            }).error(function () {
+            }, function () {
                 alert('GPS Server not Running');
             });
         }

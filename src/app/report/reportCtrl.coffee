@@ -18,6 +18,10 @@ do(app = angular.module('myApp.report')) ->
       {
         id: 2, label: 'HHQ',
         items: [{id: 21, label: 'Members'}]
+      },
+      {
+        id: 3, label: 'Users',
+        items: [{id: 31, label: 'Surveyors'}]
       }
 
     ]

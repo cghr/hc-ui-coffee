@@ -1,15 +1,12 @@
 do (app = angular.module('progressService', ['toaster'])) ->
-
-
   app.factory 'ProgressService', ($http, $log, toaster, $rootScope) ->
-
     error = (msg) -> toaster.pop('error', '', msg)
 
     getErrMsg = (role)->
       if(role == 'user')
-        "Team leader Not Available.Failed"
+        "Sync Failed.Retry."
       else
-        "Failed.Check Internet Connection"
+        "Sync Failed.Check Internet connection.Retry"
 
     syncErrMsg = getErrMsg($rootScope.user.role.title)
 

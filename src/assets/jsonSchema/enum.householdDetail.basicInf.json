@@ -327,19 +327,19 @@
         "value":"",
         "items":[
         
-            {"text":"None","value":"None","valdn":""},
+            {"text":"None","value":"0","valdn":""},
         
-            {"text":"Below Poverty Line (BPL) Card Holder","value":"Below Poverty Line (BPL) Card Holder","valdn":""},
+            {"text":"Below Poverty Line (BPL) Card Holder","value":"1","valdn":""},
         
-            {"text":"Rajiv Gandhi Health Insurance Scheme","value":"Rajiv Gandhi Health Insurance Scheme","valdn":""},
+            {"text":"Rajiv Gandhi Health Insurance Scheme","value":"2","valdn":""},
         
-            {"text":"Janani Suraksha Yojana (JSY)","value":"Janani Suraksha Yojana (JSY)","valdn":""},
+            {"text":"Janani Suraksha Yojana (JSY)","value":"3","valdn":""},
         
-            {"text":"Mahatma Gandhi National Rural Employment Guarantee Act (NREGA)","value":"Mahatma Gandhi National Rural Employment Guarantee Act (NREGA)","valdn":""},
+            {"text":"Mahatma Gandhi National Rural Employment Guarantee Act (NREGA)","value":"4","valdn":""},
         
-            {"text":"Pradhan MantriRozgarYojna(PMRY)","value":"Pradhan MantriRozgarYojna(PMRY)","valdn":""},
+            {"text":"Pradhan MantriRozgarYojna(PMRY)","value":"5","valdn":""},
         
-            {"text":"Others- Specify","value":"Others- Specify","valdn":""}
+            {"text":"Others","value":"6","valdn":""}
         
         ],
         "image":"",
@@ -365,7 +365,7 @@
         "type":"text",
         "valdn":"required",
         "label":"If any other Government scheme then please specify",
-        "flow":"data.benefitGovtScheme!='None' && data.benefitGovtScheme=='Others- Specify'",
+        "flow":"data.benefitGovtScheme!='0' && data.benefitGovtScheme=='6'",
         "value":"",
         "items":[
         

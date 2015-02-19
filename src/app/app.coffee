@@ -20,6 +20,7 @@ do (app = angular.module "myApp", [
   'ui.router'
   'anguFixedHeaderTable'
   'cgForm'
+  'myApp.backSpaceNav'
 ]) ->
 
 
