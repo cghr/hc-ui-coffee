@@ -19,8 +19,8 @@ angular.module('cgGrid.tpls', []);
 angular.module('cgGrid.lodash', []).constant('_', window._);
 angular.module('cgGrid.config', ['cgGrid.lodash']).factory('GridConfig', function () {
     return {
-        width: '600px',
-        height: '300px',
+        width: '700px',
+        height: '350px',
         autoUpdate: false,
         autoUpdateInterval: 5000,
         imagePath: 'assets/dhtmlx/imgs/',

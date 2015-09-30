@@ -1,0 +1,128 @@
+{
+"schemaName":"enum.householdDetail.deathInf",
+"onSave":"",
+"condition":"data.deaths=='Yes'",
+"success":"enum.householdDetail.consent",
+"fail":"enum.houseDetail.household",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"deathInf",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deaths",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું છેલ્લાં [પાંચ વર્ષ or જાન્યુઆરી 2010 થી] વર્ષોમાં ઘરમાં કોઇપણ મૃત્યુ થયું હતું? (0-69 years)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"Complete the survey if the household don't have any death in the last five years"
+        },
+
+
+
+        {
+        "name":"deceasedCount",
+        "type":"text",
+        "valdn":"between[0:9],required",
+        "label":"ઘરમાં કુલ મૃત્યુ",
+        "flow":"data.deaths=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

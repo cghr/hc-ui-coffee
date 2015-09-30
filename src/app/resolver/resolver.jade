@@ -1,0 +1,12 @@
+div.container(ng-controller="resolverCtrl",align="center")
+
+    h4 {{subject.name}}
+    h4 {{subject.age_value}} {{subject.age_unit}}
+    h4 {{subject.sex}}
+
+    div
+    a(ng-click="proceed()",class="btn btn-primary btn-lg") Confirm and Proceed
+    div(ng-show="subject.surveytype=='va'")
+        input(ng-change="enableLocalKeyboard(localKeyboardInput)",type="checkbox",ng-model="localKeyboardInput")
+        span
+            b  Use Gujrathi Keyboard

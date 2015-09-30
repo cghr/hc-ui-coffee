@@ -14,6 +14,14 @@ do(app = angular.module('myApp.appService', ['toaster'])) ->
       $http.get("api/entity/#{entity}/#{entityId}")
       .then ((resp)-> return resp.data), errorCallback
 
+    postData:(entity,postData)->
+      $http.post("api/entity/#{entity}",postData)
+
+
+
+
+
+
 
 
 

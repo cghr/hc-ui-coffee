@@ -1,0 +1,1451 @@
+{
+"schemaName":"enum.eslDetail.illnessSkin",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"illnessSkin",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Illness Details",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<1","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"stiffBody",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby's body become stiff, with the back arched backwards?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bulgingFontanelle",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did the baby have a bulging fontanelle? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sunkenFontanelle",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby have a sunken fontanelle?",
+        "flow":"data.bulgingFontanelle=='No' || data.bulgingFontanelle=='Dont know'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"unconsciousAfterBirth",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby become unresponsive or unconscious soon after birth (within less than 24 hours)?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"unconsciousAfter1Day",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby become unresponsive or unconscious more than 1 day after birth?",
+        "flow":"data.unconsciousAfterBirth=='No' || data.unconsciousAfterBirth=='Dont know'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"coldTouch",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby become cold to the touch before s/he died?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ageColdTouch",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"At what age did the baby start feeling cold to touch(days)?",
+        "flow":"data.coldTouch=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationColdTouch",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"How many days did the baby feel cold to touch?",
+        "flow":"data.coldTouch=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pusDrainageUmbilicalCord",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did the baby have pus drainage from the umbilical cord stump?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"rednessUmblicalCord",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did the baby have redness of the umbilical cord stump?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pusSkin",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby have skin bumps containing pus or a single large area with pus? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ulcer",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did the baby/child have ulcer(s) (pits)?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"redSwellSkin",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did the baby have an area(s) of skin with redness and swelling?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"blackSkin",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did he/she have areas of the skin that turned black?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"yellowSkin",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby/child have yellow skin or palms or soles?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationYellowSkin",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long did s/he [name]  have yellow skin or palms or soles?",
+        "flow":"data.yellowSkin=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"skinRashProb",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he have any skin rash or problems?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bleeding",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did the baby/child bleed from anywhere?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bleedingArea",
+        "type":"text",
+        "valdn":"required",
+        "label":"Record location from where did the baby/child bleed",
+        "flow":"data.bleeding=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Skin Problem Details",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"skinProb",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any skin problems?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sores",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have sores?",
+        "flow":"data.skinProb=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the sores have clear fluid or pus?",
+        "flow":"data.skinProb=='Yes' && data.sores=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"skinRash",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that led to death, did s/he [name] have any skin rash?",
+        "flow":"data.skinProb=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ulcerBody",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any ulcers, abscess or sores anywhere except on the feet?",
+        "flow":"data.skinProb=='Yes'  &&  data.sores=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"itch",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have itching of skin?",
+        "flow":"data.skinProb=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationSkinRash",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long did s/he [name] have the skin rash?",
+        "flow":"data.skinProb=='Yes' && data.skinRash=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"rashLocation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Where was the rash? ",
+        "flow":"data.skinProb=='Yes' && data.skinRash=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Face","value":"Face","valdn":"","flow":""},
+        
+            {"text":"Trunk","value":"Trunk","valdn":"","flow":""},
+        
+            {"text":"Extremities","value":"Extremities","valdn":"","flow":""},
+        
+            {"text":"Everywhere","value":"Everywhere","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherRashLocation",
+        "type":"text",
+        "valdn":"required",
+        "label":"Specify the location of rash",
+        "flow":"data.skinProb=='Yes' && data.skinRash=='Yes' && data.rashLocation=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"startRashLocation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Where did the rash start?",
+        "flow":"data.skinProb=='Yes' && data.skinRash=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Face","value":"Face","valdn":"","flow":""},
+        
+            {"text":"Trunk","value":"Trunk","valdn":"","flow":""},
+        
+            {"text":"Extremities","value":"Extremities","valdn":"","flow":""},
+        
+            {"text":"Everywhere","value":"Everywhere","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"blister",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the rash have blisters containing clear fluid?",
+        "flow":"data.skinProb=='Yes'  && data.skinRash=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"measles",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did any doctor diagnosed measles from skin rashes (use local term)?",
+        "flow":"data.skinProb=='Yes' && data.skinRash=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"blueLips",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have blue lips?",
+        "flow":"data.skinProb=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"discoloration",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have yellow discoloration of skin or white part of eyes?",
+        "flow":"data.skinProb=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationDiscoloration",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long did s/he [name] have the yellow discoloration of skin or white part of eyes?",
+        "flow":"data.skinProb=='Yes'  && data.discoloration=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hairColor",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did her/his [name] hair change in color to a reddish or yellowish color?",
+        "flow":"data.skinProb=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"whitePatch",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have sores or white patches in the mouth or on the tongue?",
+        "flow":"data.skinProb=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

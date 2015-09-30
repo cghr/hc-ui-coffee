@@ -1,0 +1,825 @@
+{
+"schemaName":"enum.eslDetail.injury",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"injury",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"ઈજા",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"injury",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેને [નામ] એવી કોઇપણ ઈજા અથવા અકસ્માત થયો હતો જેને કારણે તેનું મૃત્યુ થયું હોય?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccident",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was it?",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"રોડ ટ્રાફિક અકસ્માત","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":"આત્મઘાતી","value":"Suicide","valdn":"","flow":""},
+        
+            {"text":" હિંસા / હુમલો / મનુષ્યવધ","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"પડી જવું","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"વસ્તુઓ પડવી ","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"દાઝી જવું ","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"ડૂબી જવાને","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"ઝેરના","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"કરડવું /ડંખ મારવો","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"વિદ્યુતપ્રવાહથી","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"કુદરતી આપત્તિ","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"others",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.kindAccident=='Others'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccidentNeonate",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was it?",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"રોડ ટ્રાફિક અકસ્માત","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":" હિંસા / હુમલો / મનુષ્યવધ","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"પડી જવું","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"વસ્તુઓ પડવી ","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"દાઝી જવું ","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"ડૂબી જવાને","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"ઝેરના","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"કરડવું /ડંખ મારવો","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"વિદ્યુતપ્રવાહથી","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"કુદરતી આપત્તિ","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motRta",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ભોગ બનનાર અને પરિવહનની ઢબ",
+        "flow":"data.kindAccident=='Road traffic accident' || data.kindAccidentNeonate=='Road traffic accident'",
+        "value":"",
+        "items":[
+        
+            {"text":"રાહદારી / પગે ચાલનાર","value":"Pedestrian","valdn":"","flow":""},
+        
+            {"text":"સાયકલ સવાર","value":"Pedal cyclist ","valdn":"","flow":""},
+        
+            {"text":"મોટર સાયકલ સવાર","value":"Motor cycle rider ","valdn":"","flow":""},
+        
+            {"text":"મોટર સાયકલમાં પાછળ બેઠેલ વ્યક્તિ","value":"Pillion rider(Sitting back in the bike)","valdn":"","flow":""},
+        
+            {"text":"3-પૈડાના વાહનમાં બેઠેલ વ્યક્તિ","value":"Occupant of 3-wheeler","valdn":"","flow":""},
+        
+            {"text":"કારમાં બેઠેલ વ્યક્તિ","value":"Occupant of car","valdn":"","flow":""},
+        
+            {"text":"ટ્રક અથવા વાનમાં બેઠેલ વ્યક્તિ","value":"Occupant of truck or van","valdn":"","flow":""},
+        
+            {"text":"ભારે પરિવહન વાહનમાં બેઠેલ વ્યક્તિ","value":"Occupant of heavy transport vehicle","valdn":"","flow":""},
+        
+            {"text":"બસમાં બેઠેલ વ્યક્તિ","value":"Occupant of bus","valdn":"","flow":""},
+        
+            {"text":"અન્ય બિન-ચોક્કસ","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherMot",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.motRta=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"collisionWith",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ભોગ બનનારની અથડામણ (કોની સાથે)",
+        "flow":"data.kindAccident=='Road traffic accident' || data.kindAccidentNeonate=='Road traffic accident'",
+        "value":"",
+        "items":[
+        
+            {"text":"પગે ચાલનાર (રાહદારી) / પશુ","value":"Pedestrian/animal","valdn":"","flow":""},
+        
+            {"text":"સાયકલ સવાર","value":"Pedal cyclist","valdn":"","flow":""},
+        
+            {"text":"2-3 વ્હીલર / દ્વિ કે ત્રણ ચક્રી વાહન ","value":"2-3 wheeler","valdn":"","flow":""},
+        
+            {"text":"કાર, ટ્રક અથવા વેન ","value":"Car, truck or van","valdn":"","flow":""},
+        
+            {"text":"ભારે વાહન બસ","value":"Heavy vehicle Bus","valdn":"","flow":""},
+        
+            {"text":"રેલવે","value":"Railway","valdn":"","flow":""},
+        
+            {"text":"અન્ય બિન મોટર","value":"Other non-motor","valdn":"","flow":""},
+        
+            {"text":"સ્થિર / સ્થાયી વસ્તુઓ","value":"Fixed/stationary objects","valdn":"","flow":""},
+        
+            {"text":"બિન અથડામણ, પરિવહન","value":"Non collision transport","valdn":"","flow":""},
+        
+            {"text":"અન્ય બિન-ચોક્કસ","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherCollision",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.collisionWith=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"suicide",
+        "type":"radio",
+        "valdn":"required",
+        "label":"આત્મહત્યા ",
+        "flow":"data.kindAccident=='Suicide'",
+        "value":"",
+        "items":[
+        
+            {"text":"ગળાફાંસો ખાઈ ને","value":"By hanging ","valdn":"","flow":""},
+        
+            {"text":"બળી જઈને / આત્મ વિલોપન ","value":"By burns/self-immolation ","valdn":"","flow":""},
+        
+            {"text":"ગોળી છૂટે(બંદુક વગેરે) તેવા હથિયાર દ્વારા ","value":"Fire arm ","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherSuicide",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.suicide=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"poisoning",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ઝેરના",
+        "flow":"data.kindAccident=='Poisoning' || data.kindAccidentNeonate=='Poisoning'",
+        "value":"",
+        "items":[
+        
+            {"text":"આકસ્મિક","value":"Accidental","valdn":"","flow":""},
+        
+            {"text":"ઇરાદાપૂર્વકનું સ્વ હાનિ","value":"Intentional self harm","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherPoison",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.poisoning=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drowning",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ડૂબી જવાને",
+        "flow":"data.kindAccident=='Drowning' || data.kindAccidentNeonate=='Drowning'",
+        "value":"",
+        "items":[
+        
+            {"text":"આકસ્મિક","value":"Accidental","valdn":"","flow":""},
+        
+            {"text":"ઇરાદાપૂર્વકનું સ્વ હાનિ","value":"Intentional self harm","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherDrowning",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.drowning=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"biteSting",
+        "type":"radio",
+        "valdn":"required",
+        "label":"કરડવું /ડંખ મારવો",
+        "flow":"data.kindAccident=='Bite/sting' || data.kindAccidentNeonate=='Bite/sting'",
+        "value":"",
+        "items":[
+        
+            {"text":"સાપની ડંખ","value":"Snake bite","valdn":"","flow":""},
+        
+            {"text":"કૂતરું કરડવાથી થતો","value":"Dog bite","valdn":"","flow":""},
+        
+            {"text":"મોઢેથી તોડીને ખોલવાના અથવા અન્ય સસ્તન ગઇ","value":"Bitten or struck by other mammals","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherBiteSting",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.biteSting=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"homicideAssault",
+        "type":"radio",
+        "valdn":"required",
+        "label":"એસોલ્ટ / હિંસા / મનુષ્યવધ દ્વારા",
+        "flow":"data.kindAccident=='Homicide/assault/violence' || data.kindAccidentNeonate=='Homicide/assault/violence'",
+        "value":"",
+        "items":[
+        
+            {"text":"હાથ બંદૂક દ્વારા","value":"By handguns","valdn":"","flow":""},
+        
+            {"text":"તેજાબ દ્વારા","value":"By acids","valdn":"","flow":""},
+        
+            {"text":"અગ્નિ દ્વારા","value":"By fire","valdn":"","flow":""},
+        
+            {"text":"વિસ્ફોટક સામગ્રી દ્વારા","value":"By explosive materials ","valdn":"","flow":""},
+        
+            {"text":"તીક્ષ્ણ પદાર્થો દ્વારા","value":"By sharp objects ","valdn":"","flow":""},
+        
+            {"text":"બુઠ્ઠું પદાર્થો દ્વારા","value":"By blunt objects ","valdn":"","flow":""},
+        
+            {"text":"મોટર વાહનો દ્વારા","value":"By motor vehicles","valdn":"","flow":""},
+        
+            {"text":"શારીરિક બળ દ્વારા (લડાઈ અથવા નિઃશસ્ત્ર બોલાચાલી સહિત)","value":"By bodily force(including fight or unarmed brawl)","valdn":"","flow":""},
+        
+            {"text":"શારીરિક બળ દ્વારા જાતીય હુમલો","value":"By sexual assault by bodily force ","valdn":"","flow":""},
+        
+            {"text":"ગળુ દબાવીને મારી","value":"Strangulation","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherHomicideAssault",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.otherHomicideAssault=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surviveAfterInjury",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"તેઓ [નામ] ઈજા બાદ કેટલો સમય જીવિત રહ્યા હતાં?",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"મિનિટ","value":"Minutes","valdn":"between[1:60],required","flow":""},
+        
+            {"text":"કલાક","value":"Hours","valdn":"between[1:24],required","flow":""},
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:69],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

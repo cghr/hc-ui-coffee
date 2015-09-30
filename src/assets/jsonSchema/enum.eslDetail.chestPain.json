@@ -1,0 +1,351 @@
+{
+"schemaName":"enum.eslDetail.chestPain",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"chestPain",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Chest Pain",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chestPain",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] experience pain in the chest in the month preceding death?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationChestPain",
+        "type":"radio",
+        "valdn":"required",
+        "label":"How long did the pain last?",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Less than 30 minutes","value":"Less than 30 minutes","valdn":"","flow":""},
+        
+            {"text":"30 minutes - 24 hours","value":"30 minutes - 24 hours","valdn":"","flow":""},
+        
+            {"text":"Greater than 24 hours","value":"Greater than 24 hours","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"phyActivity",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was the pain during physical activity?",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"painLocated",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Where was the pain located?",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Upper or middle chest","value":"Upper or middle chest","valdn":"","flow":""},
+        
+            {"text":"Lower chest","value":"Lower chest","valdn":"","flow":""},
+        
+            {"text":"Left arm","value":"Left arm","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherPainLocated",
+        "type":"text",
+        "valdn":"required",
+        "label":"Specify where the pain was.",
+        "flow":"data.chestPain=='Yes' && data.painLocated=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chestpainWith",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"Was the chest pain associated with any of the following ",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Shortness of breath","value":"1","valdn":"","flow":""},
+        
+            {"text":"Vomiting ","value":"2","valdn":"","flow":""},
+        
+            {"text":"Anxiousness","value":"3","valdn":"","flow":""},
+        
+            {"text":"Pain radiating to left arm","value":"4","valdn":"","flow":""},
+        
+            {"text":"Sweating ","value":"5","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

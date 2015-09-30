@@ -1,0 +1,58 @@
+<div class="row clearfix">
+    <h4>Probe positive symptoms</h4>
+
+    <form class="form-horizontal" ng-submit="$state.go('steps.step4',$stateParams)">
+
+        <div ng-repeat="symptom in sortedSymptoms" class="container">
+            <hr/>
+            <div class="col-md-12"><img ng-src="assets/images/symptoms/{{domain}}/{{symptom.name}}.jpg" width="70"
+                                        height="70"/><span
+                    class="label label-primary">{{$index+1}} {{symptom.label | sentencecase}}</span>
+
+
+                <div ng-repeat="prob in symptom.properties" class="form-group">
+
+                    <label class="text text-danger col-sm-4 control-label"
+                           style="font-weight: bolder">{{prob['label'+lang]}}</label>
+
+                    <div class="col-sm-8">
+                        <textarea ng-if="!prob.items" ng-model="prob.comment" class="form-control"></textarea>
+                    </div>
+
+                    <div ng-if="prob.type=='radio'">
+
+                        <label ng-repeat="item in prob.items" class="radio-inline">
+                            <input value="{{item['value'+lang]}}" type="radio"
+                                   name="{{symptom.name}}_{{prob.name}}"
+                                   ng-model="prob.comment" required/><span>{{item['text'+lang]}} </span>
+                        </label>
+                    </div>
+                    <div ng-if="prob.type=='checkbox'">
+                        <label ng-repeat="item in prob.items" class="checkbox-inline">
+                            <span ng-if="$index==0">
+                            <input checklist-model="prob.comments" checklist-value="item['value'+lang]"
+                                   type="checkbox"
+                                   name="{{symptom.name}}_{{prob.name}}[]"
+                                   ng-model="prob.comment" ng-required="prob.comments ? prob.comments.length<1:true"/><span>{{item['text'+lang]}}</span>
+                            </span>
+                            <span ng-if="$index!=0">
+                                <input checklist-model="prob.comments" checklist-value="item['value'+lang]"
+                                       type="checkbox"
+                                       name="{{symptom.name}}_{{prob.name}}[]"
+                                       ng-model="prob.comment" /><span>{{item['text'+lang]}}</span>
+
+
+                            </span>
+                        </label>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Next Step &raquo;</button>
+        </div>
+    </form>
+</div>

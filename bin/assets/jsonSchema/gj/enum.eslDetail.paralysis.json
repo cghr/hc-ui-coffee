@@ -1,0 +1,325 @@
+{
+"schemaName":"enum.eslDetail.paralysis",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"paralysis",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"લકવો",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"paralysis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેઓ [નામ] કોઇપણ રીતે લકવાગ્રસ્ત હતાં?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationParalysis",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"મૃત્યુ પહેલાં કેટલો સમય તેને [નામ] લકવો રહ્યો હતો?",
+        "flow":"data.paralysis=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"paralysisPart",
+        "type":"radio",
+        "valdn":"required",
+        "label":"કયા હાથ-પગ કે શરીરના કયા ભાગો લકવાગ્રસ્ત થયા હતાં?",
+        "flow":"data.paralysis=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"જમણી બાજુ","value":"Right side","valdn":"","flow":""},
+        
+            {"text":"ડાબી બાજુ","value":"Left side","valdn":"","flow":""},
+        
+            {"text":"શરીરનો નીચલો ભાગ","value":"Lower part of body","valdn":"","flow":""},
+        
+            {"text":"શરીરનો ઉપલો ભાગ","value":"Upper part of body","valdn":"","flow":""},
+        
+            {"text":"માત્ર એક જ પગ","value":"One leg only","valdn":"","flow":""},
+        
+            {"text":"માત્ર એક જ બાહુ","value":"One arm only","valdn":"","flow":""},
+        
+            {"text":"સમગ્ર શરીર","value":"Whole body","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherParalysisPart",
+        "type":"text",
+        "valdn":"required",
+        "label":"લકવાગ્રસ્ત થયેલો શરીરનો ભાગ સૂચવો",
+        "flow":"data.paralysis=='Yes' && data.paralysisPart=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"paralysisWith",
+        "type":"checkbox",
+        "valdn":"",
+        "label":"લકવા સાથે નીચેમાંથી કોઈ લક્ષણો હતા?",
+        "flow":"data.paralysis=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"સભાનતા ગુમાવવી","value":"1","valdn":"","flow":""},
+        
+            {"text":"દ્રષ્ટિ નુકશાન","value":"2","valdn":"","flow":""},
+        
+            {"text":"પેશાબની અસંયમ ( પેશાબ લિકેજ)","value":"3","valdn":"","flow":""},
+        
+            {"text":"સનસનાટીભર્યા નુકશાન","value":"4","valdn":"","flow":""},
+        
+            {"text":"બદલો સ્પીચ","value":"5","valdn":"","flow":""},
+        
+            {"text":"મૂંઝવણ સાથે અચાનક માથાનો દુખાવો","value":"6","valdn":"","flow":""},
+        
+            {"text":"ફ્ટીસ","value":"7","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

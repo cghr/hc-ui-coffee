@@ -1,0 +1,1254 @@
+{
+"schemaName":"enum.eslDetail.abdominalUrine",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"abdominalUrine",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Abdominal",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abdominalProb",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any abdominal problem?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abdominalPain",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any abdominal pain?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<1","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abdominalPainNeonate",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"For how many days before death did s/he [name] have abdominal pain?",
+        "flow":"data.abdominalPain=='Yes' ",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durAbdPain",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have abdominal pain?",
+        "flow":"data.abdominalPain=='Yes' ",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.079 && age_value<1","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abdPainDiscomfort",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any abdominal pain or discomfort?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durAbdPainDiscomfort",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have pain or discomfort?",
+        "flow":"data.abdPainDiscomfort=='Yes' ",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abdomenPart",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was the pain in the upper or lower abdomen?",
+        "flow":"data.abdPainDiscomfort=='Yes' ",
+        "value":"",
+        "items":[
+        
+            {"text":"Upper abdomen","value":"Upper abdomen","valdn":"","flow":""},
+        
+            {"text":"Lower abdomen","value":"Lower abdomen","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bellyProtrude",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did her/his [name] belly protrude/swell more than usual?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durBellyProtrudeDays",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"For how many days before death did s/he [name] have a protruding belly?",
+        "flow":"data.bellyProtrude=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durBellyProtrudeMonths",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have a protruding belly?",
+        "flow":"data.abdominalPain=='Yes' && data.bellyProtrude=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.079 && age_value<1","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durBellyProtrude",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have a protruding belly?",
+        "flow":"data.bellyProtrude=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"speedBellyProtrude",
+        "type":"radio",
+        "valdn":"required",
+        "label":"How rapidly did s/he [name] develop the protruding belly? ",
+        "flow":"data.bellyProtrude=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Rapidly","value":"Rapidly","valdn":"","flow":""},
+        
+            {"text":"Slowly","value":"Slowly","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bellyMass",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any mass in the belly?",
+        "flow":"data.abdominalPain=='Yes' || data.abdPainDiscomfort=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durBellyMassMonths",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have a mass in the belly?",
+        "flow":"(data.abdominalPain=='Yes'  || data.abdPainDiscomfort=='Yes') && data.bellyMass=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<1","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationBellyMass",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have a mass in the belly?",
+        "flow":"(data.abdominalPain=='Yes'  || data.abdPainDiscomfort=='Yes') && data.bellyMass=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Swallow",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"difficultySwallow",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have difficulty swallowing? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationSwallow",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have difficulty swallowing?",
+        "flow":"data.difficultySwallow=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"difficultySolidLiquid",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was the difficulty with swallowing with solids, liquids, or both?",
+        "flow":"data.difficultySwallow=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Solids","value":"Solids","valdn":"","flow":""},
+        
+            {"text":"Liquids","value":"Liquids","valdn":"","flow":""},
+        
+            {"text":"Both","value":"Both","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pain",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have pain upon swallowing?",
+        "flow":"data.difficultySwallow=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Urine",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"urine",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any urine problems?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"noUrine",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] pass no urine at all?",
+        "flow":"data.urine=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"moreUrine",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name]  go to urinate more often than usual?",
+        "flow":"data.urine=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bloodUrine",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the final illness did s/he [name] ever pass blood in the urine?",
+        "flow":"data.urine=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"difficultyUrine",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have difficulty in passing urine?",
+        "flow":"data.urine=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bloodNoseMouthAnus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have any bleeding from nose or mouth or anus?",
+        "flow":"data.abdominalPain=='Yes' || data.abdPainDiscomfort=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"water",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] drink a lot more water than usual?",
+        "flow":"data.urine=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bleedBnPeriods",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she [name] have excessive vaginal bleeding in between menstrual periods?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=12","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bleedWeekDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was there excessive vaginal bleeding in the week prior to death? ",
+        "flow":"data.bleedBnPeriods=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=12","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bleedAfterMenopause",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she [name] have vaginal bleeding (start again) after menopause (menopause - a period without mentural bleeding for a consecutive 12 months)?",
+        "flow":"data.bleedBnPeriods=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=45","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

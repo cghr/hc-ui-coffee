@@ -1,0 +1,34 @@
+.modal-header
+    h3.modal-title  Confirm with the Respondent
+.modal-body
+
+    .checkbox
+        label
+            input(type="checkbox",ng-model="data.confirm1")
+            span.text.text-primary Is this information correct ?
+    .checkbox
+        label
+            input(type="checkbox",ng-model="data.confirm2")
+            spantext.text-primary Is there anything I missed out ?
+    .checkbox
+        label
+            input(type="checkbox",ng-model="data.confirm3")
+            spantext.text-primary Do you want to add anything  ?
+
+    form.form-horizontal
+        label Respondents Co-operation
+        br
+        label.radio-inline
+            input(type="radio",ng-model="data.respCooperation",value="Good",required="required",name="resp")
+            span Good
+        label.radio-inline
+            input(type="radio",ng-model="data.respCooperation",value="Poor",required="required",name="resp")
+            span Poor
+        br
+        button.btn.btn-primary.btn-primary(type="submit",ng-click="ok(data.respCooperation)",ng-show="data.confirm1 && data.confirm2 && data.confirm3 && data.respCooperation") Continue..
+
+    p.text.text-success(ng-show="data.confirm1 && data.confirm2 && data.confirm3 && data.respCooperation") Now request the respodent to give you some time to write your narrative
+
+    br
+
+

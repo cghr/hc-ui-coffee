@@ -1,0 +1,748 @@
+{
+"schemaName":"resamplingSurvey",
+"onSave":"resampling",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"resampling",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sex",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Deceased's sex?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Female","value":"Female","valdn":"","flow":""},
+        
+            {"text":"Male","value":"Male","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"age",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"How old was the deceased (NAME) at the time of death?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:69],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathSite",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Where did the death occur?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"At Home","value":"At Home","valdn":"","flow":""},
+        
+            {"text":"On Way To Health Facility","value":"On Way To Health Facility","valdn":"","flow":""},
+        
+            {"text":"PHC/CHC/Rural Hospital","value":"PHC/CHC/Rural Hospital","valdn":"","flow":""},
+        
+            {"text":"District Hospital","value":"District Hospital","valdn":"","flow":""},
+        
+            {"text":"Private Hospital","value":"Private Hospital","valdn":"","flow":""},
+        
+            {"text":"Other place","value":"Other place","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"maritalStatus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What was the marital status of the deceased?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Currently Married ","value":"Currently Married ","valdn":"","flow":""},
+        
+            {"text":"Not yet married (Single)","value":"Not yet married (Single)","valdn":"","flow":""},
+        
+            {"text":"Widowed","value":"Widowed","valdn":"","flow":""},
+        
+            {"text":"Divorced","value":"Divorced","valdn":"","flow":""},
+        
+            {"text":"Separated","value":"Separated","valdn":"","flow":""},
+        
+            {"text":"Deserted","value":"Deserted","valdn":"","flow":""},
+        
+            {"text":"Married, but Guana not performed","value":"Married, but Guana not performed","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"schoolingLevel",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What is the highest standard of education the deceased had completed?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Illiterate","value":"Illiterate","valdn":"","flow":""},
+        
+            {"text":"Literate without formal education","value":"Literate without formal education","valdn":"","flow":""},
+        
+            {"text":"Literate, below primary","value":"Literate, below primary","valdn":"","flow":""},
+        
+            {"text":"Literate, primary","value":"Literate, primary","valdn":"","flow":""},
+        
+            {"text":"Literate, middle","value":"Literate, middle","valdn":"","flow":""},
+        
+            {"text":"Literate, secondary, Matric Class-X","value":"Literate, secondary, Matric Class-X","valdn":"","flow":""},
+        
+            {"text":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","value":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","valdn":"","flow":""},
+        
+            {"text":"Graduate","value":"Graduate","valdn":"","flow":""},
+        
+            {"text":"Post-Graduate","value":"Post-Graduate","valdn":"","flow":""},
+        
+            {"text":"Non-Technical","value":"Non-Technical","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"occupation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What was the occupation of the deceased?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Nonworker","value":"Nonworker","valdn":"","flow":""},
+        
+            {"text":"Salaried","value":"Salaried","valdn":"","flow":""},
+        
+            {"text":"Wage earner","value":"Wage earner","valdn":"","flow":""},
+        
+            {"text":"Profession/Business","value":"Profession/Business","valdn":"","flow":""},
+        
+            {"text":"Cultivator","value":"Cultivator","valdn":"","flow":""},
+        
+            {"text":"Agricultural wage labour","value":"Agricultural wage labour","valdn":"","flow":""},
+        
+            {"text":"Non agricultural wage labour","value":"Non agricultural wage labour","valdn":"","flow":""},
+        
+            {"text":"Student","value":"Student","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"respodentThinkCod",
+        "type":"text",
+        "valdn":"maxlength[100],required",
+        "label":"What did the respondent think that this person died of? (Allow the respondent to tell the illness in his or her own words)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"registered",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was the death registered?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tuberculosis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose tuberculosis?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hivAids",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose HIV/AIDS?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"malaria",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose malaria?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"heartDisease",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose heart disease?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"asthma",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose asthma?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cancer",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose cancer?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"copd",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose chronic obstructive pulmonary disease (COPD)?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kidneyDisease",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose kidney disease?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"epilepsy",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did a doctor diagnose epilepsy?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationIllness",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long was (s)he ill before (s)he died?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

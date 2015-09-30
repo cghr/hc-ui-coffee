@@ -1,0 +1,700 @@
+{
+"schemaName":"enum.vaDetail.vaChild",
+"onSave":"enum.vaDetail.adult",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"va_child",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_premature",
+        "type":"radio",
+        "valdn":"required",
+        "label":"હતી તે / તેણી અકાળ જન્મ થયો હતો",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pregDuration",
+        "type":"text",
+        "valdn":"between[1:12],required",
+        "label":"નઅ કઇ૩લઅ મહ્યનિઅ હતઅ. ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_size",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તમારા વિસ્તારમાં અન્ય બાળકો સરખામણીએ જન્મ સમયે બાળકનું  વજન કેવું  હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ખૂબ નાનું","value":"Very Small","valdn":"","flow":""},
+        
+            {"text":"સામાન્ય કરતાં નાનું","value":"Smaller than usual","valdn":"","flow":""},
+        
+            {"text":"સરેરાશ","value":"Average","valdn":"","flow":""},
+        
+            {"text":"સરેરાશ કરતાં મોટુ","value":"Larger than average","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"birth_weight",
+        "type":"text",
+        "valdn":"between[1000:8000],required",
+        "label":"જન્મ સમયે બાળકનું વજન શું હતું? (Grams)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"first_breastfed",
+        "type":"radio",
+        "valdn":"required",
+        "label":"When was s/he first breastfed?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"જન્મ પછી તરત જ / અંદર એક કલાક","value":"Immediately/within one hour of birth","valdn":"","flow":""},
+        
+            {"text":"બાળકના જન્મદિવસે","value":"Same day child was born","valdn":"","flow":""},
+        
+            {"text":"બીજા દિવસે અથવા પછીના","value":"Second day or later","valdn":"","flow":""},
+        
+            {"text":"ક્યારેય સ્તનપાન nhI","value":"Never breastfed","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"other_than_breast_milk",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળક પ્રથમ દરમિયાન પીવા માટે સ્તન દૂધ કરતાં અન્ય કંઈપણ પ્રાપ્ત થયું છે 6 મહિના જીવન ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_breastfed",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુ તરફ દોરી કે માંદગી દરમિયાન , બાળક સ્તનપાન કરવામાં આવી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_stop_breastfed",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુ તરફ દોરી કે માંદગી દરમિયાન , બાળક સ્તનપાન બંધ કરી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_measles",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the child suffer from measles (use local term) ? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_pale",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the weeks preceding death , did s/he suffer from lack of blood or appear pale? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_grow",
+        "type":"radio",
+        "valdn":"required",
+        "label":"In the last six months, compared to other children of the same age, was s/he growing normally? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_antibiotics",
+        "type":"radio",
+        "valdn":"required",
+        "label":"During the illness that lead to death, did s/he receive any antibiotics? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Immunization details ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_bcg",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he receive BCG injection ? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_dpt",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he receive 3 injections of DPT (DPT-3)? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_polio",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he receive polio drops in the mouth ? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_measles_inj",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he receive an injection for measles (use local term) ? ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા - માત્ર એક જ","value":"Yes - only one","valdn":"","flow":""},
+        
+            {"text":"હા - એક કરતાં વધારે","value":"Yes - more than one","valdn":"","flow":""},
+        
+            {"text":"કોઈ - કોઈપણ પ્રાપ્ત થઇ ન હતી","value":"No - did not receive any","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

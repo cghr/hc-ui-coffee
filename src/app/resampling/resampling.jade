@@ -1,0 +1,11 @@
+div.container
+    h3 Today's Resampling
+    table.table.table-condensed
+        tr(ng-repeat="member in resampling")
+            td
+                a(ng-click="resampleSurvey(member.deathId)",href="") {{member.deathId}}
+            td {{member.name}}
+            td {{member.houseno}}
+            td {{member.age}}
+            td {{member.sex}}
+            td {{member.status}}

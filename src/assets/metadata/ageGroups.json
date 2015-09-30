@@ -1,0 +1,250 @@
+[
+  {
+    "diseases": [
+      {
+        "name": "prematurity",
+        "pattern": "5,9,4,3,7,8,12"
+      },
+      {
+        "name": "infections",
+        "pattern": "4,3,5,9,7,8,12"
+      },
+      {
+        "name": "birthTrauma",
+        "pattern": "5,9,4,3,7,8,12"
+      },
+      {
+        "name": "congenital",
+        "pattern": "5,9,4,3,7,8,12"
+      },
+      {
+        "name": "diahorrea",
+        "pattern": "7,4,8,9,3,5,12"
+      },
+      {
+        "name": "pneumonia",
+        "pattern": "5,4,9,3,7,8,12"
+      },
+      {
+        "name": "injury",
+        "pattern": "12,9,4,3,5,7,8"
+      },
+      {
+        "name": "others",
+        "pattern": "3,4,5,7,8,9,12"
+      }
+    ],
+    "first": "1,2",
+    "label": "Neonatal (0-28) days",
+    "last": "15",
+    "name": "neonatal",
+    "range": "0-0.077"
+  },
+  {
+    "diseases": [
+      {
+        "name": "pneumonia",
+        "pattern": "5,4,3,7,8,9,11,12"
+      },
+      {
+        "name": "diahorrea",
+        "pattern": "7,4,3,5,8,9,11,12"
+      },
+      {
+        "name": "measles",
+        "pattern": "3,4,5,7,8,9,11,12"
+      },
+      {
+        "name": "meningitis",
+        "pattern": "4,9,7,3,5,8,11,12"
+      },
+      {
+        "name": "malariya",
+        "pattern": "4,9,7,3,5,8,11,12"
+      },
+      {
+        "name": "nutritional",
+        "pattern": "11,7,3,4,5,8,9,12"
+      },
+      {
+        "name": "infections",
+        "pattern": "4,9,7,3,5,8,11,12"
+      },
+      {
+        "name": "injury",
+        "pattern": "12,9,11,3,4,5,7,8"
+      },
+      {
+        "name": "cancer",
+        "pattern": "11,9,3,4,7,5,8,12"
+      },
+      {
+        "name": "others",
+        "pattern": "3,4,5,7,8,9,11,12"
+      }
+    ],
+    "first": "1,2",
+    "label": "Child Death (1-11) months",
+    "last": "14,15",
+    "name": "child1",
+    "range": "0.077-1"
+  },
+  {
+    "diseases": [
+      {
+        "name": "penmonia",
+        "pattern": "4,5,3,7,8,9,11,12"
+      },
+      {
+        "name": "diahorrea",
+        "pattern": "7,4,5,8,3,9,11,12"
+      },
+      {
+        "name": "malariya",
+        "pattern": "4,7,9,3,5,8,11,12"
+      },
+      {
+        "name": "infections",
+        "pattern": "4,5,3,7,8,9,11,12"
+      },
+      {
+        "name": "measels",
+        "pattern": "4,3,5,7,8,9,11,12"
+      },
+      {
+        "name": "meningitis",
+        "pattern": "4,9,7,3,5,8,11,12"
+      },
+      {
+        "name": "nutritional",
+        "pattern": "11,7,4,8,5,3,9,12"
+      },
+      {
+        "name": "injury",
+        "pattern": "12,9,11,3,4,5,7,8"
+      },
+      {
+        "name": "cancer",
+        "pattern": "4,11,7,9,3,5,8,12"
+      },
+      {
+        "name": "others",
+        "pattern": "3,4,5,7,8,9,11,12"
+      }
+    ],
+    "first": "1,2",
+    "label": "Child Death(1-4) years",
+    "last": "14,15",
+    "name": "child2",
+    "range": "1-5.01"
+  },
+  {
+    "diseases": [
+      {
+        "name": "malariya",
+        "pattern": "4,9,3,7,5,6,8,10,11,12"
+      },
+      {
+        "name": "tb",
+        "pattern": "5,4,11,6,3,7,8,9,10,12"
+      },
+      {
+        "name": "hiv",
+        "pattern": "4,7,3,11,8,5,6,9,10,12"
+      },
+      {
+        "name": "infections",
+        "pattern": "4,3,9,7,5,6,8,10,11,12"
+      },
+      {
+        "name": "cancer",
+        "pattern": "11,4,3,8,7,5,6,9,10,12"
+      },
+      {
+        "name": "heart",
+        "pattern": "6,4,5,3,9,11,10,7,8,12"
+      },
+      {
+        "name": "renal",
+        "pattern": "8,4,3,5,6,7,9,11,12,10"
+      },
+      {
+        "name": "injury",
+        "pattern": "12,3,4,5,6,7,8,9,10,11"
+      },
+      {
+        "name": "others",
+        "pattern": "3,4,5,6,7,8,9,10,11,12"
+      }
+    ],
+    "first": "2",
+    "label": "Child Death(5-14) Years",
+    "last": "14,15,16",
+    "name": "child3",
+    "range": "5-15"
+  },
+  {
+    "diseases": [
+      {
+        "name": "malariya",
+        "pattern": "4,9,3,7,5,6,10,8,11,12"
+      },
+      {
+        "name": "tb",
+        "pattern": "5,4,11,6,10,9,7,8,3,12"
+      },
+      {
+        "name": "hiv",
+        "pattern": "11,4,7,5,3,6,8,9,10,12"
+      },
+      {
+        "name": "infections",
+        "pattern": "4,9,3,7,5,6,10,8,11,12"
+      },
+      {
+        "name": "cancer",
+        "pattern": "8,11,5,4,6,7,3,9,10,12"
+      },
+      {
+        "name": "heart",
+        "pattern": "6,10,5,11,9,4,3,7,8,12"
+      },
+      {
+        "name": "stroke",
+        "pattern": "10,6,5,11,4,7,8,3,9,12"
+      },
+      {
+        "name": "respiratory",
+        "pattern": "5,6,4,11,3,7,8,9,10,12"
+      },
+      {
+        "name": "liver",
+        "pattern": "8,3,11,5,9,4,6,7,10,12"
+      },
+      {
+        "name": "digestive",
+        "pattern": "8,11,7,3,4,5,6,9,10,12"
+      },
+      {
+        "name": "renal",
+        "pattern": "11,8,5,6,4,7,3,9,10,12"
+      },
+      {
+        "name": "maternal",
+        "pattern": "13,8,9,4,5,6,7,3,10,11,12"
+      },
+      {
+        "name": "injury",
+        "pattern": "12,9,4,5,6,7,8,3,10,11"
+      },
+      {
+        "name": "others",
+        "pattern": "4,5,6,10,9,7,8,11,3,12"
+      }
+    ],
+    "label": "Adult Death (15-100)",
+    "last": "14,15,16",
+    "name": "adult",
+    "range": "15-100"
+  }
+]

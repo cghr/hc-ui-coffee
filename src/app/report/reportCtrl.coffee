@@ -13,14 +13,12 @@ do(app = angular.module('myApp.report')) ->
         id: 1, label: 'Enumeration',
         items: [{id: 11, label: 'Areas'},
           {id: 12, label: 'Houses'}, {id: 13, label: 'Households'}
-        , {id: 14, label: 'Members'}]
+        , {id: 14, label: 'Members'}, {id: 15, label: 'Deaths'}
+        , {id: 16, label: 'Narrative'}]
       },
+
       {
-        id: 2, label: 'HHQ',
-        items: [{id: 21, label: 'Members'}]
-      },
-      {
-        id: 3, label: 'Users',
+        id: 3, label: 'Users & Teams',
         items: [{id: 31, label: 'Surveyors'}]
       }
 

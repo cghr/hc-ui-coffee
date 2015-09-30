@@ -1,8 +1,6 @@
-do(app = angular.module 'myApp.lodash', []) ->
+do(app = angular.module('myApp.lodash', [])) ->
+
 
   app.factory '_', ($window)->
 
-    return $window._
-
-
-
+    $window._

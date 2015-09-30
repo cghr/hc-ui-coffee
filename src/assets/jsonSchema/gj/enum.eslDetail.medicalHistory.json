@@ -1,0 +1,774 @@
+{
+"schemaName":"enum.eslDetail.medicalHistory",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"medicalHistory",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"હવે હું તમને મૃતકની તબીબી વિગતો વિષે થોડી માહિતી પૂછીશ.",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hbp",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે ઉચ્ચ રક્તદાબ/હાયપરટેન્શનનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tuberculosis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે ક્ષયનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hivAids",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે એચઆઈવી/એઈડ્ઝનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"malaria",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે મૅલેરિયાનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"heartDisease",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે હૃદય રોગનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"diabetes",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે ડાયબિટીસનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"asthma",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે દમનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"stroke",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે સ્ટ્રોકનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cancer",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે કેન્સરનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"copd",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે ક્રોનિક ઑબ્સ્ટ્રક્ટિવ પલ્મોનરી ડિસીઝ (સીઓપીડી)નું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"depression",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ડૉક્ટર ડિપ્રેશન નિદાન હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kidneyDisease",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ડૉક્ટર કિડની રોગ નિદાન હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"epilepsy",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ડૉક્ટર વાઈ નિદાન હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0.91","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"liverDisease",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ડૉક્ટર યકૃત(liver) રોગ નિદાન હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"arthritis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ડૉક્ટર સંધિવા નિદાન હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationIllness",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"તે [નામ] મૃત્યુ પામ્યા તે પહેલાં કેટલો સમય બીમાર રહ્યા હતાં?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"suddenDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેનું [નામ] અચાનક મૃત્યુ થયું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"suddenDeathBaby",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું બાળકનું મૃત્યુ અચાનક થયું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

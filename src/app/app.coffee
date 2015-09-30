@@ -1,31 +1,37 @@
 do (app = angular.module "myApp", [
-  'angular-loading-bar'
-  'photoConsent'
-  'ngcamera'
-  'dashboard'
-  'security'
-  'myApp.focus'
-  'myApp.stateTransitions'
-  'myApp.report'
-  'sync'
-  'enum'
-  'hc'
+
+  'resampling'
+  'va'
+  'myApp.restore'
+  'base64'
+  'myApp.areaResolver'
+  'myApp.resolver'
+  'myApp.lodash'
   'myApp.appService'
   'myApp.idService'
   'myApp.jsonSchemaListService'
   'myApp.schemaLoader'
+  'myApp.focus'
+  'myApp.stateTransitions'
+  'myApp.report'
+  'myApp.backSpaceNav'
+  'angular-loading-bar'
+  'dashboard'
+  'esl'
+  'sync'
+  'enum'
   'templates-app'
   'templates-common'
   'ui.router.state'
   'ui.router'
   'anguFixedHeaderTable'
   'cgForm'
-  'myApp.backSpaceNav'
+  'security'
+  'steps'
+  'audioService'
+  'langToggle'
 ]) ->
-
-
   app.config ($stateProvider, $urlRouterProvider, $httpProvider) ->
-
     $urlRouterProvider.otherwise '/enum/area'
 
     isDevEnv = -> /7000/.test(window.location.href)
@@ -41,6 +47,9 @@ do (app = angular.module "myApp", [
 
     if isDevEnv()
       $httpProvider.interceptors.push(reqInterceptor)
+
+
+
 
 
 

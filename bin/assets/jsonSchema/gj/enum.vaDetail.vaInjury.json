@@ -1,0 +1,278 @@
+{
+"schemaName":"enum.vaDetail.vaInjury",
+"onSave":"enum.vaDetail.vaChild",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"vaInjury",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"injury",
+        "type":"radio",
+        "valdn":"required",
+        "label":"નહોતી/ તેમણે ઓ ઇજા અથવા અકસ્માત મૃત્યુ પામે છે  ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccident",
+        "type":"radio",
+        "valdn":"required",
+        "label":"જો હા, ઈજા કે અકસ્માત કેવા પ્રકારની?",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"રોડ ટ્રાફિક અકસ્માત","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":" હિંસા / હુમલો / મનુષ્યવધ","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"પડી જવું","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"વસ્તુઓ પડવી ","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"દાઝી જવું ","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"ડૂબી જવાને","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"ઝેરના","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"કરડવું /ડંખ મારવો","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"વિદ્યુતપ્રવાહથી","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"કુદરતી આપત્તિ","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"injuryChildAdult",
+        "type":"radio",
+        "valdn":"required",
+        "label":"નહોતી/ તેમણે ઓ ઇજા અથવા અકસ્માત મૃત્યુ પામે છે  ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccidentChildAdult",
+        "type":"radio",
+        "valdn":"required",
+        "label":"જો હા, ઈજા કે અકસ્માત કેવા પ્રકારની?",
+        "flow":"data.injuryChildAdult=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"રોડ ટ્રાફિક અકસ્માત","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":"આત્મઘાતી","value":"Suicide","valdn":"","flow":""},
+        
+            {"text":" હિંસા / હુમલો / મનુષ્યવધ","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"પડી જવું","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"વસ્તુઓ પડવી ","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"દાઝી જવું ","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"ડૂબી જવાને","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"ઝેરના","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"કરડવું /ડંખ મારવો","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"વિદ્યુતપ્રવાહથી","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"કુદરતી આપત્તિ","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

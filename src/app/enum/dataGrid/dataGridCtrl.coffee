@@ -11,15 +11,11 @@ do (app = angular.module('myApp.dataGrid', [
     mappings = {
       'member': {
         entity: 'household',
-        variable: 'totalMembers', next: 'enum.householdDetail.commonQs'
-      },
-      'hosp': {
-        entity: 'hospInf',
-        variable: 'hospCount', next: 'enum.householdDetail.deathInf'
+        variable: 'householdCount', next: 'enum.householdDetail.commonQs'
       },
       'death': {
         entity: 'deathInf',
-        variable: 'deathCount', next: 'enum.householdDetail.contact'
+        variable: 'deceasedCount', next: 'enum.householdDetail.esl'
       }
     }
 
@@ -33,7 +29,10 @@ do (app = angular.module('myApp.dataGrid', [
 
       AppService.getData(mapping.entity, $stateParams['householdId'])
       .then (data) ->
-        $scope.canAddMore = (actualCount < data[mapping.variable])
+        if(data.householdCount)
+          $scope.canAddMore = (actualCount < data[mapping.variable]-1)
+        else
+          $scope.canAddMore = (actualCount < data[mapping.variable])
 
 
 

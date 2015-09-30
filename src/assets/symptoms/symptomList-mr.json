@@ -1,0 +1,1491 @@
+[
+  {
+    "name": "fever",
+    "label": "fever(ताप )",
+    "properties": [
+      {
+        "label": "Grade(श्रेणी )",
+        "name": "grade",
+        "type": "radio",
+        "items": [
+          {
+            "text": "High(जास्त )",
+            "value": "High"
+          },
+          {
+            "text": "Low(कमी )",
+            "value": "Low"
+          }
+        ]
+      },
+      {
+        "label": "Duration >30 days(कालावधी 30 दिवस )",
+        "name": "duration",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Pattern(नमुना )",
+        "name": "patternFever",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Continuous(सलग )",
+            "value": "Continuous"
+          },
+          {
+            "text": "Intermittent (on and off)(अधून मधून )",
+            "value": "Intermittent (on and off)"
+          },
+          {
+            "text": "Occasional (कधी कधी )",
+            "value": "Occasional"
+          }
+        ]
+      },
+      {
+        "label": "Did the fever rise every day (ताप दररोज वाढत होता का )",
+        "name": "ferverRiseDay",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय )",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Repeated attacks with (च्याऐवजी )",
+        "name": "repeatAttack",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Chills (थंडी )",
+            "value": "Chills"
+          },
+          {
+            "text": "Shaking()",
+            "value": "Shaking"
+          },
+          {
+            "text": "Sweating(घाम येणे )",
+            "value": "Sweating"
+          },
+          {
+            "text": "Muscle pain (अंग दुखी )",
+            "value": "Muscle pain"
+          },
+          {
+            "text": "None of the above (वरील पैकी कोणतेही नाही )",
+            "value": "None of the above"
+          }
+        ]
+      },
+      {
+        "label": "Associated with (च्यासोबत )",
+        "name": "associatedFever",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Headache (डोके दुखी )",
+            "value": "Headache"
+          },
+          {
+            "text": "Burning sensation while passing urine (उन्हाळा लागणे )",
+            "value": "Burning sensation while passing urine"
+          },
+          {
+            "text": "Neck stiffness (मान खडक)",
+            "value": "Neck stiffness"
+          },
+          {
+            "text": "Irritated and does not like light or sound ( त्रासूल जना त्याला प्रकाश / आवाज  आवडत नाही)",
+            "value": "Irritated and does not like light or sound"
+          },
+          {
+            "text": "Confusion (गोंधळ )",
+            "value": "Confusion"
+          },
+          {
+            "text": "Drowsiness (तंद्री )",
+            "value": "Drowsiness"
+          },
+          {
+            "text": "Coma (बेशुधी)",
+            "value": "Coma"
+          },
+          {
+            "text": "Rash/blisters (पुरळ )",
+            "value": "Rash/blisters"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "cough",
+    "label": "cough (खोकला )",
+    "properties": [
+      {
+        "label": "Type (प्र्कार )",
+        "name": "typeCough",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Dry",
+            "value": "Dry"
+          },
+          {
+            "text": "Wet (with sputum) (बेडका)",
+            "value": "Wet (with sputum)"
+          },
+          {
+            "text": "Bloody (rusty) (रक्त )",
+            "value": "Bloody (rusty)"
+          },
+          {
+            "text": "Foul smelling (घाणेरडा  वास )",
+            "value": "Foul smelling"
+          }
+        ]
+      },
+      {
+        "label": "Duration >30 days (कालावधी 30 दिवस )",
+        "name": "duration",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Worse (Severe) (तिव्र) ",
+        "name": "worse",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Day (दिन )",
+            "value": "Day"
+          },
+          {
+            "text": "Night (रात )",
+            "value": "Night"
+          }
+        ]
+      },
+      {
+        "label": "Along with  (च्यासोबत)",
+        "name": "alongWith",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Wheezing (घरघर )",
+            "value": "Wheezing"
+          },
+          {
+            "text": "Indrawing of chest (श्वास  घेणे )",
+            "value": "Indrawing of chest"
+          }
+        ]
+      },
+      {
+        "label": "Any pain during cough or deep breath (खोकताना इतर त्रास होता का ) ",
+        "name": "painCough",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Any pain at the sides of the chest wall (छाती जवळ  दुखत   होता का )",
+        "name": "painSideChest",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Associated with (च्यासोबत ) ",
+        "name": "associatedCough",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Night sweats (रत्री च्यावेळी घाम)",
+            "value": "Night sweats"
+          },
+          {
+            "text": "Evening rise of temperature (सायंकाळी तापमान वाढत )",
+            "value": "Evening rise of temperature"
+          },
+          {
+            "text": "Vomiting (उलटी )",
+            "value": "Vomiting"
+          },
+          {
+            "text": "Hoarseness of voice (घसा बसने )",
+            "value": "Hoarseness of voice"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "breathlessness",
+    "label": "breathlessness  (श्वसनाचे विकार )",
+    "properties": [
+      {
+        "label": "Due to (च्या मूळे )",
+        "name": "dueTo",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Allergy(वावड )",
+            "value": "Allergy"
+          },
+          {
+            "text": "Chest infection(छातीचा संसर्ग )",
+            "value": "Chest infection"
+          }
+        ]
+      },
+      {
+        "label": "Did the person feel breathlessness only during exertion(श्वास घेताना त्रास होणे )",
+        "name": "exertion",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Did it progressively worsen so that breathlessness occurred also at rest(श्वास घेण्याचा त्रास हा वाढून आराम करते वेळेस हि होता का )",
+        "name": "rest",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Worse after lying flat (झोपल्यानंतर जास्त वाढत होता का )",
+        "name": "worseLyingFlat",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Relieved by sitting up(बसल्यावर बरे वाटणे )",
+        "name": "relievedSitting",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Pattern (प्रकार )",
+        "name": "patternBreathlessness",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Continuous(सलग )",
+            "value": "Continuous"
+          },
+          {
+            "text": "Episodes/attacks (अधून मधून )",
+            "value": "Episodes/attacks"
+          }
+        ]
+      },
+      {
+        "label": "Associated with (च्यासोबत)",
+        "name": "associatedBreathlessness",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Night sweats (रत्री च्यावेळी घाम)",
+            "value": "Night sweats"
+          },
+          {
+            "text": "Evening rise of temperature (सायंकाळी तापमान वाढत )",
+            "value": "Evening rise of temperature"
+          },
+          {
+            "text": "Vomiting (उलटी )",
+            "value": "Vomiting"
+          },
+          {
+            "text": "Hoarseness of voice (घसा बसने )",
+            "value": "Hoarseness of voice"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "diarrhoea",
+    "label": "diarrhoea (अतिसार )",
+    "properties": [
+      {
+        "label": "Stool type  (विष्ठा प्रकार)",
+        "name": "typeStool",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Liquid (पातळ  )",
+            "value": "Liquid"
+          },
+          {
+            "text": "Semisolid (घट्ट)",
+            "value": "Semisolid"
+          }
+        ]
+      },
+      {
+        "label": "Stools contain  (समग्री )",
+        "name": "stoolsContain",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Mucus (आव पडणे )",
+            "value": "Mucus"
+          },
+          {
+            "text": "Look like rice water (भाताच्या कांजी सारखे दिसणे )",
+            "value": "Look like rice water"
+          }
+        ]
+      },
+      {
+        "label": "Duration >30 days (कालावधी 30 दिवस )",
+        "name": "duration",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Painless or painful (वेदना आहे / वेदना नाही )",
+        "name": "painStatus",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Painful (वेदना आहे)",
+            "value": "Painful"
+          },
+          {
+            "text": "Painless (वेदना नाही )",
+            "value": "Painless"
+          }
+        ]
+      },
+      {
+        "label": "Large quantity (ज्यास्थ प्रमाणात )",
+        "name": "largeQuantity",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Blood in the stool (रक्त )",
+        "name": "bloodStool",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Stool color  (विष्टे चारंग )",
+        "name": "colorStool",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Red (लाल )",
+            "value": "Red"
+          },
+          {
+            "text": "Black (कला )",
+            "value": "Black"
+          }
+        ]
+      },
+      {
+        "label": "No of times a day at worst (दिवसातून किती वेळा त्याची तिव्रत वाढत असते )",
+        "name": "noTimesWorst",
+        "type": "text"
+      },
+      {
+        "label": "Associated with (च्यासोबत)",
+        "name": "associatedDiarrhoea",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Vomiting (उलटी )",
+            "value": "Vomiting"
+          },
+          {
+            "text": "Very thirsty (तहानलेला )",
+            "value": "Very thirsty"
+          },
+          {
+            "text": "Dehydration (निर्जालीकर्ण )",
+            "value": "Dehydration"
+          },
+          {
+            "text": "Sunken eyes (खोल गेलेले डोळे )",
+            "value": "Sunken eyes"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "weightLoss",
+    "label": "weight loss (वजन कमी होने )",
+    "properties": [
+      {
+        "label": "Loss of weight rapid in last 2-3 months (2-3 महिने महिने मदे वजन जास्त कमी झाले)",
+        "name": "wtLossRapid",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Diarrhoea for more than 1 month ( 1 महिने पेक्षा जास्त अतिसार )",
+        "name": "diarrhoeaMore1Month",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Persistent cough for more than 1 month ( कोकला  1 महिने पेक्षा जास्त )",
+        "name": "coughMore1Month",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Swelling in (सूज )",
+        "name": "swellingIn",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Arm pits (काख )",
+            "value": "Arm pits"
+          },
+          {
+            "text": "Neck (मान/गळा  )",
+            "value": "Neck"
+          },
+          {
+            "text": "Groin (माडीचा  सांधा )",
+            "value": "Groin"
+          }
+        ]
+      },
+      {
+        "label": "Itching and skin rash  (खाज  शरीरा वरिल पुरेळ )",
+        "name": "ItchingSkinRash",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "White sores or white patches in mouth (तोंड येणे)",
+        "name": "whiteSorePatchMouth",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "White sores (सफेद फोड )",
+            "value": "White sores"
+          },
+          {
+            "text": "White patches (सफेद पट्टा )",
+            "value": "White patches"
+          }
+        ]
+      },
+      {
+        "label": "History of tuberculosis (TB चा इतिहास )",
+        "name": "hxtb",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Associated with prolonged fever for more than 1 month (either constant or continuous) (तो १ महिन्या पेक्षा जास्त तपासोबत)",
+        "name": "wtLossFever",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes(इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "chestPain",
+    "label": "chest pain(छातीचे दुखणे )",
+    "properties": [
+      {
+        "label": "Onset(आजाराची सुरुवात )",
+        "name": "cpOnset",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Sudden(अचानक )",
+            "value": "Sudden"
+          },
+          {
+            "text": "Gradual (हळूहळू )",
+            "value": "Gradual"
+          }
+        ]
+      },
+      {
+        "label": "Pain last (वेदनेचा काळ )",
+        "name": "cpPainLost ",
+        "type": "radio",
+        "items": [
+          {
+            "text": "More than 24 hours or (तो २४ तासा पेक्षा जास्त ) ",
+            "value": "More than 24 hours or "
+          },
+          {
+            "text": "Less than 24 hours (कि २४ तासा पेक्षा कमी )",
+            "value": "Less than 24 hours"
+          }
+        ]
+      },
+      {
+        "label": "Location (स्थान )",
+        "name": "cpLocation",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Chest (छाती )",
+            "value": "Chest"
+          },
+          {
+            "text": "Upper stomach (पोटाचा वरील भाग )",
+            "value": "Upper stomach"
+          },
+          {
+            "text": "Back (पाठ )",
+            "value": "Back"
+          }
+        ]
+      },
+      {
+        "label": "Pain spreading to (वेदना कुठे वाढत होती :",
+        "name": "cpSpreadLocation",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Left arm (डाव्या हाताला )",
+            "value": "Left arm"
+          },
+          {
+            "text": "Deep central chest (छातीच्या मध्ये खोल )",
+            "value": "Deep central chest"
+          },
+          {
+            "text": "Hand (हात)",
+            "value": "Hand"
+          },
+          {
+            "text": "Shoulder (खांदे)",
+            "value": "Shoulder"
+          },
+          {
+            "text": "Back (पाठ )",
+            "value": "Back"
+          },
+          {
+            "text": "None of the above (वरील पैकी कोणतेही नाही )",
+            "value": "None of the above"
+          }
+        ]
+      },
+      {
+        "label": "Pain worse with (च्या सोबत वेदना वाढत होती)",
+        "name": "painWorse",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Walking (चालताना )",
+            "value": "Walking"
+          },
+          {
+            "text": "Exertion (मेहनत जास्त झाल्यानंतर )",
+            "value": "Exertion"
+          },
+          {
+            "text": "Cough or deep breath ( खोकला किंवा खोल श्वास )",
+            "value": "Cough or deep breath"
+          },
+          {
+            "text": "Touching the area (हात लावल्यावर  त्या भागाला )",
+            "value": "Touching the area"
+          },
+          {
+            "text": "Eating (  काही खाल्या नंतर )",
+            "value": "Eating"
+          },
+          {
+            "text": "Non of the above ( वरील पैकी कोणतेही नाही)",
+            "value": "Non of the above"
+          }
+        ]
+      },
+      {
+        "label": "Associated with (च्या सोबत ) ",
+        "name": "associatedChestPain",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Sweating (घाम येणे )",
+            "value": "Sweating"
+          },
+          {
+            "text": "Vomiting (उलटी )",
+            "value": "Vomiting"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes ( इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "paralysis",
+    "label": "paralysis (लकवा )",
+    "properties": [
+      {
+        "label": "Onset (त्या आजाराची सुरुवात ) ",
+        "name": "psOnset",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Over minutes (१ मिनिट पेक्षा जास्त )",
+            "value": "Over minutes"
+          },
+          {
+            "text": "Hours ( तास )",
+            "value": "Hours"
+          },
+          {
+            "text": "Noticed after waking up ( झोपेतून उठल्यानंतर  लक्षात) ",
+            "value": "Noticed after waking up"
+          }
+        ]
+      },
+      {
+        "label": "Accompanied by sudden loss of consciousness (अचानक शुध्द हरपणे )",
+        "name": "lossConsciousness",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Paralyzed body part  (शरीराचा लकवा झालेला भाग  )",
+        "name": "paralyzedParts",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Half of body ( शरीराचा अर्धा भाग )",
+            "value": "Half of body"
+          },
+          {
+            "text": "One arm ( एक हात )",
+            "value": "One arm"
+          },
+          {
+            "text": "Right/left face ( चेहराचा डावा किंवा उजवा भाग )",
+            "value": "Right/left face"
+          }
+        ]
+      },
+      {
+        "label": "Time of onset: (आजाराच्या सुरुवातीची वेळ )",
+        "name": "timeOnset",
+        "type": "radio",
+        "items": [
+          {
+            "text": "During activity ( प्रक्रिये दरम्यान )",
+            "value": "During activity"
+          },
+          {
+            "text": "During sleep (झोपे दरम्यान )",
+            "value": "During sleep"
+          }
+        ]
+      },
+      {
+        "label": "Associated with ( च्या सोबत )",
+        "name": "associatedParalysis",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Vomiting ( उलटी )",
+            "value": "Vomiting"
+          },
+          {
+            "text": "Headache (डोकेदुखी )",
+            "value": "Headache"
+          },
+          {
+            "text": "Loss of memory ( स्मृती जाने )",
+            "value": "Loss of memory"
+          },
+          {
+            "text": "Loss of vision ( दृष्टी जाणे )",
+            "value": "Loss of vision"
+          },
+          {
+            "text": "Loss of speech ( वाचा जाणे )",
+            "value": "Loss of speech"
+          },
+          {
+            "text": "Neck stiffness ( मान ताठर होणे )",
+            "value": "Neck stiffness"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "oedema",
+    "label": "oedema(swelling) (सूज )",
+    "properties": [
+      {
+        "label": "Location:(स्थान )",
+        "name": "oedemaLocation",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Hands",
+            "value": "Hands"
+          },
+          {
+            "text": "Feet",
+            "value": "Feet"
+          },
+          {
+            "text": "Abdomen( पोटाचे )",
+            "value": "Abdomen"
+          }
+        ]
+      },
+      {
+        "label": "Onset (त्या आजाराची सुरुवात )",
+        "name": "oedemaOnset",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Sudden (अचानक )",
+            "value": "Sudden"
+          },
+          {
+            "text": "Gradual (हळूहळू )",
+            "value": "Gradual"
+          }
+        ]
+      },
+      {
+        "label": "Worse at:( त्याची तीव्रता अधिक या वेळी होते )",
+        "name": "oedemaWorse",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Night (रात्री )",
+            "value": "Night"
+          },
+          {
+            "text": "Morning  (सकाळी )",
+            "value": "Morning "
+          }
+        ]
+      },
+      {
+        "label": "Associated with ( च्या सोबत )",
+        "name": "associatedOedema",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Worse with walking (चालताना अधिक तीव्रता )",
+            "value": "Worse with walking"
+          },
+          {
+            "text": "Fatigue (थकवा )",
+            "value": "Fatigue"
+          },
+          {
+            "text": "Feeling the heart beat faster (हृदयाचे ठोके वाढणे )",
+            "value": "Feeling the heart beat faster"
+          },
+          {
+            "text": "Nausea (मळमळ )",
+            "value": "Nausea"
+          },
+          {
+            "text": "Loss of appetite ( भूक न लागणे )",
+            "value": "Loss of appetite"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes ( इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "urinaryProblems",
+    "label": "urinary problems (मुत्राष्याचे विकार )",
+    "properties": [
+      {
+        "label": "Reduced urine amount (लघवीला कमी येणे )",
+        "name": "reducedUrineAmt",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "More frequent passage of urine ",
+        "name": "freqUrination",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Burning sensation while urinating (लाघवी करताना जळजळ होणे )",
+        "name": "burningUrinating",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Urine contained (लाघवी सामग्री )",
+        "name": "UrineContain",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Pus (पु )",
+            "value": "Pus"
+          },
+          {
+            "text": "Bloody (रक्त )",
+            "value": "Bloody "
+          }
+        ]
+      },
+      {
+        "label": "Intense desire to pass more urine even after the bladder\n has been emptied (लघवी केल्यानंतर हि लघवीस जाण्याची अत्यंत तीव्र इच्छा होणे )",
+        "name": "feelPassUrineEmptyBladder",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Associated with ( च्या सोबत )",
+        "name": "associatedUp",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Pain in lower abdomen (पोटाच्या खालील भागातील दुखणे )",
+            "value": "Pain in lower abdomen "
+          },
+          {
+            "text": "Tenderness in the side of abdomen ( पोटातील नाजुकपण )",
+            "value": "Tenderness in the side of abdomen"
+          },
+          {
+            "text": "Sudden onset of pain in one or both loins, spreading  to lower abdomen (कमरेच्या पाठीमागच्या बाजूस अचानक पणे अत्यंत तीव्र स्वरूपाचे दुखु लागणे आणि ते दुखणे पोटाच्या खालच्या बाजूस पसरने ) ",
+            "value": "Sudden onset of pain in one or both loins, spreading to lower abdomen"
+          },
+          {
+            "text": "Paleness (अंधुकता )",
+            "value": "Paleness"
+          },
+          {
+            "text": "Nausea (मळमळ )",
+            "value": "Nausea"
+          },
+          {
+            "text": "Vomiting ( उलटी )",
+            "value": "Vomiting"
+          },
+          {
+            "text": "Became dull,  drowsy or unconsciousness (निरस किंवा ) ",
+            "value": "Became dull, drowsy or unconsciousness"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes ( इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "giTractProblems",
+    "label": "gastro intestinal tract problems (पोटाचे विकार )",
+    "properties": [
+      {
+        "label": "Was there pain (तेथे दुखत होते )",
+        "name": "gitPain",
+        "type": "radio",
+        "items": [{
+          "text": "Yes(होय)",
+          "value": "Yes"
+        },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }]
+      },
+      {
+        "label": "Location (जागा )",
+        "name": "gitPainLocation",
+        "type": "text"
+      },
+      {
+        "label": "Type (i.e., burning) जळजळ ",
+        "name": "gitBurning",
+        "type": "radio",
+        "items": [{
+          "text": "Yes(होय)",
+          "value": "Yes"
+        },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }]
+      },
+      {
+        "label": "Onset (आजाराची सुरुवात )",
+        "name": "gitPainOnset",
+        "type": "radio",
+        "items": [{
+          "text": "Yes(होय)",
+          "value": "Yes"
+        },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }]
+      },
+      {
+        "label": "Periodicity (ठराविक मुदतीचे )",
+        "name": "gitPeriodicity",
+        "type": "text"
+      },
+      {
+        "label": "Pattern (प्रकार )",
+        "name": "gitPainPattern",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Episodes (अधून मधून )",
+            "value": "Episodes"
+          },
+          {
+            "text": "Continuous (सलग )",
+            "value": "Continuous"
+          }
+        ]
+      },
+      {
+        "label": "Duration of each episode (कालवधी ) ",
+        "name": "gitPainDuration",
+        "type": "text"
+      },
+      {
+        "label": "More pain on empty stomach (रिकाम्या पोटात  जास्त दुखणे )",
+        "name": "painEmptyStomach",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Pain relieved after taking food (जेवल्या नंतर दुखणे कमी होणे )",
+        "name": "noPainAfterFood",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Difficulty in swallowing solid or liquid food (द्रव किंवा घाट्ट पदार्थ गिळताना दुखणे  ) ",
+        "name": "difficultySwallowing",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Pain wake person from sleep (झोपल्या नंतर त्रास अचानक वाढतो )",
+        "name": "wakeSleep",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Onset of abdominal distension (पोटावर सूज येणे )",
+        "name": "abdDistOnset",
+        "type": "radio",
+        "items": [{
+          "text": "Yes(होय)",
+          "value": "Yes"
+        },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }]
+      },
+      {
+        "label": "Associated with (च्यासोबत )",
+        "name": "associatedGit",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Loss of appetite, nausea (भूक न लागणे , मलमल होणे )",
+            "value": "Loss of appetite, nausea"
+          },
+          {
+            "text": "Constipation (बद्ध कोष्टता )",
+            "value": "Constipation"
+          },
+          {
+            "text": "Black stools (काळे मल )",
+            "value": "Black stools"
+          },
+          {
+            "text": "Vomiting with blood (उलटी सोबत रक्त )",
+            "value": "Vomiting with blood"
+          },
+          {
+            "text": "Sweating (घाम येणे )",
+            "value": "Sweating"
+          },
+          {
+            "text": "History of surgery or trauma or cancer (आघाताची किंवा कर्करोगाची  किंवा शस्त्रक्रियेचा इतिहास )",
+            "value": "History of surgery or trauma or cancer"
+          },
+          {
+            "text": "History of lump/mass in abdomen (टेंगुळ किंवा मांस पोटात )",
+            "value": "History of lump/mass in abdomen"
+          },
+          {
+            "text": "Alcohol abuse (दारूचा उपयोग )",
+            "value": "Alcohol abuse"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "jaundice",
+    "label": "jaundice (कावीळ )",
+    "properties": [
+      {
+        "label": "What become yellow (पिवळे काय झाले )",
+        "name": "yellowParts",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Eyes (डोळे )",
+            "value": "Eyes"
+          },
+          {
+            "text": "Skin (त्वचा )",
+            "value": "Skin"
+          }
+        ]
+      },
+      {
+        "label": "Urine color (लघवीचा रंग )",
+        "name": "urineColor",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Dark yellow (गडद पिवळा )",
+            "value": "Dark yellow"
+          },
+          {
+            "text": "Brown (तपकिरी )",
+            "value": "Brown"
+          }
+        ]
+      },
+      {
+        "label": "Onset (आजाराची सुरुवात )",
+        "name": "jaundiceOnset",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yellowness came first followed by other illness (आजार सुरु होण्या आदोगर पिवळसर पणा सुरु झाला )",
+            "value": "Yellowness came first followed by other illness "
+          },
+          {
+            "text": "Illness came first followed by yellowness (आजार सुरु झाल्या नंतर पिवळसर पणा सुरु झाला )",
+            "value": "Illness came first followed by yellowness"
+          }
+        ]
+      },
+      {
+        "label": "Associated with (च्या सोबत )",
+        "name": "associatedJaundice",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Vomiting blood (रक्ताची उलटी )",
+            "value": "Vomiting blood"
+          },
+          {
+            "text": "Alcohol abuse (दारूचा उपयोग )",
+            "value": "Alcohol abuse"
+          },
+          {
+            "text": "History of cancer (कर्करोगाचा इतिहास )",
+            "value": "History of cancer"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "fits",
+    "label": "fits(seziures) (झटके /मिरगी )",
+    "properties": [
+      {
+        "label": "Previous episodes of sudden jerky movements of arms or legs (मागिल अचानक झटके हे हात पायाला आले होते )",
+        "name": "previousEpisodes",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Loss of consciousness (शुध्द हरपणे )",
+        "name": "lossConsciousness",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Awake between fits (मिरगी च्या मधेच उठून बसने )",
+        "name": "awakeBnFits",
+        "type": "radio",
+        "items": [
+          {
+            "text": "Yes(होय)",
+            "value": "Yes"
+          },
+          {
+            "text": "No(नाही )",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "label": "Associated with (च्यासोबत )",
+        "name": "associatedFits",
+        "type": "checkbox",
+        "items": [
+          {
+            "text": "Rolling of eye balls (डोळे फिरणे )",
+            "value": "Rolling of eye balls"
+          },
+          {
+            "text": "Frothing of mouth (तोनडला फेस येणे )",
+            "value": "Frothing of mouth"
+          },
+          {
+            "text": "Loss of memory (स्मुर्ती जाने )",
+            "value": "Loss of memory"
+          },
+          {
+            "text": "Bit tongue (तोंडाची चव जाने )",
+            "value": "Bit tongue"
+          },
+          {
+            "text": "Bed wetting (अंथरूण ओले करणे )",
+            "value": "Bed wetting "
+          },
+          {
+            "text": "Confused (गोन्धालेला )",
+            "value": "Confused"
+          },
+          {
+            "text": "History of head injury (डोक्याच्या आजाराचा इतिहास )",
+            "value": "History of head injury"
+          }
+        ]
+      },
+      {
+        "label": "Others/Notes (इतर )",
+        "name": "others",
+        "type": "text"
+      }
+    ]
+  }
+]

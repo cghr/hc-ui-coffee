@@ -1,11 +1,11 @@
 .col-md-2.column(style="margin-left:10px",ng-init='childStates=$state.current.data.children;parent=$state.current.data.thisState;prev=$state.current.data.prev;')
-   a(ng-click='$state.go(prev.name,$stateParams)', href='')&laquo; Back to {{prev.title}}
-   .well.sidebar-nav.sidebar-nav-fixed
-      ul.nav.nav-list
-         li.nav-header
-         li(ui-sref-active='sidebarActive', ng-repeat='childState in childStates')
-            a(ui-sref='{{parent.name}}.{{childState.name}}')
-               | {{childState.title}}
+    a(ng-click='$state.go(prev.name,$stateParams)', href='')&laquo; Back to {{prev.title}}
+    .well.sidebar-nav.sidebar-nav-fixed
+        ul.nav.nav-list
+            li.nav-header
+            li(ui-sref-active='sidebarActive', ng-repeat='childState in childStates')
+                a(ui-sref='{{parent.name}}.{{childState.name}}')
+                    | {{childState.title}}
 .col-md-9.column(style="padding-top:15px")
-   div(ui-view='')
+    div(ui-view='')
 .col-md-1.column

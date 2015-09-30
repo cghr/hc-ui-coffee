@@ -1,0 +1,11 @@
+<div class="row clearfix">
+    <h3>VA(Narrative)</h3>
+    <h5>
+        Tell me what happened in the last few months before death ?
+    </h5>
+
+    <textarea rows="5" style="width: 100%" placeholder="Only write key points" ng-model="participant.respondentCOD"
+              class="form-control"></textarea><br/>
+
+    <div align="center"><a ng-disabled="participant.respondentCOD.length<10" ng-click="step1Complete()" class="btn btn-primary">Next Step &raquo;</a></div>
+</div>

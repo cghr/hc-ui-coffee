@@ -69,9 +69,10 @@ angular.module('cgForm.templateFactory', []).factory('TemplateFactory', [
     function TemplateFactory($http, $templateCache) {
         function getTemplate(templateName) {
             var template = 'template/formElement/' + templateName + '.html';
-            return $http.get(template, { cache: $templateCache });
+            return $http.get(template, {cache: $templateCache});
         }
-        return { get: getTemplate };
+
+        return {get: getTemplate};
     }
 ]);
 angular.module('cgForm.initFocus', []).directive('initFocus', [
@@ -83,8 +84,10 @@ angular.module('cgForm.initFocus', []).directive('initFocus', [
             function elmFocus() {
                 elm.focus();
             }
+
             $timeout(elmFocus, 0);
         }
+
         return {
             restrict: 'A',
             link: postLink
@@ -101,12 +104,14 @@ angular.module('cgForm.scrollTop', ['cgForm.jQuery']).directive('scrollTop', [
             if (attrs.scrollTop == 'false')
                 return false;
             function scrollTop() {
-                jQuery('body, html').animate({ scrollTop: jQuery(elm).offset().top }, 100);
+                jQuery('body, html').animate({scrollTop: jQuery(elm).offset().top}, 100);
             }
+
             /* Scroll to the newly added element */
             $timeout(scrollTop, 0);
         }
-        return { link: postLink };
+
+        return {link: postLink};
     }
 ]);
 angular.module('cgForm.ngEnter', []).directive('ngEnter', function () {
@@ -116,6 +121,7 @@ angular.module('cgForm.ngEnter', []).directive('ngEnter', function () {
                 scope.$apply(attrs.ngEnter);
         });
     }
+
     return {
         restrict: 'A',
         link: postLink
@@ -163,6 +169,7 @@ angular.module('cgForm.formElement', [
                 });
             });
         }
+
         return {
             replace: true,
             restrict: 'E',
@@ -204,37 +211,45 @@ angular.module('cgForm.formService', [
                 alert('GPS Server not Running');
             });
         }
+
         function postData(url, data) {
             return $http.post(url, data);
         }
+
         function getData(url) {
             return $http.get(url);
         }
+
         function getResource(entity) {
             var params = $location.url().split('/');
             var entityId = params[params.length - 2];
             var dataUrl = FormConfig.resourceBaseUrl + entity + '/' + entityId;
             return getData(dataUrl);
         }
+
         function postResource(data) {
             var entityName = data.datastore;
             delete data.datastore;
             return postData(FormConfig.submitUrl + entityName, data);
         }
+
         function getLookupData(reqData) {
             reqData.refId = $stateParams[reqData.ref];
             return postData(FormConfig.lookupBaseUrl, reqData);
         }
+
         function getCrossCheckData(reqData) {
             reqData.refId = $stateParams[reqData.ref];
             return postData(FormConfig.crossCheckBaseUrl, reqData);
         }
+
         function checkCrossFlow(crossFlows) {
             angular.forEach(crossFlows, function (crossFlow) {
                 crossFlow.refId = $stateParams[crossFlow.ref];
             });
             return postData(FormConfig.crossFlowBaseUrl, crossFlows);
         }
+
         function getDynamicDropDownData(reqData) {
             return postData(FormConfig.dynamicDropdownBaseUrl, reqData);
         }
@@ -244,7 +259,7 @@ angular.module('cgForm.joelpurra', []).factory('JoelPurra', [
     '$window',
     function ($window) {
         var JoelPurra = $window.JoelPurra;
-        JoelPurra.PlusAsTab.setOptions({ key: 13 });
+        JoelPurra.PlusAsTab.setOptions({key: 13});
         return JoelPurra;
     }
 ]);
@@ -260,6 +275,7 @@ angular.module('cgForm.schemaFactory', ['cgForm.lodash']).factory('SchemaFactory
                 throw 'Schema Not found for ' + schemaName;
             return this[schemaName];
         }
+
         function putSchema(schemaName, schemaObject) {
             this[schemaName] = schemaObject;
         }
@@ -282,7 +298,8 @@ angular.module('cgForm.schemaResolver', [
             /* Extend the current schema with default config */
             return _.extend(schema, FormConfig);
         }
-        return { resolve: resolveSchema };
+
+        return {resolve: resolveSchema};
     }
 ]);
 angular.module('cgForm.standardForm', [
@@ -337,7 +354,7 @@ angular.module('cgForm.standardForm', [
                             randomProperties.push(property);  //scope.schema.properties.splice(index,1);
                         }
                     });
-                    _.remove(scope.schema.properties, { type: 'hidden' });
+                    _.remove(scope.schema.properties, {type: 'hidden'});
                     angular.forEach(randoms, function (randomItem) {
                         randomProperties.push(scope.schema.properties[randomItem]);
                     });
@@ -346,6 +363,7 @@ angular.module('cgForm.standardForm', [
                 function mathRandom() {
                     return Math.floor(Math.random() * scope.randomtotal + 1);
                 }
+
                 function getRandomNumber() {
                     var randomNumber;
                     while (1) {
@@ -356,6 +374,7 @@ angular.module('cgForm.standardForm', [
                     }
                     return randomNumber;
                 }
+
                 console.log('random properties');
                 console.log(scope.schema.properties);
                 /* Initialize data in  scope to save all form data*/
@@ -383,12 +402,12 @@ angular.module('cgForm.standardForm', [
                     }
                 });
                 /* Initialize checkbox element's data with empty objects in scope.data */
-                var multipleSelectElements = _.filter(scope.schema.properties, { type: 'checkbox' });
+                var multipleSelectElements = _.filter(scope.schema.properties, {type: 'checkbox'});
                 _.each(multipleSelectElements, function (item) {
                     scope.data[item.name] = {};
                 });
                 /* Store datastore value in scope.data  */
-                scope.data.datastore = _.find(scope.schema.properties, { name: 'datastore' }).value;
+                scope.data.datastore = _.find(scope.schema.properties, {name: 'datastore'}).value;
                 /* Bind Enter as Tab and Validation to form */
                 element.plusAsTab();
                 element.bValidator();
@@ -416,6 +435,7 @@ angular.module('cgForm.standardForm', [
                         };
                         FormService.postResource(data).then(done, fail);
                     }
+
                     /* Get GPS */
                     $scope.getGps = function () {
                         $scope.data.gps_latitude = '12.7435';
@@ -485,7 +505,7 @@ angular.module('cgForm.surveyForm', [
                         FormService.getLookupData(elem.lookup).then(function (resp) {
                             elem.type = 'radio';
                             elem.items = resp.data;
-                            var index = _.findIndex(scope.flow.properties, { name: elem.name });
+                            var index = _.findIndex(scope.flow.properties, {name: elem.name});
                             if (index != -1) {
                                 scope.flow.properties[index].type = 'radio';
                                 scope.flow.properties[index].items = resp.data;
@@ -496,7 +516,7 @@ angular.module('cgForm.surveyForm', [
                         FormService.getCrossCheckData(elem.crossCheck).then(function (resp) {
                             var condition = elem.crossCheck.condition.replace('{value}', resp.data.value);
                             elem.valdn = condition;
-                            var index = _.findIndex(scope.flow.properties, { name: elem.name });
+                            var index = _.findIndex(scope.flow.properties, {name: elem.name});
                             if (index != -1)
                                 scope.flow.properties[index].valdn = condition;
                         });
@@ -538,12 +558,12 @@ angular.module('cgForm.surveyForm', [
                         scope.data[elem.name] = elem.value;
                 });
                 /* Initialize checkbox element's data with empty objects in scope.data */
-                var multipleSelectElements = _.filter(scope.schema.properties, { type: 'checkbox' });
+                var multipleSelectElements = _.filter(scope.schema.properties, {type: 'checkbox'});
                 _.each(multipleSelectElements, function (item) {
                     scope.data[item.name] = {};
                 });
                 /* Store datastore value in scope to use in controller */
-                scope.datastore = _.find(scope.schema.properties, { name: 'datastore' }).value;
+                scope.datastore = _.find(scope.schema.properties, {name: 'datastore'}).value;
                 /* Get form data if already populated */
                 FormService.getResource(scope.datastore).then(function (resp) {
                     delete resp.data.timelog;
@@ -553,7 +573,7 @@ angular.module('cgForm.surveyForm', [
                 });
                 /* Bind Validation to form */
                 element.bValidator();
-                scope.flow = { properties: [] };
+                scope.flow = {properties: []};
                 //Render All hidden elements
                 var hiddenCount = -1;
                 //count all hidden elements
@@ -585,23 +605,32 @@ angular.module('cgForm.surveyForm').controller('surveyFormCtrl', [
         /* Posts  data to Sever */
         function postData() {
             var done = function () {
+                //console.log($scope.fnct({ data: $scope.data }));
                 if ($scope.schema.onSave !== '')
                     $state.go($scope.schema.onSave, $stateParams);
-                else if ($scope.schema.condtion !== '' && $scope.schema.crossEntity === '') {
+                else if ($scope.schema.condition !== '') {
                     var data = $scope.data;
                     var transition = eval($scope.schema.condition) ? $scope.schema.success : $scope.schema.fail;
                     $state.go(transition, $stateParams);
-                } else if ($scope.schema.crossEntity !== '') {
-                    var params = $scope.schema.crossEntity.split(';');
-                    var entity = params[0];
-                    var entityId = params[1];
-                    FormService.getResource(entity, $stateParams[entityId]).then(function (resp) {
-                        var data = resp.data;
-                        var transition = eval($scope.schema.condition) ? $scope.schema.success : $scope.schema.fail;
-                        $state.go(transition, $stateParams);
-                    });
-                } else
-                    $scope.fnct({ data: $scope.data });  //$rootScope.$eval($scope.schema.onSave);
+                }
+                //else if ($scope.schema.condtion !== '' && $scope.schema.crossEntity === '') {
+                //    console.log('schema condition '+$scope.schema.condition);
+                //    console.log('schema condition '+$scope.schema.crossEntity);
+                //    var data = $scope.data;
+                //    var transition = eval($scope.schema.condition) ? $scope.schema.success : $scope.schema.fail;
+                //    $state.go(transition, $stateParams);
+                //} else if ($scope.schema.crossEntity !== '') {
+                //    var params = $scope.schema.crossEntity.split(';');
+                //    var entity = params[0];
+                //    var entityId = params[1];
+                //    FormService.getResource(entity, $stateParams[entityId]).then(function (resp) {
+                //        var data = resp.data;
+                //        var transition = eval($scope.schema.condition) ? $scope.schema.success : $scope.schema.fail;
+                //        $state.go(transition, $stateParams);
+                //    });
+                //}
+                else
+                    $scope.fnct({data: $scope.data});  //$rootScope.$eval($scope.schema.onSave);
             };
             var fail = function () {
                 throw new Error('Failed to post data');
@@ -617,10 +646,12 @@ angular.module('cgForm.surveyForm').controller('surveyFormCtrl', [
             });
             FormService.postResource($scope.data).then(done, fail);
         }
+
         /* Validate form before submit */
         function isValidForm() {
             return $element.data('bValidator').validate();
         }
+
         /* Handles enter Event on Form to render next Question */
         $scope.showNext = function () {
             if (!isValidForm()) {
@@ -643,6 +674,16 @@ angular.module('cgForm.surveyForm').controller('surveyFormCtrl', [
             $scope.flowSeq++;
             var nextItemInFlow = $scope.schema.properties[$scope.flowSeq];
             if (!_.isUndefined(nextItemInFlow)) {
+                //clabel flow
+                if (nextItemInFlow.type == 'radio') {
+                    var items = angular.copy($scope.schema.properties[$scope.flowSeq].items);
+                    $scope.schema.properties[$scope.flowSeq].items = items.filter(function (item) {
+                        if (item.flow == '') return true;
+                        else return $scope.$eval(item.flow);
+                    });
+
+                }
+                //clabel flow end
                 if (nextItemInFlow.type == 'checkbox')
                     $scope.data[nextItemInFlow.name] = {};
                 else if (nextItemInFlow.type == 'dynamic_dropdown') {
@@ -669,17 +710,18 @@ angular.module('cgForm.surveyForm').controller('surveyFormCtrl', [
                 handleFlow();
             }
         }
+
         /* Handles focus event on control group and modifies flow accordingly */
         $scope.jumpFlow = function (itemName) {
-            var flowIndex = _.findIndex($scope.flow.properties, { name: itemName });
-            var seqIndex = _.findIndex($scope.schema.properties, { name: itemName });
+            var flowIndex = _.findIndex($scope.flow.properties, {name: itemName});
+            var seqIndex = _.findIndex($scope.schema.properties, {name: itemName});
             $scope.flow.properties = _.initial($scope.flow.properties, $scope.flow.properties.length - 1 - flowIndex);
             $scope.flowIndex = seqIndex;
             $scope.flowSeq = $scope.flowIndex;
             /* Remove all non-flow properties added to $scope.data (form data) as a result of flow navigation back */
             _.each($scope.data, function (value, key) {
                 key = key.split('_')[0];
-                var isPresent = _.findIndex($scope.flow.properties, { name: key });
+                var isPresent = _.findIndex($scope.flow.properties, {name: key});
                 if (isPresent === -1) {
                     delete $scope.data[key];
                 }
@@ -729,17 +771,17 @@ angular.module('cgForm.tableForm', [
                     scope.data[elem.name] = elem.value;
             });
             /* Initialize checkbox element's data with empty objects in scope.data */
-            var multipleSelectElements = _.filter(scope.schema.properties, { type: 'checkbox' });
+            var multipleSelectElements = _.filter(scope.schema.properties, {type: 'checkbox'});
             _.each(multipleSelectElements, function (item) {
                 scope.data[item.name] = {};
             });
             /* Store datastore value in scope to use in controller */
             //scope.data.datastore = _.find(scope.schema.properties, {name: 'datastore'}).value;
-            scope.datastore = _.find(scope.schema.properties, { name: 'datastore' }).value;
+            scope.datastore = _.find(scope.schema.properties, {name: 'datastore'}).value;
             /* Create a separate collection for hidden elements  */
-            scope.schema.hiddenElements = _.filter(scope.schema.properties, { type: 'hidden' });
+            scope.schema.hiddenElements = _.filter(scope.schema.properties, {type: 'hidden'});
             /* Remove hidden items from schema */
-            _.remove(scope.schema.properties, { type: 'hidden' });
+            _.remove(scope.schema.properties, {type: 'hidden'});
             /* Get form data if already populated */
             FormService.getResource(scope.datastore).then(function (resp) {
                 delete resp.data.timelog;
@@ -750,13 +792,14 @@ angular.module('cgForm.tableForm', [
             element.plusAsTab();
             element.bValidator();
         }
+
         return {
             templateUrl: function (elem, attrs) {
                 return attrs.templateUrl;
             },
             restrict: 'E',
             replace: true,
-            scope: { options: ' = ' },
+            scope: {options: ' = '},
             link: postLink,
             controller: 'tableFormCtrl'
         };
@@ -779,6 +822,7 @@ angular.module('cgForm.tableForm').controller('tableFormCtrl', [
         function isValidForm() {
             return $element.data('bValidator').validate();
         }
+
         /* Posts form data to Sever */
         function postData(data) {
             var done = function () {
@@ -798,7 +842,7 @@ angular.module('cgForm.tableForm').controller('tableFormCtrl', [
                         $state.go(transition, $stateParams);
                     });
                 } else
-                    $scope.fnct({ data: $scope.data });  //$rootScope.$eval($scope.schema.onSave);
+                    $scope.fnct({data: $scope.data});  //$rootScope.$eval($scope.schema.onSave);
             };
             var fail = function () {
                 throw new Error('Failed to post data');
@@ -816,7 +860,7 @@ angular.module('template/formElement/checkbox.html', []).run([
 angular.module('template/formElement/control-group-heading.html', []).run([
     '$templateCache',
     function ($templateCache) {
-        $templateCache.put('template/formElement/control-group-heading.html', '<div class="control-group" id="{{config.name}}-control-group" scroll-top="{{config.scrollTop}}">\n' + '    <div class="control-label" >\n' + '        <div class="alert alert-error" style="font-weight:bold">{{config.label}}<a  ng-if="config.help" popover="{{config.help}}" popover-trigger="mouseenter">Help</a></div>\n' + '    </div>\n' + '    <div class="controls"></div>\n' + '</div>');
+        $templateCache.put('template/formElement/control-group-heading.html', '<div class="control-group" id="{{config.name}}-control-group" scroll-top="{{config.scrollTop}}">\n' + '    <div class="control-label" >\n' + '        <div class="alert alert-error" style="font-weight:bold">{{config.label}}<a data-html="true" ng-if="config.help" popover="{{config.help}}" popover-trigger="mouseenter">Help</a></div>\n' + '    </div>\n' + '    <div class="controls"></div>\n' + '</div>');
     }
 ]);
 angular.module('template/formElement/control-group.html', []).run([
@@ -858,7 +902,7 @@ angular.module('template/formElement/label-heading.html', []).run([
 angular.module('template/formElement/label.html', []).run([
     '$templateCache',
     function ($templateCache) {
-        $templateCache.put('template/formElement/label.html', '<div id="{{config.name}}-control-group" scroll-top="{{config.scrollTop}}">\n' + '    <label ng-if="config.label">{{config.label}} {{config.dynamicValue}}<a ng-if="config.help"\n' + '                                                                               popover="{{config.help}}"\n' + '                                                                               popover-trigger="mouseenter">Help</a></label>\n' + '\n' + '    <div ng-if="config.image!=\'\'"><img ng-src="{{config.image}}"/></div>\n' + '    <div class="controls" ng-click="jumpFlow(config.name)"></div>\n' + '\n' + '</div>\n' + '');
+        $templateCache.put('template/formElement/label.html', '<div id="{{config.name}}-control-group" scroll-top="{{config.scrollTop}}">\n' + '    <label ng-if="config.label">{{config.label}} {{config.dynamicValue}}<a data-html="true" ng-if="config.help"\n' + '                                                                               popover="{{config.help}}"\n' + '                                                                               popover-trigger="mouseenter">Help</a></label>\n' + '\n' + '    <div ng-if="config.image!=\'\'"><img ng-src="{{config.image}}"/></div>\n' + '    <div class="controls" ng-click="jumpFlow(config.name)"></div>\n' + '\n' + '</div>\n' + '');
     }
 ]);
 angular.module('template/formElement/lookup.html', []).run([

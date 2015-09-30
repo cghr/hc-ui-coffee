@@ -1,0 +1,702 @@
+{
+"schemaName":"enum.eslDetail.healthcare",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"healthcare",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"આ વિભાગ આરોગ્ય સેવાઓ ના ઉપયોગ કરવા માટે સંબંધિત છે",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"healthRecord",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમારી પાસે સ્વાસ્થ્યની એવી કોઇપણ નોંધો છે જે મૃતક સાથે સંબંધિત હોય?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"note",
+        "type":"text",
+        "valdn":"maxlength[200],required",
+        "label":"નોંધનો સારાંશ",
+        "flow":"data.healthRecord=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"treatment",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેણે [નામ] મૃત્યુ સુધી દોરી જનારી બીમારી માટે કોઇપણ સારવાર લીધી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"salts",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેણે [નામ] કોઇપણ મૌખિક રિહાઈડ્રેશન સૉલ્ટ મેળવ્યા હતાં?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drip",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેણે [નામ] નસ વાટે પ્રવાહી (ડ્રિપ) સારવાર મેળવી હતી (અથવા જરૂર પડી હતી)?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bloodTrans",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેણે [નામ] બોટલથી લોહી મેળવ્યું હતું (અથવા જરૂર પડી હતી)?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"oxygenHome",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તેને ઓક્શીજન ચડાવવામાં આવ્યો હતો કે ઓક્શીજનની જરૂર પડી હતી?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tube",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેણે [નામ] નાકમાંથી પસાર કરાયેલી નળી દ્વારા સારવાર/ખોરાક મેળવ્યા હતાં (અથવા જરૂર પડી હતી)?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"antibiotics",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તેને એન્ટી બાયોટીક દવા આપવામાં આવી હતી કે આપવાની જરૂર પડી હતી?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surgery",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેણે [નામ] બીમારી માટે શસ્ત્રક્રિયા કરાવી હતી (અથવા જરૂર પડી હતી)?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surgeryLocation",
+        "type":"text",
+        "valdn":"required",
+        "label":"જો હા તો, કઈ જગ્યાએ?",
+        "flow":"data.surgery=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cardiacTreatment",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તેને કોઈ હૃદયને લગતી સારવાર આપવામાં આવી હતી કે આપવાની જરૂર પડી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"કંઈ","value":"None","valdn":"","flow":""},
+        
+            {"text":"એન્જીયોપ્લાસ્ટી","value":"Angioplasty","valdn":"","flow":""},
+        
+            {"text":"બાયપાસ","value":"Bypass","valdn":"","flow":""},
+        
+            {"text":"અન્ય કાર્ડિયાક સારવાર","value":"Other cardiac treatments","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kidneyDialysis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તેને ક્યારેય ડાયાલીસીસ કરાવ્યું હતું કે કરાવવાની જરૂર પડી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cancerTreatment",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"શું તેને કેન્સરની સારવાર આપવામાં આવી હતી કે આપવાની જરૂર પડી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"કંઈ","value":"None","valdn":"","flow":""},
+        
+            {"text":"કિમોચિકિત્સાઃ","value":"Chemotherapy","valdn":"","flow":""},
+        
+            {"text":"રેડિયો ઉપચાર","value":"Radiotherapy","valdn":"","flow":""},
+        
+            {"text":"સર્જરી","value":"Surgery","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"medicalHistory","field":"cancer","ref":"deathId","condition":"cancer=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"locationCancerMale",
+        "type":"radio",
+        "valdn":"",
+        "label":"કેન્સર સ્થાન",
+        "flow":"data.cancerTreatment!='None'",
+        "value":"",
+        "items":[
+        
+            {"text":"માઉથ","value":"Mouth","valdn":"","flow":""},
+        
+            {"text":"ગળા / ફેફસા","value":"Throat/Lung","valdn":"","flow":""},
+        
+            {"text":"અન્નનળી","value":"Oesophagus","valdn":"","flow":""},
+        
+            {"text":"યકૃત(Liver)","value":"Liver","valdn":"","flow":""},
+        
+            {"text":"ઉદર/પેટ","value":"Abdomen/Stomach","valdn":"","flow":""},
+        
+            {"text":"દંડવત કે સાષ્ટાંગ નમસ્કાર કરતું","value":"Prostrate","valdn":"","flow":""},
+        
+            {"text":"શિશ્ન","value":"Penis","valdn":"","flow":""},
+        
+            {"text":"બ્લડ","value":"Blood","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"medicalHistory","field":"cancer","ref":"deathId","condition":"cancer=='Yes'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Male'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"locationCancerFemale",
+        "type":"radio",
+        "valdn":"",
+        "label":"કેન્સર સ્થાન",
+        "flow":"data.cancerTreatment!='None'",
+        "value":"",
+        "items":[
+        
+            {"text":"ગર્ભાશયનાં મુખનું ","value":"Cervix","valdn":"","flow":""},
+        
+            {"text":"સ્તન","value":"Breast","valdn":"","flow":""},
+        
+            {"text":"ઓવરી / અંડાશય ","value":"Ovary","valdn":"","flow":""},
+        
+            {"text":"મોઢાનું ","value":"Mouth","valdn":"","flow":""},
+        
+            {"text":"ગળા / ફેફસા","value":"Throat/Lung","valdn":"","flow":""},
+        
+            {"text":"અન્નનળી","value":"Oesophagus","valdn":"","flow":""},
+        
+            {"text":"યકૃત (Liver)","value":"Liver","valdn":"","flow":""},
+        
+            {"text":"ઉદર/પેટ","value":"Abdomen/Stomach","valdn":"","flow":""},
+        
+            {"text":"લોહી (Blood)","value":"Blood","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Others","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"medicalHistory","field":"cancer","ref":"deathId","condition":"cancer=='Yes'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

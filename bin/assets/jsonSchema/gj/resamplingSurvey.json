@@ -1,0 +1,748 @@
+{
+"schemaName":"resamplingSurvey",
+"onSave":"resampling",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"resampling",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"memberId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.memberId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sex",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકની જાતિ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"સ્ત્રી","value":"Female","valdn":"","flow":""},
+        
+            {"text":"પુરૂષ","value":"Male","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"age",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"મૃત્યુના સમયે મૃતક (નામ)ની ઉંમર કેટલી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:69],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathSite",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુ ક્યાં થયું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ઘર","value":"At Home","valdn":"","flow":""},
+        
+            {"text":"સ્વાસ્થ્ય સુવિધાના રસ્તા પર","value":"On Way To Health Facility","valdn":"","flow":""},
+        
+            {"text":"PHC / CHC / ગ્રામીણ હોસ્પિટલ","value":"PHC/CHC/Rural Hospital","valdn":"","flow":""},
+        
+            {"text":"જિલ્લા હોસ્પિટલ","value":"District Hospital","valdn":"","flow":""},
+        
+            {"text":"ખાનગી હોસ્પિટલ","value":"Private Hospital","valdn":"","flow":""},
+        
+            {"text":"અન્ય સ્થળે","value":"Other place","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"maritalStatus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકનો વૈવાહિક દરજ્જો શો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હાલમાં પરિણીત","value":"Currently Married ","valdn":"","flow":""},
+        
+            {"text":"હજુ સુધી લગ્ન કર્યા","value":"Not yet married (Single)","valdn":"","flow":""},
+        
+            {"text":"વિધુર/વિધવા","value":"Widowed","valdn":"","flow":""},
+        
+            {"text":"છૂટાછેડા લીધેલ","value":"Divorced","valdn":"","flow":""},
+        
+            {"text":"અલગ/ત્યક્તા","value":"Separated","valdn":"","flow":""},
+        
+            {"text":"ત્યક્તા","value":"Deserted","valdn":"","flow":""},
+        
+            {"text":"પરિણીત, પરંતુ ગ્વેના કરવામાં આવ્યું નથી","value":"Married, but Guana not performed","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"schoolingLevel",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What is the highest standard of education the deceased had completed?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"નિરક્ષર","value":"Illiterate","valdn":"","flow":""},
+        
+            {"text":"ઔપચારિક શિક્ષણ વિના સાક્ષર","value":"Literate without formal education","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિકથી નીચેના સાક્ષર","value":"Literate, below primary","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિક સાક્ષર","value":"Literate, primary","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, મધ્ય","value":"Literate, middle","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, માધ્યમિક, મૅટ્રિક વર્ગ-X","value":"Literate, secondary, Matric Class-X","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, એચઆર માધ્યમિક/સિનિયર માધ્યમિક, પ્રિ-યુનિવર્સિટી, વર્ગ XII","value":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","valdn":"","flow":""},
+        
+            {"text":" સ્નાતક","value":"Graduate","valdn":"","flow":""},
+        
+            {"text":"અનુસ્નાતક","value":"Post-Graduate","valdn":"","flow":""},
+        
+            {"text":"બિન-ટૅકનિકલ","value":"Non-Technical","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"occupation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકનો વ્યવસાય શો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"બિનકામદાર","value":"Nonworker","valdn":"","flow":""},
+        
+            {"text":"પગારદાર","value":"Salaried","valdn":"","flow":""},
+        
+            {"text":"વેતન કમાનાર","value":"Wage earner","valdn":"","flow":""},
+        
+            {"text":"વ્યવસાય/ધંધો","value":"Profession/Business","valdn":"","flow":""},
+        
+            {"text":"ખેડૂત","value":"Cultivator","valdn":"","flow":""},
+        
+            {"text":"કૃષિ વેતન મજૂરી","value":"Agricultural wage labour","valdn":"","flow":""},
+        
+            {"text":"બિન કૃષિ વેતન મજૂરી","value":"Non agricultural wage labour","valdn":"","flow":""},
+        
+            {"text":"વિદ્યાર્થી","value":"Student","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"respodentThinkCod",
+        "type":"text",
+        "valdn":"maxlength[100],required",
+        "label":"આ વ્યક્તિ શાના કારણે મૃત્યુ પામી હોવાનું પ્રતિભાવક માને છે? (પ્રતિભાવકને તેના પોતાના શબ્દોમાં બીમારી વિશે કહેવા દો)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"registered",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું મૃત્યુની નોંધ થઈ હતી",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tuberculosis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે ક્ષયનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hivAids",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે એચઆઈવી/એઈડ્ઝનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"malaria",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે મૅલેરિયાનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"heartDisease",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે હૃદય રોગનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"asthma",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે દમનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cancer",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે કેન્સરનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"copd",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે ક્રોનિક ઑબ્સ્ટ્રક્ટિવ પલ્મોનરી ડિસીઝ (સીઓપીડી)નું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kidneyDisease",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે કિડનીના રોગનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"epilepsy",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું ડૉક્ટરે વાઈનું નિદાન કર્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationIllness",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"તે [નામ] મૃત્યુ પામ્યા તે પહેલાં કેટલો સમય બીમાર રહ્યા હતાં?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

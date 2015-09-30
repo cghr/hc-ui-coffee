@@ -1,0 +1,24 @@
+<div ng-controller="EslCtrl">
+    <div class="row clearfix"></div>
+    <div class='col-md-2'
+         ng-init="parent=eslConfig.thisState;prev=eslConfig.prevState;">
+        <a ng-click="$state.go(prev.name,$stateParams)" href=''>&laquo; Back to {{prev.title}} </a>
+
+        <div class="well sidebar-nav sidebar-nav-fixed" style="margin-left:10px;overflow:scroll;height: 400px">
+            <ul class="nav nav-list">
+
+                <li class="nav-header"></li>
+                <li ui-sref-active="sidebarActive"
+                    ng-repeat="childState in eslConfig.children">
+                    <a ui-sref="{{parent.name}}.{{childState.name}}">
+                        {{childState.label}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class='col-md-9' style="padding-top:15px">
+        <div ui-view></div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

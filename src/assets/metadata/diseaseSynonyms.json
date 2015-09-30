@@ -1,0 +1,319 @@
+[
+  {
+    "disease": "prematurity",
+    "synonyms": [
+      "premature",
+      "low birth weight",
+      "preterm delivery",
+      "born before due date",
+      "born small",
+      "born weak",
+      "weakness",
+      "under weight",
+      "low weight",
+      "multiple births",
+      "twins"
+    ]
+  },
+  {
+    "disease": "infections",
+    "synonyms": [
+      "infections",
+      "Typhoid",
+      "High fever",
+      "Dengue",
+      "fever of unknown origin",
+      "chicken pox",
+      "mumps",
+      "meningitis",
+      "encephlitis",
+      "Vomiting and  Diarrhoea",
+      "Measles",
+      "Brain fever"
+    ]
+  },
+  {
+    "disease": "birthTrauma",
+    "synonyms": [
+      "Birth Injury",
+      "wheezing and difficulty in breathing",
+      "Respiratory Distress",
+      "prolonger difficult labour",
+      "bruishes and head injuries",
+      "Injury over head during delivery",
+      "blue baby",
+      "weakness",
+      "No cry",
+      "unconscious",
+      "premature rupture of membrane"
+    ]
+  },
+  {
+    "disease": "congenital",
+    "synonyms": [
+      "small head",
+      "abnormal body parts",
+      "Malformation",
+      "black rashes over body",
+      "Flat head",
+      "no muscle tone",
+      "very small size",
+      "unusual large size",
+      "swelling on head",
+      "imperforate anus",
+      "damage intestine",
+      "bleeding from mouth and nose"
+    ]
+  },
+  {
+    "disease": "diahorrea",
+    "synonyms": [
+      "loose motion",
+      "diarrhoea",
+      "dysentry",
+      "vomiting",
+      "stomach ache",
+      "Watery stool",
+      "dehydration",
+      "Persistent diarrhoea",
+      "Bloody stool",
+      "Vomiting/Fever and diarrhea",
+      "Cholera"
+    ]
+  },
+  {
+    "disease": "pneumonia",
+    "synonyms": [
+      "chest infection",
+      "fever cold cough",
+      "Breathing problem",
+      "Dyspnoea",
+      
+      "Respiratory problem",
+      "Chest infusion",
+      "In drawing of chest"
+    ]
+  },
+  {
+    "disease": "injury",
+    "synonyms": [
+      "accident/other accident",
+      "road traffic accident",
+      "suicide",
+      
+      "burns",
+      "fall",
+      "Fall of object",
+      "Homicide/ assault",
+      "Drowning",
+      "Poisoning",
+      "Bite/sting",
+      "Natural disaster",
+      "depression"
+    ]
+  },
+  {
+    "disease": "others",
+    "synonyms": [
+      "others",
+      "unspecified"
+    ]
+  },
+  {
+    "disease": "measles",
+    "synonyms": [
+      "measles",
+      "rash"
+    ]
+  },
+  {
+    "disease": "meningitis",
+    "synonyms": [
+      "brain fever",
+      "meningitis"
+    ]
+  },
+  {
+    "disease": "malariya",
+    "synonyms": [
+      "malaria",
+      "high fever",
+      "fever with  chills and shivering",
+      "headache",
+      "Cerebral Malaria",
+      "Chills and rigors",
+      "Falciform Malaria",
+      "weakness"
+    ]
+  },
+  {
+    "disease": "nutritional",
+    "synonyms": [
+      "slow growth",
+      "nutrinational problems"
+    ]
+  },
+  
+  {
+    "disease": "tb",
+    "synonyms": [
+      "tuberculosis",
+      "cough",
+      "bloody sputum",
+      "weight loss",
+      "Chronic cough",
+      "Chronic TB",
+      "Gland TB",
+      "TB, water in lungs",
+      "TB of nervous system",
+      "Chest disease",
+      "Fever and cough"
+    ]
+  },
+  {
+    "disease": "hiv",
+    "synonyms": [
+      
+      "aids",
+      "HIV positive",
+      "Injectable drug user",
+      "prolonged unexplained fever",
+      "Prolonged fever",
+      "skin disease",
+      "Persistent cough",
+      "Blood transfusion",
+      "unexplained weight loss",
+      "mouth ulcer",
+      "prolonged diarrhea"
+    ]
+  },
+  {
+    "disease": "heart",
+    "synonyms": [
+      "heart attack",
+      "Heart Disease",
+      "Heart Failure",
+      "Chest pain",
+      "pain in chest and arm",
+      "stopping of heart beat",
+      "Chest pain & Chest burning",
+      "Heart stroke",
+      "cardiac arrest",
+      "burning sensation in chest",
+      "chest pain with breathing difficulty",
+      "restlessness",
+      "High BP and chest pain"
+    ]
+  },
+  {
+    "disease": "renal",
+    "synonyms": [
+      "kidney problem",
+      "Kidney failure",
+      "Bad kidneys",
+      "Kidney malfunction",
+      "high fever with bloody urination",
+      "urinary tract problem",
+      "scanty urine",
+      "Kidney stone",
+      "Kidney disorder",
+      "Haematuria",
+      "Diabetes",
+      "Gangrene"
+    ]
+  },
+  {
+    "disease": "cancer",
+    "synonyms": [
+      "stomach cancer",
+      "lung cancer",
+      "blood cancer",
+      "Throat Cancer",
+      "Breast Cancer",
+      "bone cancer",
+      "Mouth Cancer",
+      "Uterus Cancer",
+      "Neck cancer",
+      "Jaundice",
+      "Brain Tumor"
+    ]
+  },
+  {
+    "disease": "stroke",
+    "synonyms": [
+      "paralysis",
+      "brain haemorrage",
+      "high bp",
+      "sudden fall",
+      "Stroke",
+      "senselessness",
+      "Frothing"
+    ]
+  },
+  {
+    "disease": "respiratory",
+    "synonyms": [
+      "breathing problem",
+      "respiratory infection",
+      "Bronchites",
+      "Asthma",
+      "Acute Bronchites",
+      "wheezing",
+      "Respiratory problem",
+      "Breathelessness",
+      "chronic cough",
+      "Damage of Lungs",
+      "lung infection",
+      "Pneumonia",
+      "COPD"
+    ]
+  },
+  {
+    "disease": "liver",
+    "synonyms": [
+      "liver disease",
+      "liver damage",
+      "excesive alcohol intake",
+      "swelling of legs",
+      "Jaundice",
+      "Liver cyst",
+      "Fever with Jaundice",
+      "gall bladder stone",
+      "liver sclerosis",
+      "swelling of the stomach",
+      "ascitis",
+      "Hepatitis",
+      "Alcoholism",
+      "Abdominal burst"
+    ]
+  },
+  {
+    "disease": "digestive",
+    "synonyms": [
+      "digestive problem",
+      "Gastric ulcer",
+      "intestinal ulcer",
+      "Appendicitis",
+      "Hernia",
+      "Obstruction of intestine",
+      "severe pain abdomen"
+    ]
+  },
+  {
+    "disease": "maternal",
+    "synonyms": [
+      "maternal death",
+      "Abortion",
+      "Miscarriage",
+      "Hypertension of pregnancy",
+      "haemorrhage",
+      "Maternal sepsis",
+      "Fever after delivery",
+      "Fall during pregnancy",
+      "Heavy vaginal bleeding",
+      "excessive loss of blood while delivery",
+      "prolonged labour",
+      "delivery problem"
+    ]
+  }
+]

@@ -1,0 +1,490 @@
+{
+"schemaName":"enum.eslDetail.fever",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"fever",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"તાવ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fever",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેને [નામ] તાવ આવ્યો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"lastNeonate",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"તાવ કેટલો સમય ચાલ્યો? (દિવસો)",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"last",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"તાવ કેટલો સમય ચાલ્યો?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"severity",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તાવ કેટલો તીવ્ર હતો?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હળવો","value":"Mild","valdn":"","flow":""},
+        
+            {"text":"મધ્યમ","value":"Moderate","valdn":"","flow":""},
+        
+            {"text":"તીવ્ર","value":"Severe","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pattern",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તાવની પૅટર્ન શું હતી?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"સતત","value":"Continuous","valdn":"","flow":""},
+        
+            {"text":"ચડે અને ઊતરે","value":"On and off","valdn":"","flow":""},
+        
+            {"text":"માત્ર રાત્રે આવે","value":"Only at night","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sweating",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તેને [નામ] તાવ સાથે પરસેવો થયો હતો?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tillDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુ સુધી તાવ રહ્યો હતો?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"nightSweats",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેને [નામ] રાત્રે પરસેવો થયો હતો?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"headache",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેને [નામ] માથાનો દુખાવો થયો હતો?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"feverWith",
+        "type":"checkbox",
+        "valdn":"",
+        "label":"શું તાવની સાથે નીચેમાંથી કઈ હતું?",
+        "flow":"data.fever=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"ઠંડી / જીવનની મુશ્કેલીઓ","value":"1","valdn":"","flow":""},
+        
+            {"text":"માથાનો દુખાવો","value":"2","valdn":"","flow":""},
+        
+            {"text":"પેશાબ કરવાની સાથે બળતરાની સંવેદના","value":"3","valdn":"","flow":""},
+        
+            {"text":"ગરદન અકડાવી","value":"4","valdn":"","flow":""},
+        
+            {"text":"પ્રકાશ અને અવાજ થાય ત્યારે ગુસ્સો કે અણગમો થવો","value":"5","valdn":"","flow":""},
+        
+            {"text":"મૂંઝવણ","value":"6","valdn":"","flow":""},
+        
+            {"text":"નિદ્રાધીનતા","value":"7","valdn":"","flow":""},
+        
+            {"text":"બેભાન અવસ્થા","value":"8","valdn":"","flow":""},
+        
+            {"text":"ચકામા/ફોલ્લાં","value":"9","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

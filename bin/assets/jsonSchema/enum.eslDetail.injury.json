@@ -1,0 +1,825 @@
+{
+"schemaName":"enum.eslDetail.injury",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"injury",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Injury",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"injury",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he  [name] suffer from any injury or accident that led to her/his death?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccident",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was it?",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Road traffic accident","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":"Suicide","value":"Suicide","valdn":"","flow":""},
+        
+            {"text":"Homicide/assault/violence","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"Falls","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"Fall of objects","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"Burns","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"Drowning","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"Poisoning","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"Bite/sting","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"Electrocution","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"Natural disaster","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"Others","value":"Others","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"others",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.kindAccident=='Others'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccidentNeonate",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was it?",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Road traffic accident","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":"Homicide/assault/violence","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"Falls","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"Fall of objects","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"Burns","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"Drowning","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"Poisoning","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"Bite/sting","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"Electrocution","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"Natural disaster","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"Others","value":"Others","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motRta",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If it was a road traffic accident, was the victim and mode of Transport ? ",
+        "flow":"data.kindAccident=='Road traffic accident' || data.kindAccidentNeonate=='Road traffic accident'",
+        "value":"",
+        "items":[
+        
+            {"text":"Pedestrian","value":"Pedestrian","valdn":"","flow":""},
+        
+            {"text":"Pedal cyclist ","value":"Pedal cyclist ","valdn":"","flow":""},
+        
+            {"text":"Motor cycle rider ","value":"Motor cycle rider ","valdn":"","flow":""},
+        
+            {"text":"Pillion rider(Sitting back in the bike)","value":"Pillion rider(Sitting back in the bike)","valdn":"","flow":""},
+        
+            {"text":"Occupant of 3-wheeler","value":"Occupant of 3-wheeler","valdn":"","flow":""},
+        
+            {"text":"Occupant of car","value":"Occupant of car","valdn":"","flow":""},
+        
+            {"text":"Occupant of truck or van","value":"Occupant of truck or van","valdn":"","flow":""},
+        
+            {"text":"Occupant of heavy transport vehicle","value":"Occupant of heavy transport vehicle","valdn":"","flow":""},
+        
+            {"text":"Occupant of bus","value":"Occupant of bus","valdn":"","flow":""},
+        
+            {"text":"Others specify","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherMot",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.motRta=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"collisionWith",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Victim in collision with",
+        "flow":"data.kindAccident=='Road traffic accident' || data.kindAccidentNeonate=='Road traffic accident'",
+        "value":"",
+        "items":[
+        
+            {"text":"Pedestrian/animal","value":"Pedestrian/animal","valdn":"","flow":""},
+        
+            {"text":"Pedal cyclist","value":"Pedal cyclist","valdn":"","flow":""},
+        
+            {"text":"2-3 wheeler","value":"2-3 wheeler","valdn":"","flow":""},
+        
+            {"text":"Car, truck or van","value":"Car, truck or van","valdn":"","flow":""},
+        
+            {"text":"Heavy vehicle Bus","value":"Heavy vehicle Bus","valdn":"","flow":""},
+        
+            {"text":"Railway","value":"Railway","valdn":"","flow":""},
+        
+            {"text":"Other non-motor","value":"Other non-motor","valdn":"","flow":""},
+        
+            {"text":"Fixed/stationary objects","value":"Fixed/stationary objects","valdn":"","flow":""},
+        
+            {"text":"Non collision transport","value":"Non collision transport","valdn":"","flow":""},
+        
+            {"text":"Others specify","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherCollision",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.collisionWith=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"suicide",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If suicide ",
+        "flow":"data.kindAccident=='Suicide'",
+        "value":"",
+        "items":[
+        
+            {"text":"By hanging ","value":"By hanging ","valdn":"","flow":""},
+        
+            {"text":"By burns/self-immolation ","value":"By burns/self-immolation ","valdn":"","flow":""},
+        
+            {"text":"Fire arm ","value":"Fire arm ","valdn":"","flow":""},
+        
+            {"text":"Others specify","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherSuicide",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.suicide=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"poisoning",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If poisoning ",
+        "flow":"data.kindAccident=='Poisoning' || data.kindAccidentNeonate=='Poisoning'",
+        "value":"",
+        "items":[
+        
+            {"text":"Accidental","value":"Accidental","valdn":"","flow":""},
+        
+            {"text":"Intentional self harm","value":"Intentional self harm","valdn":"","flow":""},
+        
+            {"text":"Others specify","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherPoison",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.poisoning=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drowning",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If drowning ",
+        "flow":"data.kindAccident=='Drowning' || data.kindAccidentNeonate=='Drowning'",
+        "value":"",
+        "items":[
+        
+            {"text":"Accidental","value":"Accidental","valdn":"","flow":""},
+        
+            {"text":"Intentional self harm","value":"Intentional self harm","valdn":"","flow":""},
+        
+            {"text":"Others specify","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherDrowning",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.drowning=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"biteSting",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If bite/sting",
+        "flow":"data.kindAccident=='Bite/sting' || data.kindAccidentNeonate=='Bite/sting'",
+        "value":"",
+        "items":[
+        
+            {"text":"Snake bite","value":"Snake bite","valdn":"","flow":""},
+        
+            {"text":"Dog bite","value":"Dog bite","valdn":"","flow":""},
+        
+            {"text":"Bitten or struck by other mammals","value":"Bitten or struck by other mammals","valdn":"","flow":""},
+        
+            {"text":"Others specify","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherBiteSting",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.biteSting=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"homicideAssault",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If Homicide/assault/violence",
+        "flow":"data.kindAccident=='Homicide/assault/violence' || data.kindAccidentNeonate=='Homicide/assault/violence'",
+        "value":"",
+        "items":[
+        
+            {"text":"By handguns","value":"By handguns","valdn":"","flow":""},
+        
+            {"text":"By acids","value":"By acids","valdn":"","flow":""},
+        
+            {"text":"By fire","value":"By fire","valdn":"","flow":""},
+        
+            {"text":"By explosive materials ","value":"By explosive materials ","valdn":"","flow":""},
+        
+            {"text":"By sharp objects ","value":"By sharp objects ","valdn":"","flow":""},
+        
+            {"text":"By blunt objects ","value":"By blunt objects ","valdn":"","flow":""},
+        
+            {"text":"By motor vehicles","value":"By motor vehicles","valdn":"","flow":""},
+        
+            {"text":"By bodily force(including fight or unarmed brawl)","value":"By bodily force(including fight or unarmed brawl)","valdn":"","flow":""},
+        
+            {"text":"By sexual assault by bodily force ","value":"By sexual assault by bodily force ","valdn":"","flow":""},
+        
+            {"text":"Strangulation","value":"Strangulation","valdn":"","flow":""},
+        
+            {"text":"Others specify","value":"Others specify","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherHomicideAssault",
+        "type":"text",
+        "valdn":"required",
+        "label":"Others specify",
+        "flow":"data.otherHomicideAssault=='Others specify'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surviveAfterInjury",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long did s/he  [name] survive after the injury? ",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Minutes","value":"Minutes","valdn":"between[1:60],required","flow":""},
+        
+            {"text":"Hours","value":"Hours","valdn":"between[1:24],required","flow":""},
+        
+            {"text":"Days","value":"Days","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:69],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

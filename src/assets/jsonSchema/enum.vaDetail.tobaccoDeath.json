@@ -1,0 +1,588 @@
+{
+"schemaName":"enum.vaDetail.tobaccoDeath",
+"onSave":"enum.vaDetail.tobaccoResp",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"va_tobacco_death",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Tobacco Consumption Deceased",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"smokeTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he smoke tobacco within the last 5 years?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Definite Yes","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"Definite No","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bidiDeath",
+        "type":"text",
+        "valdn":"between[0:99],required",
+        "label":"If yes, how many bidi per day?",
+        "flow":"data.smokeTobaccoDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cigarettesDeath",
+        "type":"text",
+        "valdn":"between[0:99],required",
+        "label":"If yes, how many cigarettes per day?",
+        "flow":"data.smokeTobaccoDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Any other tobacco smoked?",
+        "flow":"data.smokeTobaccoDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Definite Yes","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"Definite No","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chewTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he chew tobacco within the last 5 years?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Definite Yes","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"Definite No","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"applyTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he apply tobacco within the last 5 years?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Definite Yes","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"Definite No","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drinkAlcoholDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he normally drink alcohol (use local term) at least once a week during most weeks in the last 5 years?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Definite Yes","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"Definite No","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"daysPerWeekDeath",
+        "type":"dropdown",
+        "valdn":"between[1:7],required",
+        "label":"If yes, what was the average no. of days per week s/he drank?",
+        "flow":"data.drinkAlcoholDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"1","value":"1","valdn":"","flow":""},
+        
+            {"text":"2","value":"2","valdn":"","flow":""},
+        
+            {"text":"3","value":"3","valdn":"","flow":""},
+        
+            {"text":"4","value":"4","valdn":"","flow":""},
+        
+            {"text":"5","value":"5","valdn":"","flow":""},
+        
+            {"text":"6","value":"6","valdn":"","flow":""},
+        
+            {"text":"7","value":"7","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"alcoholTypeDeath",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"If yes, what type of alcohol was most commonly consumed?",
+        "flow":"data.drinkAlcoholDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Country liquor(Potli)","value":"Country liquor(Potli)","valdn":"","flow":""},
+        
+            {"text":"Toddy","value":"Toddy","valdn":"","flow":""},
+        
+            {"text":"Indian made foreign liquor","value":"Indian made foreign liquor","valdn":"","flow":""},
+        
+            {"text":"Beer","value":"Beer","valdn":"","flow":""},
+        
+            {"text":"Other ","value":"Other ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"vegetarianDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was s/he a pure vegetarian (consumed no egg, meat or fish) for the last 5 years?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Definite Yes","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"Definite No","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"maleFiveyrsAgo",
+        "type":"radio-inline",
+        "valdn":"required",
+        "label":"Please select how you think the deceased looked like five years before his death",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"1","value":"1","valdn":"","flow":""},
+        
+            {"text":"2","value":"2","valdn":"","flow":""},
+        
+            {"text":"3","value":"3","valdn":"","flow":""},
+        
+            {"text":"4","value":"4","valdn":"","flow":""},
+        
+            {"text":"5","value":"5","valdn":"","flow":""},
+        
+            {"text":"6","value":"6","valdn":"","flow":""},
+        
+            {"text":"7","value":"7","valdn":"","flow":""},
+        
+            {"text":"8","value":"8","valdn":"","flow":""},
+        
+            {"text":"9","value":"9","valdn":"","flow":""}
+        
+        ],
+        "image":"assets/pics/male.png",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=40","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Male'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"femaleFiveyrsAgo",
+        "type":"radio-inline",
+        "valdn":"required",
+        "label":"Please select how you think the deceased looked like five years before her death",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"1","value":"1","valdn":"","flow":""},
+        
+            {"text":"2","value":"2","valdn":"","flow":""},
+        
+            {"text":"3","value":"3","valdn":"","flow":""},
+        
+            {"text":"4","value":"4","valdn":"","flow":""},
+        
+            {"text":"5","value":"5","valdn":"","flow":""},
+        
+            {"text":"6","value":"6","valdn":"","flow":""},
+        
+            {"text":"7","value":"7","valdn":"","flow":""},
+        
+            {"text":"8","value":"8","valdn":"","flow":""},
+        
+            {"text":"9","value":"9","valdn":"","flow":""}
+        
+        ],
+        "image":"assets/pics/female.png",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=40","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

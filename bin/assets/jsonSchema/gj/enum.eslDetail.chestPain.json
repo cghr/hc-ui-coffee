@@ -1,0 +1,351 @@
+{
+"schemaName":"enum.eslDetail.chestPain",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"chestPain",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"છાતીમાં દુખાવો",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chestPain",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તેમણે [નામ] મૃત્યુ પૂર્વેના મહિનામાં છાતીમાં દુખાવો અનુભવ્યો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationChestPain",
+        "type":"radio",
+        "valdn":"required",
+        "label":"દુખાવો કેટલો સમય રહ્યો?",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"30થી ઓછી મિનિટ","value":"Less than 30 minutes","valdn":"","flow":""},
+        
+            {"text":"30 મિનિટથી 24 કલાક","value":"30 minutes - 24 hours","valdn":"","flow":""},
+        
+            {"text":"24 કલાકથી વધારે","value":"Greater than 24 hours","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"phyActivity",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું દુખાવો શારીરિક પ્રવૃત્તિ દરમિયાન થયો હતો?",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"painLocated",
+        "type":"radio",
+        "valdn":"required",
+        "label":"દુખાવાનું સ્થાન ક્યાં હતું?",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"છાતીનો ઉપલો કે મધ્ય ભાગ","value":"Upper or middle chest","valdn":"","flow":""},
+        
+            {"text":"છાતીનો નીચલો ભાગ","value":"Lower chest","valdn":"","flow":""},
+        
+            {"text":"ડાબો બાહુ","value":"Left arm","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherPainLocated",
+        "type":"text",
+        "valdn":"required",
+        "label":"દુખાવો ક્યાં હતો તે સૂચવો.",
+        "flow":"data.chestPain=='Yes' && data.painLocated=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chestpainWith",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"શું છાતીમાં દુખાવાની સાથે નીચેમાંથી કાઈ હતું?",
+        "flow":"data.chestPain=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હાંફ ચઢે","value":"1","valdn":"","flow":""},
+        
+            {"text":"ઉલ્ટી","value":"2","valdn":"","flow":""},
+        
+            {"text":"ચિંતાતુર","value":"3","valdn":"","flow":""},
+        
+            {"text":"ડાબા હાથ પર પહોંચે પેઇન","value":"4","valdn":"","flow":""},
+        
+            {"text":"પરસેવો","value":"5","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

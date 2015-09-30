@@ -7,7 +7,7 @@ do(app = angular.module('myApp.stateTransitions', [])) ->
     },
 
     "enum.houseDetail.household": {
-      to: "enum.householdDetail.visit",
+      to: "enum.householdDetail.basicInf",
       param: "householdId"
     },
 
@@ -31,9 +31,9 @@ do(app = angular.module('myApp.stateTransitions', [])) ->
       param: "memberId"
     },
 
-    "enum.householdDetail.death": {
+    "enum.householdDetail.esl": {
       to: "enum.deathDetail.basicInf",
-      param: "memberId"
+      param: "deathId"
     },
 
     "hc.householdDetail.visit": {

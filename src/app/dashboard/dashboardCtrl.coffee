@@ -1,13 +1,10 @@
 do (app = angular.module('dashboard')) ->
-
-
   app.controller 'Dashboard', ($scope, $timeout,
-                               DashboardService, $q, _, $log) ->
-
+                               DashboardService, $q, $log, $http,toaster) ->
     vm = $scope
 
     vm.progress = {}
-    contexts = ['enum', 'hhq', 'downloads']
+    contexts = ['va', 'esl', 'downloads']
 
     liveUpdate = undefined
 
@@ -28,6 +25,14 @@ do (app = angular.module('dashboard')) ->
       $log.info('killed dashboard live update')
       $timeout.cancel(liveUpdate)
     )
+
+    vm.distributeData = ->
+
+      done = -> toaster.pop('success','','Distribution Successful')
+      fail = -> toaster.pop('error','','Distribution Failed')
+      $http.get('api/distribute')
+      .then(done,fail)
+
 
 
 

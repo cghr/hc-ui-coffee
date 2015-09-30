@@ -1,0 +1,20 @@
+<div class="container" >
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <h2 align="center">
+                ESL
+            </h2>
+            <h3>
+                What did the respondent think that this person died of ?
+            </h3>
+
+            <input class="form-control" type="text" ng-model="cod" class="form-control"
+                   typeahead="synonym for synonym in metadata.synonyms | filter:$viewValue" focus="true" ng-enter="handleCauseOfDeath(cod)" />
+            <br/>
+            <div align="center">
+                <button class="btn btn-primary btn-lg" ng-click="handleCauseOfDeath(cod)">Next</button>
+            </div>
+
+        </div>
+    </div>
+</div>

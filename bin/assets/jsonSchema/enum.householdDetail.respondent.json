@@ -1,0 +1,456 @@
+{
+"schemaName":"enum.householdDetail.respondent",
+"onSave":"enum.householdDetail.death",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"respondent",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"name",
+        "type":"text",
+        "valdn":"alpha,minlength[3],required",
+        "label":"What is your (the respondent's) name?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sex",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Respondent's sex?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Female","value":"Female","valdn":"","flow":""},
+        
+            {"text":"Male","value":"Male","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"age",
+        "type":"text",
+        "valdn":"between[15:99],required",
+        "label":"How old were you at your last birthday? (Age in complete years)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationDeceaseF",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What is your relationship with the deceased person?",
+        "flow":"data.sex=='Female'",
+        "value":"",
+        "items":[
+        
+            {"text":"Head","value":"Head","valdn":"","flow":"data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"Wife","value":"Wife","valdn":"","flow":"data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"Daughter","value":"Daughter","valdn":"","flow":""},
+        
+            {"text":"Daughter-in-law","value":"Daughter-in-law","valdn":"","flow":""},
+        
+            {"text":"Grandchild","value":"Grandchild","valdn":"","flow":""},
+        
+            {"text":"Mother","value":"Mother","valdn":"","flow":""},
+        
+            {"text":"Mother-in-law","value":"Mother-in-law","valdn":"","flow":""},
+        
+            {"text":"Sister","value":"Sister","valdn":"","flow":""},
+        
+            {"text":"Sister-in-law","value":"Sister-in-law","valdn":"","flow":""},
+        
+            {"text":"Niece","value":"Niece","valdn":"","flow":""},
+        
+            {"text":"Other relative ","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"Adopted/Foster/Step-child","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"Domestic servant","value":"Domestic servant","valdn":"","flow":""},
+        
+            {"text":"Other not related","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationDeceaseM",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What is your relationship with the deceased person?",
+        "flow":"data.sex=='Male'",
+        "value":"",
+        "items":[
+        
+            {"text":"Head","value":"Head","valdn":"","flow":""},
+        
+            {"text":"Husband","value":"Husband","valdn":"","flow":""},
+        
+            {"text":"Son","value":"Son","valdn":"","flow":""},
+        
+            {"text":"Son-in-law","value":"Son-in-law","valdn":"","flow":""},
+        
+            {"text":"Grandchild","value":"Grandchild","valdn":"","flow":""},
+        
+            {"text":"Father","value":"Father","valdn":"","flow":""},
+        
+            {"text":"Father-in-law","value":"Father-in-law","valdn":"","flow":""},
+        
+            {"text":"Brother","value":"Brother","valdn":"","flow":""},
+        
+            {"text":"Brother-in-law","value":"Brother-in-law","valdn":"","flow":""},
+        
+            {"text":"Nephew","value":"Nephew","valdn":"","flow":""},
+        
+            {"text":"Other relative ","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"Adopted/Foster/Step-child","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"Domestic servant","value":"Domestic servant","valdn":"","flow":""},
+        
+            {"text":"Other not related","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"living",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did you (the respondent) live with the deceased in the period leading to her/his death?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"schoolingLevel",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What is the highest standard of education the respondent has completed?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Illiterate","value":"Illiterate","valdn":"","flow":""},
+        
+            {"text":"Literate without formal education","value":"Literate without formal education","valdn":"","flow":""},
+        
+            {"text":"Literate, below primary","value":"Literate, below primary","valdn":"","flow":""},
+        
+            {"text":"Literate, primary","value":"Literate, primary","valdn":"","flow":""},
+        
+            {"text":"Literate, middle","value":"Literate, middle","valdn":"","flow":""},
+        
+            {"text":"Literate, secondary, Matric Class-X","value":"Literate, secondary, Matric Class-X","valdn":"","flow":""},
+        
+            {"text":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","value":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","valdn":"","flow":""},
+        
+            {"text":"Graduate","value":"Graduate","valdn":"","flow":""},
+        
+            {"text":"Post-Graduate","value":"Post-Graduate","valdn":"","flow":""},
+        
+            {"text":"Non-Technical","value":"Non-Technical","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"1.Illiterate: No education and does not know to read and write in any language. If knows to write only name then illiterate.2. Literate without formal education: Did not take any formal education but knows to read and write 3. Below Primary:        Studied and completed less than 4th std 4. Primary: Studied and completed 4th std 5. Middle: Studied till 5th Std/6th Std/ 7th Std/ 8th Std 6. Secondary/ Class-10/ Matric: Completed education till 10th Grade 7. Hr. Sec/ Class XII/ Pre-Univ: Completed education till 12th Grade or diploma after 10th or diploma after 12th. If cleared 11th std and not studied till 12th then mark output as Secondary/Class-10/Matric schooling. 8. Graduate and above: Completed Graduation/ Engineering/ Medical i.e a holding a graduate certificate, If the respondent has completed only 1st or 2nd year graduation it will be considered High School and not College Graduation"
+        },
+
+
+
+        {
+        "name":"aadharCard",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Whether you have an Aadhar card?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"religion",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What is the religion of the head of the household?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Hindu","value":"Hindu","valdn":"","flow":""},
+        
+            {"text":"Muslim","value":"Muslim","valdn":"","flow":""},
+        
+            {"text":"Christianity","value":"Christianity","valdn":"","flow":""},
+        
+            {"text":"Other religion","value":"Other religion","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"religionSpecify",
+        "type":"text",
+        "valdn":"",
+        "label":"Specify the type of religion",
+        "flow":"data.religion=='Other religion'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

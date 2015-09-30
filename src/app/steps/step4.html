@@ -1,0 +1,10 @@
+<div class="row clearfix">
+    <h4>Past Medical Treatment Information</h4>
+    <ul>
+        <li>Hospital Discharge Notes</li>
+        <li>Name of the Hospital/Doctor</li>
+        <li>Any Treatment given/Diagnosis made</li>
+    </ul>
+    <textarea style="width:100%;" rows="5" placeholder="Past Medical Treatment Information" ng-model="participant.medicalInformation" class="form-control"></textarea><br/>
+    <div align="center"><a ng-disabled="participant.medicalInformation.length<10" ui-sref="steps.step5" class="btn btn-primary">Next Step &raquo;</a></div>
+</div>

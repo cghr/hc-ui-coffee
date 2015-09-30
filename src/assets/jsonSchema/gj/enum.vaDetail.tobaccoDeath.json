@@ -1,0 +1,588 @@
+{
+"schemaName":"enum.vaDetail.tobaccoDeath",
+"onSave":"enum.vaDetail.tobaccoResp",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"va_tobacco_death",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"તમાકુ વપરાશ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"smokeTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તે / તેણી છેલ્લા 5 વર્ષમાં તમાકુ ધૂમ્રપાન હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bidiDeath",
+        "type":"text",
+        "valdn":"between[0:99],required",
+        "label":"દિવસ દીઠ હા, કેટલા બીડી તો?",
+        "flow":"data.smokeTobaccoDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cigarettesDeath",
+        "type":"text",
+        "valdn":"between[0:99],required",
+        "label":"દિવસ દીઠ હા, કેટલી સિગારેટ તો?",
+        "flow":"data.smokeTobaccoDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"કોઈપણ અન્ય તમાકુ પીવામાં ?",
+        "flow":"data.smokeTobaccoDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"chewTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તે / તેણી છેલ્લા 5 વર્ષમાં તમાકુ ચાવવું હતી ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"applyTobaccoDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તે / તેણી છેલ્લા 5 વર્ષમાં તમાકુ અરજી કરી ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drinkAlcoholDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તે / તેણી સામાન્ય રીતે દારૂ (સ્થાનિક શબ્દનો ઉપયોગ ) પીતા હતી જો છેલ્લા 5 વર્ષ માં સૌથી અઠવાડિયા દરમિયાન ઓછામાં ઓછા એક સપ્તાહ એકવાર ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"daysPerWeekDeath",
+        "type":"dropdown",
+        "valdn":"between[1:7],required",
+        "label":"જો હા, તો , સરેરાશ કોઈ શું હતી. સપ્તાહ દીઠ દિવસ તે / તેણી પીધું ?",
+        "flow":"data.drinkAlcoholDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"1","value":"1","valdn":"","flow":""},
+        
+            {"text":"2","value":"2","valdn":"","flow":""},
+        
+            {"text":"3","value":"3","valdn":"","flow":""},
+        
+            {"text":"4","value":"4","valdn":"","flow":""},
+        
+            {"text":"5","value":"5","valdn":"","flow":""},
+        
+            {"text":"6","value":"6","valdn":"","flow":""},
+        
+            {"text":"7","value":"7","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"alcoholTypeDeath",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"જો હા, તો ,તમે કેવા પ્રકારનો આલ્કોહૉલ સામાન્ય રીતે પીઓ છો?",
+        "flow":"data.drinkAlcoholDeath=='Definite Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"દેશી દારૂ ( Potli )","value":"Country liquor(Potli)","valdn":"","flow":""},
+        
+            {"text":"ટોડી","value":"Toddy","valdn":"","flow":""},
+        
+            {"text":"ભારતીય કરવામાં વિદેશી દારૂ","value":"Indian made foreign liquor","valdn":"","flow":""},
+        
+            {"text":"બીયર","value":"Beer","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"vegetarianDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તેઓ છેલ્લાં 5 વર્ષોથી શુદ્ધ શાકાહારી હતાં (ઈંડા, માંસ કે માછલી ખાતા નહિ)?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Definite Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"Definite No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"maleFiveyrsAgo",
+        "type":"radio-inline",
+        "valdn":"required",
+        "label":"Please select how you think the deceased looked like five years before his death",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"1","value":"1","valdn":"","flow":""},
+        
+            {"text":"2","value":"2","valdn":"","flow":""},
+        
+            {"text":"3","value":"3","valdn":"","flow":""},
+        
+            {"text":"4","value":"4","valdn":"","flow":""},
+        
+            {"text":"5","value":"5","valdn":"","flow":""},
+        
+            {"text":"6","value":"6","valdn":"","flow":""},
+        
+            {"text":"7","value":"7","valdn":"","flow":""},
+        
+            {"text":"8","value":"8","valdn":"","flow":""},
+        
+            {"text":"9","value":"9","valdn":"","flow":""}
+        
+        ],
+        "image":"assets/pics/male.png",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=40","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Male'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"femaleFiveyrsAgo",
+        "type":"radio-inline",
+        "valdn":"required",
+        "label":"Please select how you think the deceased looked like five years before her death",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"1","value":"1","valdn":"","flow":""},
+        
+            {"text":"2","value":"2","valdn":"","flow":""},
+        
+            {"text":"3","value":"3","valdn":"","flow":""},
+        
+            {"text":"4","value":"4","valdn":"","flow":""},
+        
+            {"text":"5","value":"5","valdn":"","flow":""},
+        
+            {"text":"6","value":"6","valdn":"","flow":""},
+        
+            {"text":"7","value":"7","valdn":"","flow":""},
+        
+            {"text":"8","value":"8","valdn":"","flow":""},
+        
+            {"text":"9","value":"9","valdn":"","flow":""}
+        
+        ],
+        "image":"assets/pics/female.png",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=40","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

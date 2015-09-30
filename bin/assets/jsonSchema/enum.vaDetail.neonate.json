@@ -1,0 +1,1040 @@
+{
+"schemaName":"enum.vaDetail.neonate",
+"onSave":"enum.vaDetail.vaInjury",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"va_neonate",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":" Details of Pregnancy and delivery",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pregDuration",
+        "type":"text",
+        "valdn":"between[1:12],required",
+        "label":"How many months long was the pregnancy?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tt_vaccine",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the mother receive tetanus toxoid (TT) vaccine during this pregnancy?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"preg_complications",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Were there any complication during the pregnancy, or during labour?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"complications",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"If yes, what complication(s) occured? (Check all that apply)",
+        "flow":"data.preg_complications=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Mother had fits","value":"1","valdn":"","flow":""},
+        
+            {"text":"Excessive bleeding before/during delivery","value":"2","valdn":"","flow":""},
+        
+            {"text":"Water broke one or more days before contraction started","value":"3","valdn":"","flow":""},
+        
+            {"text":"Prolonged/ difficulty labour (12 hours or more)","value":"4","valdn":"","flow":""},
+        
+            {"text":"Operative delivery","value":"5","valdn":"","flow":""},
+        
+            {"text":"Mother had fever","value":"6","valdn":"","flow":""},
+        
+            {"text":"Baby had cord around neck","value":"7","valdn":"","flow":""},
+        
+            {"text":"High blood pressure ","value":"8","valdn":"","flow":""},
+        
+            {"text":"Severe anemia ","value":"9","valdn":"","flow":""},
+        
+            {"text":"Diabetes","value":"10","valdn":"","flow":""},
+        
+            {"text":"Baby delivered bottom or feet first","value":"11","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"12","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"movingStopped",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby stop moving in the womb before labour started?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"childLastMove",
+        "type":"select_text",
+        "valdn":"between[1:99],required",
+        "label":"If yes, when did you/the baby's mother last feel the baby move before delivery?(Enter in Hours/Days)",
+        "flow":"data.movingStopped=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Hours","value":"Hours","valdn":"between[1:24],required","flow":""},
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"singleton_multiple_birth",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was the baby/child a singleton or multiple birth?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Singleton","value":"Singleton","valdn":"","flow":""},
+        
+            {"text":"Multiple","value":"Multiple","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"birth_place",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Where was the baby born?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Home","value":"Home","valdn":"","flow":""},
+        
+            {"text":"On way to Health facility","value":"On way to Health facility","valdn":"","flow":""},
+        
+            {"text":"PHC/CHC/Rural Hospital","value":"PHC/CHC/Rural Hospital","valdn":"","flow":""},
+        
+            {"text":"Public Hospital","value":"Public Hospital","valdn":"","flow":""},
+        
+            {"text":"Private Hospital","value":"Private Hospital","valdn":"","flow":""},
+        
+            {"text":"Other place","value":"Other place","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"delivery_attendant",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Who attended the delivery?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Untrained Traditional Birth Attendant","value":"Untrained Traditional Birth Attendant","valdn":"","flow":""},
+        
+            {"text":"Trained Traditional Birth Attendant","value":"Trained Traditional Birth Attendant","valdn":"","flow":""},
+        
+            {"text":"Midwife/Nurse","value":"Midwife/Nurse","valdn":"","flow":""},
+        
+            {"text":"Allopathic Doctor","value":"Allopathic Doctor","valdn":"","flow":""},
+        
+            {"text":"None","value":"None","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"clean_blade",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was a clean blade (disinfected or new) used to cut the umbilical cord?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Details of Baby after Birth",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"duration_firstcry",
+        "type":"select_text",
+        "valdn":"between[0:60],required",
+        "label":"How long after birth did the baby first cry, move or breathe?(mins/hours)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Minutes","value":"Minutes","valdn":"between[0:60],required","flow":""},
+        
+            {"text":"Hours","value":"Hours","valdn":"between[1:24],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"If the baby cry, move or breathe less than a minute or immediately enter as '0'"
+        },
+
+
+
+        {
+        "name":"bodyInjury",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Were there any bruises or signs of injury on the baby/child's body after the birth?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"blueColor",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was the baby blue in colour at birth?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deliveryMode",
+        "type":"radio",
+        "valdn":"required",
+        "label":"What was the mode of delivery?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Vaginal without forceps/vaccum","value":"Vaginal without forceps/vaccum","valdn":"","flow":""},
+        
+            {"text":"Vaginal with forceps","value":"Vaginal with forceps","valdn":"","flow":""},
+        
+            {"text":"Vaginal with vaccum","value":"Vaginal with vaccum","valdn":"","flow":""},
+        
+            {"text":"Vaginal Don't know (whether forceps or vaccume used)","value":"Vaginal Dont know (whether forceps or vaccume used)","valdn":"","flow":""},
+        
+            {"text":"Caesarean section","value":"Caesarean section","valdn":"","flow":""},
+        
+            {"text":"Don't know","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"birth_malformation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he have any visible malformation at birth? (very small head, mass on spine, etc)?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"child_size",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Compared to other children in your area, what was the child's size at birth?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Very Small","value":"Very Small","valdn":"","flow":""},
+        
+            {"text":"Smaller than usual","value":"Smaller than usual","valdn":"","flow":""},
+        
+            {"text":"Average","value":"Average","valdn":"","flow":""},
+        
+            {"text":"Larger than average","value":"Larger than average","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"birth_weight",
+        "type":"text",
+        "valdn":"between[1000:8000],required",
+        "label":"What was the birth weight? (Grams)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"baby_stop_cry",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the baby stop being able to cry?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"stop_cry_days",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"If yes, how long (days) after birth did s/he stop breathing/crying?",
+        "flow":"data.baby_stop_cry=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"first_breastfed",
+        "type":"radio",
+        "valdn":"required",
+        "label":"When was s/he first breastfed?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Immediately/within one hour of birth","value":"Immediately/within one hour of birth","valdn":"","flow":""},
+        
+            {"text":"Same day child was born","value":"Same day child was born","valdn":"","flow":""},
+        
+            {"text":"Second day or later","value":"Second day or later","valdn":"","flow":""},
+        
+            {"text":"Never breastfed","value":"Never breastfed","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"other_than_breast_milk",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was the baby ever given anything to drink other than breast milk?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"suckle_normal",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was s/he able to suckle normally during the first day of life?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"stop_suckle",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If yes, did s/he stop being able to suck in a normal way?",
+        "flow":"data.suckle_normal=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"stop_suckle_days",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"If yes, how many completed days after birth did s/he stop sucking?",
+        "flow":"data.suckle_normal=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

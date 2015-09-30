@@ -1,0 +1,325 @@
+{
+"schemaName":"enum.eslDetail.paralysis",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"paralysis",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"Paralysis",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"paralysis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Was s/he [name] in any way paralyzed?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationParalysis",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"For how long before death did s/he [name] have paralysis?",
+        "flow":"data.paralysis=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Days","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"Months","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"Years","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"paralysisPart",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Which were the limbs or body parts paralyzed? ",
+        "flow":"data.paralysis=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Right side","value":"Right side","valdn":"","flow":""},
+        
+            {"text":"Left side","value":"Left side","valdn":"","flow":""},
+        
+            {"text":"Lower part of body","value":"Lower part of body","valdn":"","flow":""},
+        
+            {"text":"Upper part of body","value":"Upper part of body","valdn":"","flow":""},
+        
+            {"text":"One leg only","value":"One leg only","valdn":"","flow":""},
+        
+            {"text":"One arm only","value":"One arm only","valdn":"","flow":""},
+        
+            {"text":"Whole body","value":"Whole body","valdn":"","flow":""},
+        
+            {"text":"Other","value":"Other","valdn":"","flow":""},
+        
+            {"text":"Don't know ","value":"Dont know ","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherParalysisPart",
+        "type":"text",
+        "valdn":"required",
+        "label":"Specify the body part that was paralyzed",
+        "flow":"data.paralysis=='Yes' && data.paralysisPart=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"paralysisWith",
+        "type":"checkbox",
+        "valdn":"",
+        "label":"Was the paralysis associated with any of the following symptoms ",
+        "flow":"data.paralysis=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Loss of conciousness","value":"1","valdn":"","flow":""},
+        
+            {"text":"Loss of vision ","value":"2","valdn":"","flow":""},
+        
+            {"text":"Urinary incontinence (Urinary leakage)","value":"3","valdn":"","flow":""},
+        
+            {"text":"Loss of sensation ","value":"4","valdn":"","flow":""},
+        
+            {"text":"Change in speech","value":"5","valdn":"","flow":""},
+        
+            {"text":"Sudden headache with confusion","value":"6","valdn":"","flow":""},
+        
+            {"text":"Fits","value":"7","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

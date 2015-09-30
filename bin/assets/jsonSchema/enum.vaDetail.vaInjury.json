@@ -1,0 +1,278 @@
+{
+"schemaName":"enum.vaDetail.vaInjury",
+"onSave":"enum.vaDetail.vaChild",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"vaInjury",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"injury",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he die from an injury or accident?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccident",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If yes, what kind of injury or accident?",
+        "flow":"data.injury=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Road traffic accident","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":"Homicide/assault/violence","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"Falls","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"Fall of objects","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"Burns","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"Drowning","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"Poisoning","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"Bite/sting","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"Electrocution","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"Natural disaster","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"Others","value":"Others","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"injuryChildAdult",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he die from and injury or an accident ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kindAccidentChildAdult",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If yes, what kind of injury or accident?",
+        "flow":"data.injuryChildAdult=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Road traffic accident","value":"Road traffic accident","valdn":"","flow":""},
+        
+            {"text":"Suicide","value":"Suicide","valdn":"","flow":""},
+        
+            {"text":"Homicide/assault/violence","value":"Homicide/assault/violence","valdn":"","flow":""},
+        
+            {"text":"Falls","value":"Falls","valdn":"","flow":""},
+        
+            {"text":"Fall of objects","value":"Fall of objects","valdn":"","flow":""},
+        
+            {"text":"Burns","value":"Burns","valdn":"","flow":""},
+        
+            {"text":"Drowning","value":"Drowning","valdn":"","flow":""},
+        
+            {"text":"Poisoning","value":"Poisoning","valdn":"","flow":""},
+        
+            {"text":"Bite/sting","value":"Bite/sting","valdn":"","flow":""},
+        
+            {"text":"Electrocution","value":"Electrocution","valdn":"","flow":""},
+        
+            {"text":"Natural disaster","value":"Natural disaster","valdn":"","flow":""},
+        
+            {"text":"Others","value":"Others","valdn":"","flow":""},
+        
+            {"text":"Unknown","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

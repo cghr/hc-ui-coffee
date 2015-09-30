@@ -18,9 +18,9 @@
     <% }); %>
 </head>
 
-<body  oncopy="return false" oncut="return false" onpaste="return false">
+<body>
 
-<h4 access-level="accessLevels.anon" align="center">Version 1.4 (Release: 23rd FEB'15)</h4>
+<h4 access-level="accessLevels.anon" align="center">Version 2.0 (Release:28th Sep'15)</h4>
 <!-- Div for displaying toast messages -->
 <toaster-container toaster-options="{'time-out': 6000}"></toaster-container>
 <header>
@@ -28,19 +28,27 @@
     <nav class="container navbar-default" ng-controller="NavCtrl as NavCtrl" access-level="accessLevels.user">
         <ul class="nav navbar-nav ">
             <li>
-                <a class="navbar-brand" href="#">ISHA</a>
+                <a class="navbar-brand" href="#">COD Study</a>
             </li>
+
             <li ng-class="{active:$state.includes('enum')}">
-                <a ui-sref="enum.area">Enumeration</a>
+                <a ui-sref="enum.area">Areas/Home</a>
             </li>
-            <li ng-class="{active:$state.includes('hc')}">
-                <a ui-sref="hc.area">Household Questionnaire</a>
-            </li>
+            <!--<li ng-class="{active:$state.includes('va')}">-->
+            <!--<a ui-sref="va.area">VA</a>-->
+            <!--</li>-->
+
             <li ng-class="{active:$state.includes('dashboard')}">
                 <a href="#/dashboard">Dashboard</a>
             </li>
             <li ng-class="{active:$state.includes('report')}">
                 <a href="#/report/11">Reports</a>
+            </li>
+            <li ng-class="{active:$state.includes('restore')}">
+                <a href="#/restore">Restore Session</a>
+            </li>
+            <li access-level="accessLevels.manager" ng-class="{active:$state.includes('resampling')}">
+                <a href="#/resampling">Resampling</a>
             </li>
 
         </ul>
@@ -57,8 +65,36 @@
         </ul>
     </nav>
 </header>
+<div class="container">
+
+    <div class="col-md-9"></div>
+    <div class="col-md-3">
+        <div>
+            <div style="margin-right: 5px" access-level="accessLevels.anon">
+                <select class="form-control" ng-change="changeLanguage(app.lang)" ng-model="app.lang">
+                    <option value="">Select Language</option>
+                    <option value="gj">Gujrathi</option>
+                    <option value="">English</option>
+
+                </select>
+            </div>
+        </div>
+        <div align="right" access-level="accessLevels.user">Current AreaId: <span style="font-weight: bold">{{$stateParams.areaId}}</span>
+        </div>
+
+    </div>
+
+</div>
+
+<h4 align="center" ng-if="$state.current.name=='enum.area'">
+    <a href="#/enum/area/1/house/9911810/household/991181001/esl">Sample Deaths (Only for Demo)</a>
+</h4>
+
 
 <div class="row clearfix" ui-view="" keypressEvents>
+
+
+    <div ui-view="" keypressEvents></div>
 
 </div>
 

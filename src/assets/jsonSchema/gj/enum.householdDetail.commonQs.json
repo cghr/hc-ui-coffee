@@ -1,0 +1,408 @@
+{
+"schemaName":"enum.householdDetail.commonQs",
+"onSave":"enum.householdDetail.death",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"commonQs",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"rooms",
+        "type":"text",
+        "valdn":"between[0:95],required",
+        "label":"ઘરમાં કેટલા રૂમ છે? ( બાથ રૂમ સિવાય)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kitchen",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમારા ઘરમાં રસોડા તરીકે આલગ રૂમ છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":" હા","value":"Yes","valdn":""},
+        
+            {"text":"ના","value":"No","valdn":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"toiletType",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તમારા ઘરના સભ્યો સામાન્ય રીતે કેવા પ્રકારની ટોઈલેટ સુવિધાનો ઉપયોગ કરે છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ફ્લશ ટુ પાઈપ્ડ સ્યુઅર સિસ્ટમ","value":"Flush to piped sewer system","valdn":""},
+        
+            {"text":"ફ્લશ ટુ સૅપ્ટિક ટૅન્ક","value":"Flush to septic tank","valdn":""},
+        
+            {"text":"ફ્લશ ટુ પિટ લૅટ્રિન","value":"Flush to pit latrine","valdn":""},
+        
+            {"text":"અન્ય કોઇ જગ્યાએ ફ્લશ થઈને જાય","value":"Flush to somewhere else","valdn":""},
+        
+            {"text":"ફ્લશ, ક્યાં તે ખબર નહીં","value":"Flush , Don’t know where","valdn":""},
+        
+            {"text":"હવાઉજાસવાળી સુધારેલી વ્યવસ્થા","value":"Ventilated improved system","valdn":""},
+        
+            {"text":"સ્લૅબ સાથે પિટ લૅટ્રિન","value":"Pit Latrine with slab","valdn":""},
+        
+            {"text":"સ્લૅબ/ખુલ્લાં ખાડા સાથે પિટ લૅટ્રિન","value":"Pit Latrine without slab/open pit","valdn":""},
+        
+            {"text":"ટ્વિન પિટ/કમ્પોસ્ટિંગ ટોઈલેટ","value":"Twin Pit/composting toilet ","valdn":""},
+        
+            {"text":"કોરું ટોઈલેટ","value":"Dry toilet ","valdn":""},
+        
+            {"text":"કોઇ સુવિધા નહીં /ખુલ્લી જગ્યા અથવા ખેતરનો ઉપયોગ કરે છે","value":"No Facility /uses open space or field ","valdn":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"toiletTypeSpecify",
+        "type":"text",
+        "valdn":"required",
+        "label":"ઉપયોગમાં લેવાતી ટોઈલેટ સુવિધા સૂચવો.",
+        "flow":"data.toiletType=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cookingEnergy",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તમારું ઘર રાંધવા માટે મુખ્યત્વે કેવા પ્રકારના બળતણનો ઉપયોગ કરે છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"વીજળી","value":"Electricity","valdn":""},
+        
+            {"text":"એલપીજી/નેચરલ ગેસ","value":"LPG/Natural gas","valdn":""},
+        
+            {"text":"બાયોગેસ","value":"Biogas","valdn":""},
+        
+            {"text":"કેરોસીન","value":"Kerosene","valdn":""},
+        
+            {"text":"કોલસો/લિગ્નાઈટ","value":"Coal/Lignite","valdn":""},
+        
+            {"text":"કોલસો","value":"Charcoal","valdn":""},
+        
+            {"text":"લાકડું","value":"Wood","valdn":""},
+        
+            {"text":"ભૂંગળી/ઝાડી ઝાંખરા/ઘાસ","value":"Straw/Shrubs/Grass","valdn":""},
+        
+            {"text":"કૃષિ પાકનો કચરો","value":"Agricultural crop waste","valdn":""},
+        
+            {"text":"છાણાં","value":"Dung cakes","valdn":""},
+        
+            {"text":"ઘરમાં કોઇ ખોરાક રાંધવામાં આવતો નથી","value":"No food cooked in household","valdn":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cookingEnergySpecify",
+        "type":"text",
+        "valdn":"required",
+        "label":"ઉપયોગમાં લેવાતા બળતણનો પ્રકાર સૂચવો.",
+        "flow":"data.cookingEnergy=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"houseType",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ઘરનો પ્રકાર? (અવલોકન દ્વારા)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"પાકું","value":"Pakka","valdn":""},
+        
+            {"text":"અડધું પાકું","value":"Semi pakka","valdn":""},
+        
+            {"text":"કાચું","value":"Kaccha","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drinkingWater",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તમારા ઘરના સભ્યો માટે પીવાના પાણીનો મુખ્ય સ્રોત શો છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"રહેઠાણમાં પાઈપ નાંખેલી છે","value":"Piped into dwelling ","valdn":""},
+        
+            {"text":"વાડા/પ્લૉટમાં પાઈપ નાંખેલી છે","value":"Piped to Yard/Plot","valdn":""},
+        
+            {"text":"પબ્લિક ટૅબ/સ્ટૅન્ડપાઈપ","value":"Public tab/standpipe","valdn":""},
+        
+            {"text":"ટ્યુબવેલ અથવા બોરહોલ","value":"Tube well or borehole","valdn":""},
+        
+            {"text":"આરક્ષિત કૂવો","value":"Protected well","valdn":""},
+        
+            {"text":"અનારક્ષિત કૂવો","value":"Unprotected well","valdn":""},
+        
+            {"text":"આરક્ષિત ઝરો","value":"Protected spring","valdn":""},
+        
+            {"text":"અનારક્ષિત ઝરો","value":"Unprotected spring","valdn":""},
+        
+            {"text":"વરસાદી પાણી","value":"Rain water","valdn":""},
+        
+            {"text":"ટૅન્કર ટ્રંક","value":"Tanker trunk","valdn":""},
+        
+            {"text":"નાની ટાંકી સાથેની લારી","value":"Cart with small tank","valdn":""},
+        
+            {"text":"સપાટી પરનું પાણી (નદી/ડૅમ/સરોવર/તળાવ/ઝરો/નહેર/સિંચાઈની ચેનલ)","value":"Surface water(River/Dam/Lake/Pond/Stream/Canal/Irrigation Channel)","valdn":""},
+        
+            {"text":"બોટલમાં ભરેલું પાણી","value":"Bottled water","valdn":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drinkingWaterSpecify",
+        "type":"text",
+        "valdn":"required",
+        "label":"ઉપયોગમાં લીધેલા પીવાના પાણીનો પ્રકાર સૂચવો.",
+        "flow":"data.drinkingWater=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

@@ -1,0 +1,456 @@
+{
+"schemaName":"enum.householdDetail.respondent",
+"onSave":"enum.householdDetail.death",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"respondent",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"name",
+        "type":"text",
+        "valdn":"alpha,minlength[3],required",
+        "label":"તમારા ( પ્રતિવાદી માતાનો) નામ શું છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sex",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રતિવાદી જાતિ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"સ્ત્રી","value":"Female","valdn":"","flow":""},
+        
+            {"text":"પુરૂષ","value":"Male","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"age",
+        "type":"text",
+        "valdn":"between[15:99],required",
+        "label":"તમારા છેલ્લાં જન્મદિવસ પર તમે હતા કેવી રીતે જૂના(સંપૂર્ણ વર્ષ ઉંમર)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationDeceaseF",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત વ્યક્તિનો તમારી સાથે શું સંબંધ છે?",
+        "flow":"data.sex=='Female'",
+        "value":"",
+        "items":[
+        
+            {"text":" મુખ્ય વ્યક્તિ","value":"Head","valdn":"","flow":"data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"પત્ની","value":"Wife","valdn":"","flow":"data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"પુત્રી","value":"Daughter","valdn":"","flow":""},
+        
+            {"text":"પુત્રવધુ","value":"Daughter-in-law","valdn":"","flow":""},
+        
+            {"text":"પૌત્રી","value":"Grandchild","valdn":"","flow":""},
+        
+            {"text":" માતા","value":"Mother","valdn":"","flow":""},
+        
+            {"text":"સાસુ","value":"Mother-in-law","valdn":"","flow":""},
+        
+            {"text":"બહેન","value":"Sister","valdn":"","flow":""},
+        
+            {"text":"નણંદ","value":"Sister-in-law","valdn":"","flow":""},
+        
+            {"text":"ભત્રીજો","value":"Niece","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"ઘરેલુ નોકર","value":"Domestic servant","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationDeceaseM",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત વ્યક્તિનો તમારી સાથે શું સંબંધ છે?",
+        "flow":"data.sex=='Male'",
+        "value":"",
+        "items":[
+        
+            {"text":" મુખ્ય વ્યક્તિ","value":"Head","valdn":"","flow":""},
+        
+            {"text":"પતિ ","value":"Husband","valdn":"","flow":""},
+        
+            {"text":"પુત્ર","value":"Son","valdn":"","flow":""},
+        
+            {"text":"જમાઈ","value":"Son-in-law","valdn":"","flow":""},
+        
+            {"text":"પૌત્ર","value":"Grandchild","valdn":"","flow":""},
+        
+            {"text":"પિતા","value":"Father","valdn":"","flow":""},
+        
+            {"text":"સસરા","value":"Father-in-law","valdn":"","flow":""},
+        
+            {"text":"ભાઈ","value":"Brother","valdn":"","flow":""},
+        
+            {"text":"બનેવી","value":"Brother-in-law","valdn":"","flow":""},
+        
+            {"text":"ભત્રીજી","value":"Nephew","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"ઘરેલુ નોકર","value":"Domestic servant","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"living",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતક મૃત્યુ પામ્યા તે સમયગાળામાં તમે (પ્રતિભાવક) તેમની સાથે રહ્યા હતાં?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"schoolingLevel",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકે પૂરા કરેલ શિક્ષણનું ઉચ્ચતમ સ્તર શું છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"નિરક્ષર","value":"Illiterate","valdn":"","flow":""},
+        
+            {"text":"ઔપચારિક શિક્ષણ વિના સાક્ષર","value":"Literate without formal education","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિકથી નીચેના સાક્ષર","value":"Literate, below primary","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિક સાક્ષર","value":"Literate, primary","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, મધ્ય","value":"Literate, middle","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, માધ્યમિક, મૅટ્રિક વર્ગ-X","value":"Literate, secondary, Matric Class-X","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, એચઆર માધ્યમિક/સિનિયર માધ્યમિક, પ્રિ-યુનિવર્સિટી, વર્ગ XII","value":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","valdn":"","flow":""},
+        
+            {"text":" સ્નાતક","value":"Graduate","valdn":"","flow":""},
+        
+            {"text":"અનુસ્નાતક","value":"Post-Graduate","valdn":"","flow":""},
+        
+            {"text":"બિન-ટૅકનિકલ","value":"Non-Technical","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"1.Illiterate: No education and does not know to read and write in any language. If knows to write only name then illiterate.2. Literate without formal education: Did not take any formal education but knows to read and write 3. Below Primary:        Studied and completed less than 4th std 4. Primary: Studied and completed 4th std 5. Middle: Studied till 5th Std/6th Std/ 7th Std/ 8th Std 6. Secondary/ Class-10/ Matric: Completed education till 10th Grade 7. Hr. Sec/ Class XII/ Pre-Univ: Completed education till 12th Grade or diploma after 10th or diploma after 12th. If cleared 11th std and not studied till 12th then mark output as Secondary/Class-10/Matric schooling. 8. Graduate and above: Completed Graduation/ Engineering/ Medical i.e a holding a graduate certificate, If the respondent has completed only 1st or 2nd year graduation it will be considered High School and not College Graduation"
+        },
+
+
+
+        {
+        "name":"aadharCard",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમારી પાસે આધાર કાર્ડ છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"religion",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ઘરના વડાનો ધર્મ શું છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હિન્દુ","value":"Hindu","valdn":"","flow":""},
+        
+            {"text":"મુસ્લિમ","value":"Muslim","valdn":"","flow":""},
+        
+            {"text":"ખ્રિસ્તી","value":"Christianity","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other religion","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"religionSpecify",
+        "type":"text",
+        "valdn":"",
+        "label":"ધર્મ પ્રકાર સ્પષ્ટ",
+        "flow":"data.religion=='Other religion'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

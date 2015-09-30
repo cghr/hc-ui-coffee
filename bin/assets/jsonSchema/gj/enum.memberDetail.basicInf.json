@@ -1,0 +1,406 @@
+{
+"schemaName":"enum.memberDetail.basicInf",
+"onSave":"enum.householdDetail.member",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"member",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"name",
+        "type":"text",
+        "valdn":"alpha,minlength[3],required",
+        "label":"આગામી વ્યક્તિ નામ શું છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sex",
+        "type":"radio",
+        "valdn":"required",
+        "label":"આ સભ્યની જાતિ શી છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"સ્ત્રી","value":"Female","valdn":""},
+        
+            {"text":"પુરૂષ","value":"Male","valdn":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationHeadF",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ઘરના વડા સાથે આ સભ્યનો સંબંધ શું છે?",
+        "flow":"data.sex=='Female'",
+        "value":"",
+        "items":[
+        
+            {"text":"મુખ્ય વ્યક્તિ","value":"Head/Self","valdn":""},
+        
+            {"text":"પત્ની","value":"Wife","valdn":""},
+        
+            {"text":"પુત્રી","value":"Daughter","valdn":""},
+        
+            {"text":"પુત્રવધુ","value":"Daughter-in-law","valdn":""},
+        
+            {"text":"પૌત્રી","value":"Grandchild","valdn":""},
+        
+            {"text":"માતા","value":"Mother","valdn":""},
+        
+            {"text":"સાસુ","value":"Mother-in-law","valdn":""},
+        
+            {"text":"બહેન","value":"Sister","valdn":""},
+        
+            {"text":"નણંદ","value":"Sister-in-law","valdn":""},
+        
+            {"text":"ભત્રીજો","value":"Niece","valdn":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":""},
+        
+            {"text":"ઘરેલુ નોકર","value":"Domestic servant","valdn":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":""},
+        
+            {"text":"ખબર નથી","value":"Don't know","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationHeadM",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ઘરના વડા સાથે આ સભ્યનો સંબંધ શું છે?",
+        "flow":"data.sex=='Male'",
+        "value":"",
+        "items":[
+        
+            {"text":"મુખ્ય વ્યક્તિ","value":"Head/Self","valdn":""},
+        
+            {"text":"પતિ","value":"Husband","valdn":""},
+        
+            {"text":"પુત્ર ","value":"Son","valdn":""},
+        
+            {"text":"જમાઈ","value":"Son-in-law","valdn":""},
+        
+            {"text":"પૌત્ર","value":"Grandchild","valdn":""},
+        
+            {"text":"પિતા","value":"Father","valdn":""},
+        
+            {"text":"સસરા","value":"Father-in-law","valdn":""},
+        
+            {"text":"ભાઈ ","value":"Brother","valdn":""},
+        
+            {"text":"બનેવી","value":"Brother-in-law","valdn":""},
+        
+            {"text":"ભત્રીજી","value":"Nephew","valdn":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":""},
+        
+            {"text":"ઘરેલુ નોકર","value":"Domestic servant","valdn":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":""},
+        
+            {"text":"ખબર નથી","value":"Don't know","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"age",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"સભ્યની ઉંમર કેટલી છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required"},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required"},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:99],required"}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"maritalStatus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તેમનો હાલનો વૈવાહિક દરજ્જો શો છે?",
+        "flow":"data.age_value >=12 && data.age_unit=='Years'",
+        "value":"",
+        "items":[
+        
+            {"text":"હાલમાં પરિણીત","value":"Currently Married ","valdn":""},
+        
+            {"text":"હજુ સુધી લગ્ન કર્યા","value":"Not yet married (Single)","valdn":""},
+        
+            {"text":"વિધુર/વિધવા","value":"Widowed","valdn":""},
+        
+            {"text":"છૂટાછેડા લીધેલ","value":"Divorced","valdn":""},
+        
+            {"text":"અલગ/ત્યક્તા","value":"Separated","valdn":""},
+        
+            {"text":"ત્યક્તા","value":"Deserted","valdn":""},
+        
+            {"text":"પરિણીત, પરંતુ ગ્વેના કરવામાં આવ્યું નથી","value":"Married, but Guana not performed","valdn":""},
+        
+            {"text":"ખબર નથી","value":"Don't know","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"schoolingLevel",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તે સભ્ય દ્વારા પૂરા કરેલ શિક્ષણનું ઉચ્ચતમ સ્તર શું છે?",
+        "flow":"data.age_value >= 5",
+        "value":"",
+        "items":[
+        
+            {"text":"નિરક્ષર","value":"Illiterate","valdn":""},
+        
+            {"text":"ઔપચારિક શિક્ષણ વિના સાક્ષર","value":"Literate without formal education","valdn":""},
+        
+            {"text":"પ્રાથમિકથી નીચેના સાક્ષર","value":"Literate, below primary","valdn":""},
+        
+            {"text":"પ્રાથમિક સાક્ષર","value":"Literate, primary","valdn":""},
+        
+            {"text":"સાક્ષર, મધ્ય","value":"Literate, middle","valdn":""},
+        
+            {"text":"સાક્ષર, માધ્યમિક, મૅટ્રિક વર્ગ-X","value":"Literate, secondary, Matric Class-X","valdn":""},
+        
+            {"text":"સાક્ષર, એચઆર માધ્યમિક/સિનિયર માધ્યમિક, પ્રિ-યુનિવર્સિટી, વર્ગ XII","value":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","valdn":""},
+        
+            {"text":" સ્નાતક","value":"Graduate","valdn":""},
+        
+            {"text":"અનુસ્નાતક","value":"Post-Graduate","valdn":""},
+        
+            {"text":"બિન-ટૅકનિકલ","value":"Non-Technical","valdn":""},
+        
+            {"text":" અજ્ઞાત","value":"Unknown","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"aadharCard",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તે / તેણી આધાર કાર્ડ ધરાવે છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":""},
+        
+            {"text":"ના","value":"No","valdn":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

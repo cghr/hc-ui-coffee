@@ -12,7 +12,7 @@ do (app = angular.module('progressService', ['toaster'])) ->
 
 
     startSync: ->
-      $http.get('api/sync/dataSync')
+      $http.get('api/sync/dataSync/'+$rootScope.user.role.title)
       .then ->
         toaster.pop('success', '', 'Sync Successful')
       , ->

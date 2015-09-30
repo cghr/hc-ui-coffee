@@ -1,0 +1,49 @@
+<div class="row clearfix" ng-init="readNotesToRespondent=false">
+    <div class="col-md-12">
+        <h4>Notes & Narrative
+            <button ng-click="readNotes();readNotesToRespondent=true" class="btn btn-primary btn-sm">Review Done</button>
+        </h4>
+    </div>
+    <div class="col-md-5">
+        <div style="height:400px;overflow:scroll;">
+            <div class="panel-body">
+                <span class="label label-primary">RESPONDENT SUMMARY</span>
+
+
+                <p>{{participant.respondentCOD}}</p>
+
+                <hr/>
+                <span class="label label-primary">POSITIVE SYMPTOMS</span>
+
+
+                <div ng-repeat="symptom in positiveSymptoms"><strong class="label label-warning">{{symptom.label |
+                    lowercase}}</strong>
+
+                    <p><span ng-repeat="prob in symptom.properties">
+                        <span>
+                            <span style="color: darkgray" ng-if="prob.comment || prob.comments">{{prob['label'+lang]}} : </span> {{prob.comment}} {{prob.comments.join(",")}} &nbsp; <br/>
+                        </span>
+                    </span>
+                    </p>
+                </div>
+                <hr/>
+                <span class="label label-primary">MEDICAL INFO</span>
+
+                <p>{{participant.medicalInformation}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        Narrative
+        <div class="panel-body">
+            <textarea ng-disabled="!readNotesToRespondent" ng-model="participant.narrative" placeholder="Narrative"
+                      rows="18"
+                      style="width:100%" class="form-control"></textarea>
+            <br/>
+            <button ng-disabled="!readNotesToRespondent" class="btn btn-success"
+                    ng-click="saveVA(participant.narrative)">Finish
+            </button>
+        </div>
+    </div>
+
+</div>

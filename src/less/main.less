@@ -3,13 +3,10 @@
  * stylesheets used throughout the application as this is the only stylesheet in
  * the Grunt configuration that is automatically processed.
  */
-
-
 /**
  * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
  * project should be imported as the rest are just wasting space.
  */
-
 @import '../../vendor/bootstrap/less/bootstrap.less';
 @import '../../vendor/lib-bValidator/release/styles/bvalidator.less';
 @import '../../vendor/angularjs-toaster/toaster.less';
@@ -17,14 +14,11 @@
 @import '../../vendor/bootstrap/less/bootstrap.less';
 @import '../common/sideMenu/sideMenu.less';
 @import '../../vendor/angular-ui-grid/ui-grid.less';
-
 /**
  * This is our main variables file. We must include it last so we can overwrite any variable
  * definitions in our imported stylesheets.
  */
-
 @import 'variables.less';
-
 
 /**
  * Typography
@@ -36,15 +30,21 @@
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
 }
-.sidebarActive{
+
+.sidebarActive {
   font-weight: bolder;
   background-color: #dcdcdc;
-  color:#FFFFFF;
-}
-html,body{
-  font-size: 90%;
+  color: #FFFFFF;
 }
 
+html, body {
+  font-size: 95%;
+}
+
+.active-true {
+  background: lightgreen;
+
+}
 
 /**
  * Now that all app-wide styles have been applied, we can load the styles for

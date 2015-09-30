@@ -1,0 +1,1546 @@
+{
+"schemaName":"enum.deathDetail.basicInf",
+"onSave":"resolver",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"death",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"householdId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.householdId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"houseId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.houseId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"areaId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.areaId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surveyor",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"user.id",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"respondentName",
+        "type":"text",
+        "valdn":"alpha,minlength[3],required",
+        "label":"તમારા ( પ્રતિવાદી માતાનો) નામ શું છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"respondentSex",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રતિવાદી જાતિ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"સ્ત્રી","value":"Female","valdn":"","flow":""},
+        
+            {"text":"પુરૂષ","value":"Male","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"respondentAge",
+        "type":"text",
+        "valdn":"between[15:99],required",
+        "label":"તમારા છેલ્લાં જન્મદિવસ પર તમે હતા કેવી રીતે જૂના(સંપૂર્ણ વર્ષ ઉંમર)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"respondentSchoolingLevel",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકે પૂરા કરેલ શિક્ષણનું ઉચ્ચતમ સ્તર શું છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"નિરક્ષર","value":"Illiterate","valdn":"","flow":""},
+        
+            {"text":"ઔપચારિક શિક્ષણ વિના સાક્ષર","value":"Literate without formal education","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિકથી નીચેના સાક્ષર","value":"Literate, below primary","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિક સાક્ષર","value":"Literate, primary","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, મધ્ય","value":"Literate, middle","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, માધ્યમિક, મૅટ્રિક વર્ગ-X","value":"Literate, secondary, Matric Class-X","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, એચઆર માધ્યમિક/સિનિયર માધ્યમિક, પ્રિ-યુનિવર્સિટી, વર્ગ XII","value":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","valdn":"","flow":""},
+        
+            {"text":" સ્નાતક","value":"Graduate","valdn":"","flow":""},
+        
+            {"text":"અનુસ્નાતક","value":"Post-Graduate","valdn":"","flow":""},
+        
+            {"text":"બિન-ટૅકનિકલ","value":"Non-Technical","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"1.Illiterate: No education and does not know to read and write in any language. If knows to write only name then illiterate.2. Literate without formal education: Did not take any formal education but knows to read and write 3. Below Primary:        Studied and completed less than 4th std 4. Primary: Studied and completed 4th std 5. Middle: Studied till 5th Std/6th Std/ 7th Std/ 8th Std 6. Secondary/ Class-10/ Matric: Completed education till 10th Grade 7. Hr. Sec/ Class XII/ Pre-Univ: Completed education till 12th Grade or diploma after 10th or diploma after 12th. If cleared 11th std and not studied till 12th then mark output as Secondary/Class-10/Matric schooling. 8. Graduate and above: Completed Graduation/ Engineering/ Medical i.e a holding a graduate certificate, If the respondent has completed only 1st or 2nd year graduation it will be considered High School and not College Graduation"
+        },
+
+
+
+        {
+        "name":"respondentAadharCard",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમારી પાસે આધાર કાર્ડ છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"religion",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ઘરના વડાનો ધર્મ શું છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હિન્દુ","value":"Hindu","valdn":"","flow":""},
+        
+            {"text":"મુસ્લિમ","value":"Muslim","valdn":"","flow":""},
+        
+            {"text":"ખ્રિસ્તી","value":"Christianity","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other religion","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"religionSpecify",
+        "type":"text",
+        "valdn":"",
+        "label":"ધર્મ પ્રકાર સ્પષ્ટ",
+        "flow":"data.religion=='Other religion'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"name",
+        "type":"text",
+        "valdn":"alpha,minlength[3],required",
+        "label":"મૃત ના સંપૂર્ણ નામ શું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"Write as 'Baby of (Mother's name)' if the baby don't have any name "
+        },
+
+
+
+        {
+        "name":"sex",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકની જાતિ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"સ્ત્રી","value":"Female","valdn":"","flow":""},
+        
+            {"text":"પુરૂષ","value":"Male","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"monthod",
+        "type":"dropdown",
+        "valdn":"required",
+        "label":"મારનાર વ્યક્તિ ક્યાં મહિના અને વર્ષમાં મરેલ હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""},
+        
+            {"text":"જાન્યુઆરી","value":"Jan","valdn":"","flow":""},
+        
+            {"text":"ફેબ્રુઆરી","value":"Feb","valdn":"","flow":""},
+        
+            {"text":"માર્ચ","value":"Mar","valdn":"","flow":""},
+        
+            {"text":"એપ્રિલ","value":"Apr","valdn":"","flow":""},
+        
+            {"text":"મે","value":"May","valdn":"","flow":""},
+        
+            {"text":"જૂન","value":"Jun","valdn":"","flow":""},
+        
+            {"text":"જુલાઈ","value":"Jul","valdn":"","flow":""},
+        
+            {"text":"ઓગસ્ટ","value":"Aug","valdn":"","flow":""},
+        
+            {"text":"સપ્ટેમ્બર","value":"Sep","valdn":"","flow":""},
+        
+            {"text":"ઓક્ટોબર","value":"Oct","valdn":"","flow":""},
+        
+            {"text":"નવેમ્બર","value":"Nov","valdn":"","flow":""},
+        
+            {"text":"ડિસેમ્બર","value":"Dec","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"yod",
+        "type":"dropdown",
+        "valdn":"required",
+        "label":"",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""},
+        
+            {"text":"2010","value":"2010","valdn":"","flow":""},
+        
+            {"text":"2011","value":"2011","valdn":"","flow":""},
+        
+            {"text":"2012","value":"2012","valdn":"","flow":""},
+        
+            {"text":"2013","value":"2013","valdn":"","flow":""},
+        
+            {"text":"2014","value":"2014","valdn":"","flow":""},
+        
+            {"text":"2015","value":"2015","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"mob",
+        "type":"dropdown",
+        "valdn":"required",
+        "label":"મારનાર વ્યક્તિ ક્યાં મહિના અને વર્ષમાં જન્મેલ હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""},
+        
+            {"text":"જાન્યુઆરી","value":"Jan","valdn":"","flow":""},
+        
+            {"text":"ફેબ્રુઆરી","value":"Feb","valdn":"","flow":""},
+        
+            {"text":"માર્ચ","value":"Mar","valdn":"","flow":""},
+        
+            {"text":"એપ્રિલ","value":"Apr","valdn":"","flow":""},
+        
+            {"text":"મે","value":"May","valdn":"","flow":""},
+        
+            {"text":"જૂન","value":"Jun","valdn":"","flow":""},
+        
+            {"text":"જુલાઈ","value":"Jul","valdn":"","flow":""},
+        
+            {"text":"ઓગસ્ટ","value":"Aug","valdn":"","flow":""},
+        
+            {"text":"સપ્ટેમ્બર","value":"Sep","valdn":"","flow":""},
+        
+            {"text":"ઓક્ટોબર","value":"Oct","valdn":"","flow":""},
+        
+            {"text":"નવેમ્બર","value":"Nov","valdn":"","flow":""},
+        
+            {"text":"ડિસેમ્બર","value":"Dec","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"yob",
+        "type":"dropdown",
+        "valdn":"required",
+        "label":"",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""},
+        
+            {"text":"1944","value":"1944","valdn":"","flow":""},
+        
+            {"text":"1945","value":"1945","valdn":"","flow":""},
+        
+            {"text":"1946","value":"1946","valdn":"","flow":""},
+        
+            {"text":"1947","value":"1947","valdn":"","flow":""},
+        
+            {"text":"1948","value":"1948","valdn":"","flow":""},
+        
+            {"text":"1949","value":"1949","valdn":"","flow":""},
+        
+            {"text":"1950","value":"1950","valdn":"","flow":""},
+        
+            {"text":"1951","value":"1951","valdn":"","flow":""},
+        
+            {"text":"1952","value":"1952","valdn":"","flow":""},
+        
+            {"text":"1953","value":"1953","valdn":"","flow":""},
+        
+            {"text":"1954","value":"1954","valdn":"","flow":""},
+        
+            {"text":"1955","value":"1955","valdn":"","flow":""},
+        
+            {"text":"1956","value":"1956","valdn":"","flow":""},
+        
+            {"text":"1957","value":"1957","valdn":"","flow":""},
+        
+            {"text":"1958","value":"1958","valdn":"","flow":""},
+        
+            {"text":"1959","value":"1959","valdn":"","flow":""},
+        
+            {"text":"1960","value":"1960","valdn":"","flow":""},
+        
+            {"text":"1961","value":"1961","valdn":"","flow":""},
+        
+            {"text":"1962","value":"1962","valdn":"","flow":""},
+        
+            {"text":"1963","value":"1963","valdn":"","flow":""},
+        
+            {"text":"1964","value":"1964","valdn":"","flow":""},
+        
+            {"text":"1965","value":"1965","valdn":"","flow":""},
+        
+            {"text":"1966","value":"1966","valdn":"","flow":""},
+        
+            {"text":"1967","value":"1967","valdn":"","flow":""},
+        
+            {"text":"1968","value":"1968","valdn":"","flow":""},
+        
+            {"text":"1969","value":"1969","valdn":"","flow":""},
+        
+            {"text":"1970","value":"1970","valdn":"","flow":""},
+        
+            {"text":"1971","value":"1971","valdn":"","flow":""},
+        
+            {"text":"1972","value":"1972","valdn":"","flow":""},
+        
+            {"text":"1973","value":"1973","valdn":"","flow":""},
+        
+            {"text":"1974","value":"1974","valdn":"","flow":""},
+        
+            {"text":"1975","value":"1975","valdn":"","flow":""},
+        
+            {"text":"1976","value":"1976","valdn":"","flow":""},
+        
+            {"text":"1977","value":"1977","valdn":"","flow":""},
+        
+            {"text":"1978","value":"1978","valdn":"","flow":""},
+        
+            {"text":"1979","value":"1979","valdn":"","flow":""},
+        
+            {"text":"1980","value":"1980","valdn":"","flow":""},
+        
+            {"text":"1981","value":"1981","valdn":"","flow":""},
+        
+            {"text":"1982","value":"1982","valdn":"","flow":""},
+        
+            {"text":"1983","value":"1983","valdn":"","flow":""},
+        
+            {"text":"1984","value":"1984","valdn":"","flow":""},
+        
+            {"text":"1985","value":"1985","valdn":"","flow":""},
+        
+            {"text":"1986","value":"1986","valdn":"","flow":""},
+        
+            {"text":"1987","value":"1987","valdn":"","flow":""},
+        
+            {"text":"1988","value":"1988","valdn":"","flow":""},
+        
+            {"text":"1989","value":"1989","valdn":"","flow":""},
+        
+            {"text":"1990","value":"1990","valdn":"","flow":""},
+        
+            {"text":"1991","value":"1991","valdn":"","flow":""},
+        
+            {"text":"1992","value":"1992","valdn":"","flow":""},
+        
+            {"text":"1993","value":"1993","valdn":"","flow":""},
+        
+            {"text":"1994","value":"1994","valdn":"","flow":""},
+        
+            {"text":"1995","value":"1995","valdn":"","flow":""},
+        
+            {"text":"1996","value":"1996","valdn":"","flow":""},
+        
+            {"text":"1997","value":"1997","valdn":"","flow":""},
+        
+            {"text":"1998","value":"1998","valdn":"","flow":""},
+        
+            {"text":"1999","value":"1999","valdn":"","flow":""},
+        
+            {"text":"2000","value":"2000","valdn":"","flow":""},
+        
+            {"text":"2001","value":"2001","valdn":"","flow":""},
+        
+            {"text":"2002","value":"2002","valdn":"","flow":""},
+        
+            {"text":"2003","value":"2003","valdn":"","flow":""},
+        
+            {"text":"2004","value":"2004","valdn":"","flow":""},
+        
+            {"text":"2005","value":"2005","valdn":"","flow":""},
+        
+            {"text":"2006","value":"2006","valdn":"","flow":""},
+        
+            {"text":"2007","value":"2007","valdn":"","flow":""},
+        
+            {"text":"2008","value":"2008","valdn":"","flow":""},
+        
+            {"text":"2009","value":"2009","valdn":"","flow":""},
+        
+            {"text":"2010","value":"2010","valdn":"","flow":""},
+        
+            {"text":"2011","value":"2011","valdn":"","flow":""},
+        
+            {"text":"2012","value":"2012","valdn":"","flow":""},
+        
+            {"text":"2013","value":"2013","valdn":"","flow":""},
+        
+            {"text":"2014","value":"2014","valdn":"","flow":""},
+        
+            {"text":"2015","value":"2015","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"age",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"મૃત્યુના સમયે મૃતક ની ઉંમર કેટલી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:69],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":"Specify the completed age of deceased.In Days, if -age <29 days,In Months, if - 1month<age<1year In Years, if- age >1 year"
+        },
+
+
+
+        {
+        "name":"relationDeceaseF",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત વ્યક્તિનો તમારી સાથે શું સંબંધ છે?",
+        "flow":"data.respondentSex=='Female'",
+        "value":"",
+        "items":[
+        
+            {"text":" મુખ્ય વ્યક્તિ","value":"Head","valdn":"","flow":""},
+        
+            {"text":"પત્ની","value":"Wife","valdn":"","flow":"data.sex=='Male' && data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"પુત્રી","value":"Daughter","valdn":"","flow":"data.respondentAge<data.age_value && data.age_unit=='Years'"},
+        
+            {"text":"પુત્રવધુ","value":"Daughter-in-law","valdn":"","flow":"data.respondentAge<data.age_value && data.age_unit=='Years'"},
+        
+            {"text":"પૌત્રી","value":"Grandchild","valdn":"","flow":"data.respondentAge<data.age_value && data.age_unit=='Years'"},
+        
+            {"text":" માતા","value":"Mother","valdn":"","flow":""},
+        
+            {"text":"સાસુ","value":"Mother-in-law","valdn":"","flow":""},
+        
+            {"text":"બહેન","value":"Sister","valdn":"","flow":""},
+        
+            {"text":"નણંદ","value":"Sister-in-law","valdn":"","flow":""},
+        
+            {"text":"ભત્રીજો","value":"Niece","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationDeceaseM",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત વ્યક્તિનો તમારી સાથે શું સંબંધ છે?",
+        "flow":"data.respondentSex=='Male'",
+        "value":"",
+        "items":[
+        
+            {"text":" મુખ્ય વ્યક્તિ","value":"Head","valdn":"","flow":""},
+        
+            {"text":"પતિ ","value":"Husband","valdn":"","flow":"data.sex=='Female' && data.age_value>12 && data.age_unit=='Years'"},
+        
+            {"text":"પુત્ર","value":"Son","valdn":"","flow":"data.respondentAge<data.age_value && data.age_unit=='Years'"},
+        
+            {"text":"જમાઈ","value":"Son-in-law","valdn":"","flow":"data.respondentAge<data.age_value && data.age_unit=='Years'"},
+        
+            {"text":"પૌત્ર","value":"Grandchild","valdn":"","flow":"data.respondentAge<data.age_value && data.age_unit=='Years'"},
+        
+            {"text":"પિતા","value":"Father","valdn":"","flow":""},
+        
+            {"text":"સસરા","value":"Father-in-law","valdn":"","flow":""},
+        
+            {"text":"ભાઈ","value":"Brother","valdn":"","flow":""},
+        
+            {"text":"બનેવી","value":"Brother-in-law","valdn":"","flow":""},
+        
+            {"text":"ભત્રીજી","value":"Nephew","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"living",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતક મૃત્યુ પામ્યા તે સમયગાળામાં તમે (પ્રતિભાવક) તેમની સાથે રહ્યા હતાં?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathSite",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુ ક્યાં થયું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ઘર","value":"At Home","valdn":"","flow":""},
+        
+            {"text":"સ્વાસ્થ્ય સુવિધાના રસ્તા પર","value":"On Way To Health Facility","valdn":"","flow":""},
+        
+            {"text":"PHC / CHC / ગ્રામીણ હોસ્પિટલ","value":"PHC/CHC/Rural Hospital","valdn":"","flow":""},
+        
+            {"text":"જિલ્લા હોસ્પિટલ","value":"District Hospital","valdn":"","flow":""},
+        
+            {"text":"ખાનગી હોસ્પિટલ","value":"Private Hospital","valdn":"","flow":""},
+        
+            {"text":"અન્ય સ્થળે","value":"Other place","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherPlace",
+        "type":"text",
+        "valdn":"required",
+        "label":"અન્ય",
+        "flow":"data.deathSite=='Other place'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"maritalStatus",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકનો વૈવાહિક દરજ્જો શો હતો?",
+        "flow":"data.age_value>=15 && data.age_unit=='Years'",
+        "value":"",
+        "items":[
+        
+            {"text":"હાલમાં પરિણીત","value":"Currently Married ","valdn":"","flow":""},
+        
+            {"text":"હજુ સુધી લગ્ન કર્યા","value":"Not yet married (Single)","valdn":"","flow":""},
+        
+            {"text":"વિધુર/વિધવા","value":"Widowed","valdn":"","flow":""},
+        
+            {"text":"છૂટાછેડા લીધેલ","value":"Divorced","valdn":"","flow":""},
+        
+            {"text":"અલગ/ત્યક્તા","value":"Separated","valdn":"","flow":""},
+        
+            {"text":"ત્યક્તા","value":"Deserted","valdn":"","flow":""},
+        
+            {"text":"પરિણીત, પરંતુ ગ્વેના કરવામાં આવ્યું નથી","value":"Married, but Guana not performed","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"schoolingLevel",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત વ્યક્તિ દ્વારા પૂર્ણ કરેલ સર્વોચ્ચ શૈક્ષણિક લાયકાત શું છે?",
+        "flow":"data.age_value>=15 && data.age_unit=='Years'",
+        "value":"",
+        "items":[
+        
+            {"text":"નિરક્ષર","value":"Illiterate","valdn":"","flow":""},
+        
+            {"text":"ઔપચારિક શિક્ષણ વિના સાક્ષર","value":"Literate without formal education","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિકથી નીચેના સાક્ષર","value":"Literate, below primary","valdn":"","flow":""},
+        
+            {"text":"પ્રાથમિક સાક્ષર","value":"Literate, primary","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, મધ્ય","value":"Literate, middle","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, માધ્યમિક, મૅટ્રિક વર્ગ-X","value":"Literate, secondary, Matric Class-X","valdn":"","flow":""},
+        
+            {"text":"સાક્ષર, એચઆર માધ્યમિક/સિનિયર માધ્યમિક, પ્રિ-યુનિવર્સિટી, વર્ગ XII","value":"Literate, HR Secondary/Sr. Secondary, Pre-University, Class XII","valdn":"","flow":""},
+        
+            {"text":" સ્નાતક","value":"Graduate","valdn":"","flow":""},
+        
+            {"text":"અનુસ્નાતક","value":"Post-Graduate","valdn":"","flow":""},
+        
+            {"text":"બિન-ટૅકનિકલ","value":"Non-Technical","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"occupation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃતકનો વ્યવસાય શો હતો?",
+        "flow":"data.age_value>=15 && data.age_unit=='Years'",
+        "value":"",
+        "items":[
+        
+            {"text":"બિનકામદાર","value":"Nonworker","valdn":"","flow":""},
+        
+            {"text":"પગારદાર","value":"Salaried","valdn":"","flow":""},
+        
+            {"text":"વેતન કમાનાર","value":"Wage earner","valdn":"","flow":""},
+        
+            {"text":"વ્યવસાય/ધંધો","value":"Profession/Business","valdn":"","flow":""},
+        
+            {"text":"ખેડૂત","value":"Cultivator","valdn":"","flow":""},
+        
+            {"text":"કૃષિ વેતન મજૂરી","value":"Agricultural wage labour","valdn":"","flow":""},
+        
+            {"text":"બિન કૃષિ વેતન મજૂરી","value":"Non agricultural wage labour","valdn":"","flow":""},
+        
+            {"text":"વિદ્યાર્થી","value":"Student","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationHhheadF",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Relationship of the deceased with the head of the household",
+        "flow":"data.sex=='Female'",
+        "value":"",
+        "items":[
+        
+            {"text":"પત્ની","value":"Wife","valdn":"","flow":"data.age_value>12 && data.age_unit=='Years'"},
+        
+            {"text":"પુત્રી","value":"Daughter","valdn":"","flow":""},
+        
+            {"text":"પુત્રવધુ","value":"Daughter-in-law","valdn":"","flow":""},
+        
+            {"text":"પૌત્રી","value":"Grandchild","valdn":"","flow":""},
+        
+            {"text":"માતા","value":"Mother","valdn":"","flow":"data.age_value>12 && data.age_unit=='Years'"},
+        
+            {"text":"સાસુ","value":"Mother-in-law","valdn":"","flow":"data.age_value>12 && data.age_unit=='Years'"},
+        
+            {"text":"બહેન","value":"Sister","valdn":"","flow":""},
+        
+            {"text":"નણંદ","value":"Sister-in-law","valdn":"","flow":""},
+        
+            {"text":"ભત્રીજો","value":"Niece","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"relationHhheadM",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Relationship of the deceased with the head of the household",
+        "flow":"data.sex=='Male'",
+        "value":"",
+        "items":[
+        
+            {"text":"પતિ","value":"Husband","valdn":"","flow":"data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"પુત્ર ","value":"Son","valdn":"","flow":""},
+        
+            {"text":"જમાઈ","value":"Son-in-law","valdn":"","flow":""},
+        
+            {"text":"પૌત્ર","value":"Grandchild","valdn":"","flow":""},
+        
+            {"text":"પિતા","value":"Father","valdn":"","flow":"data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"સસરા","value":"Father-in-law","valdn":"","flow":"data.age_value>15 && data.age_unit=='Years'"},
+        
+            {"text":"ભાઈ ","value":"Brother","valdn":"","flow":""},
+        
+            {"text":"બનેવી","value":"Brother-in-law","valdn":"","flow":""},
+        
+            {"text":"ભત્રીજી","value":"Nephew","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધી","value":"Other relative ","valdn":"","flow":""},
+        
+            {"text":"દત્તક લીધેલ/પોષક/સાવકું બાળક","value":"Adopted/Foster/Step-child","valdn":"","flow":""},
+        
+            {"text":"અન્ય સંબંધિત નથી","value":"Other not related","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"aadharCard",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Whether deceased had Aadhar card? ",
+        "flow":"data.age_value>=5 && data.age_unit=='Years'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"registered",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુ રજીસ્ટર કરવામાં આવી હતી ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"certificateAvailability",
+        "type":"radio",
+        "valdn":"",
+        "label":"શું તમારી પાસે તેનું મૃત્યુનું પ્રમાણપત્ર છે? (બતાવવા માટે કહો)",
+        "flow":"data.registered=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathPregnant",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તે ગર્ભવતી હતાં અથવા ગર્ભવતી હોય તેવી શંકા હતી અથવા તેમની પ્રસૂતિ કે ગર્ભપાતને 42 દિવસ ન થયા હતાં?",
+        "flow":"data.age_value>=15 && data.age_value<=49 && data.age_unit=='Years' &&  data.sex=='Female'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cod",
+        "type":"text",
+        "valdn":"maxlength[100]",
+        "label":"મૃત્યુ પ્રમાણપત્ર મુજબ મૃત્યુ કારણ",
+        "flow":"data.certificateAvailability=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"respodentThinkCod",
+        "type":"text",
+        "valdn":"maxlength[100],required",
+        "label":"આ વ્યક્તિ શાના કારણે મૃત્યુ પામી હોવાનું પ્રતિભાવક માને છે? (પ્રતિભાવકને તેના પોતાના શબ્દોમાં બીમારી વિશે કહેવા દો)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

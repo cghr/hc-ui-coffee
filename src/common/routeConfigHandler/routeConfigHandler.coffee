@@ -18,8 +18,8 @@ do(app = angular.module 'myApp.routeConfigHandler', []) ->
         abstract = getAbstractState(child)
 
         $stateProvider.state(parentState + '.' + child.name, {
-          url: child.url,
-          templateUrl: child.tpl,
+          url: child.url || ("/" + child.name),
+          templateUrl: child.tpl || "tpls/surveyFormCustomNav.jade",
           title: child.title,
           addNew: child.addNew,
           msg: child.msg,

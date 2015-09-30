@@ -1,0 +1,53 @@
+<div class="row clearfix">
+    <h4>Cardinal Symptoms</h4>
+
+
+        <div ng-repeat="symptom in symptomList" class="col-md-4">
+            <div class="col-md-4"></div>
+            <div ng-click="selectSymptom(symptom)" style="border:3px solid #eee;" class="active-{{symptom.active}}"><img
+                    width="60" height="60" ng-src="assets/images/symptoms/{{domain}}/{{symptom.name}}.jpg"/><strong>
+                &nbsp;
+                {{symptom.label | sentencecase}}</strong></div>
+        </div>
+
+
+        <div class="col-md-4">
+            <h4>Which came first ?
+                <button class="btn btn-danger btn-sm" ng-click="clearSymptomOrdering()">Clear Ordering</button>
+            </h4>
+
+            <div class="well">
+                <ul class="list-group">
+                    <li ng-repeat="symptom in positiveSymptoms">
+                        <a class="list-group-item" href="" ng-click="extractSymptom(symptom)">
+                            <strong>{{symptom.label | sentencecase}}</strong></a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+            <strong>In Order</strong>
+
+            <div class="well">
+
+                <ul data-as-sortable="board.dragControlListeners" data-ng-model="sortedSymptoms" class="list-group">
+                    <li ng-repeat="symptom in sortedSymptoms" data-as-sortable-item=""
+                        class="list-group-item text-primary">
+                        <div data-as-sortable-item-handle=""><strong>{{$index+1}}.{{symptom.label |
+                            sentencecase}}</strong></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div align="center" style="margin-top:10px">
+                <a
+                        ng-disabled="positiveSymptoms.length>0?(positiveSymptoms.length>0 || sortedSymptoms.length>0):false"
+                        ui-sref="steps.step3"
+                        ng-click="filterSymptoms()"
+                        class="btn btn-primary">Next Step &raquo;</a>
+            </div>
+        </div>
+
+</div>

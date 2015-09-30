@@ -1,0 +1,838 @@
+{
+"schemaName":"enum.vaDetail.maternal",
+"onSave":"enum.vaDetail.tobaccoDeath",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"va_maternal",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"માતાના મૃત્યુ વિગતો",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pregDuration",
+        "type":"text",
+        "valdn":"between[1:12],required",
+        "label":"How many months long was the pregnancy?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"preg_times",
+        "type":"text",
+        "valdn":"between[0:50],required",
+        "label":"How many times previously was she pregnant?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deliver_count",
+        "type":"text",
+        "valdn":"between[0:25],required",
+        "label":"How many times previously did she deliver a live infant?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"antinatal_care",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she receive antenatal care during this pregnancy?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"antinatal_care_count",
+        "type":"text",
+        "valdn":"between[0:25],required",
+        "label":"How many times did she receive antenatal care during this pregnancy?",
+        "flow":"data.antinatal_care=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"days_die_after",
+        "type":"text",
+        "valdn":"between[0:999],required",
+        "label":"How many days after delivery/abortion did she die?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"childBornLocation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"રસૂતિ/ગર્ભપાતની ઘટના ક્યાં થઈ હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ઘર","value":"Home","valdn":"","flow":""},
+        
+            {"text":"સ્વાસ્થ્ય સુવિધાના રસ્તા પર","value":"On way to Health facility","valdn":"","flow":""},
+        
+            {"text":"PHC/CHC/ગ્રામીણ હૉસ્પિટલ","value":"PHC/CHC/Rural Hospital","valdn":"","flow":""},
+        
+            {"text":"સાર્વજનિક હૉસ્પિટલ","value":"Public Hospital","valdn":"","flow":""},
+        
+            {"text":"ખાનગી હૉસ્પિટલ","value":"Private Hospital","valdn":"","flow":""},
+        
+            {"text":"અન્ય સ્થળે","value":"Other place","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"other_women_delivering",
+        "type":"radio",
+        "valdn":"required",
+        "label":"If the delivery was not at home-were other women delivering babies at the facility at the same time the women delivered?",
+        "flow":"data.childBornLocation!='Home'",
+        "value":"",
+        "items":[
+        
+            {"text":"na કોઈ - માતા n હતી","value":"No-mother was only delivery","valdn":"","flow":""},
+        
+            {"text":"ha - 5 અથવા ઓછા અન્ય સ્ત્રીઓ","value":"Yes-5 or less other women","valdn":"","flow":""},
+        
+            {"text":"હા - 5 કરતા વધારે અન્ય સ્ત્રીઓ","value":"Yes- more than 5 other women","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"delivery_attendant",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રસૂતિમાં કોણે કરઅવિ હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"તાલીમ ન પામેલ પરંપરાગત બર્થ અટેન્ડન્ટ","value":"Untrained Traditional Birth Attendant","valdn":"","flow":""},
+        
+            {"text":"તાલીમ પામેલ પરંપરાગત બર્થ અટેન્ડન્ટ","value":"Trained Traditional Birth Attendant","valdn":"","flow":""},
+        
+            {"text":"દાયણ/નર્સ","value":"Midwife/Nurse","valdn":"","flow":""},
+        
+            {"text":"ઍલોપેથિક ડૉક્ટર","value":"Allopathic Doctor","valdn":"","flow":""},
+        
+            {"text":"કોઇ નહીં","value":"None","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"caesarean",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have a caesarean delivery?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"too_much_bleeding",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have too much bleeding at the beginning of labour pains?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"too_much_bleeding_labour",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have too much bleeding during labour (before delivering the baby)?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"too_much_bleeding_after",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have too much bleeding after delivering the baby?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"prolonged_labour",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have prolonged labour:≥ 24 hours for first baby, ≥ 12 hours otherwise?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"difficulty_delivering",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have difficulty delivering the placenta?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fits_during_pregnancy",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have fits or loss of consciousness during the pregnancy, during labour or after labour?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fever_after_birth",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have a fever after the birth?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"foul_smelling_discharge",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did she have foul smelling discharge?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<50","whereCondition":""},
+        
+        {"entity":"death","field":"deathPregnant","ref":"deathId","condition":"deathPregnant=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

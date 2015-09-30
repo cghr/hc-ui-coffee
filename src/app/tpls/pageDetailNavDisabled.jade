@@ -1,12 +1,12 @@
 .col-md-2.column(style="margin-left:10px",ng-init='childStates=$state.current.data.children;parent=$state.current.data.thisState;prev=$state.current.data.prev;')
-   a(ui-sref='{{prev.name}}({{$stateParams}})', href='',ng-if="prev.name!=''") &laquo; Back to {{prev.title}}
-   .well.sidebar-nav.sidebar-nav-fixed(style='height:550px ;overflow: scroll')
-      ul.nav.nav-list
-         li.nav-header
-         li(ng-class="{sidebarActive:$state.includes(parent.name+'.'+childState.name)}", ng-repeat='childState in childStates')
-            a
-               | {{childState.title}}
+    a(ui-sref='{{prev.name}}({{$stateParams}})', href='',ng-if="prev.name!=''") &laquo; Back to {{prev.title}}
+    .well.sidebar-nav.sidebar-nav-fixed(style='height:550px ;overflow: scroll')
+        ul.nav.nav-list
+            li.nav-header
+            li(ng-class="{sidebarActive:$state.includes(parent.name+'.'+childState.name)}", ng-repeat='childState in childStates')
+                a
+                    | {{childState.title}}
 .col-md-9.column(style="padding-top:15px")
-   div(ui-view='')
+    div(ui-view='')
 .col-md-1.column
 .col-md-1.column

@@ -1,0 +1,702 @@
+{
+"schemaName":"enum.eslDetail.healthcare",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"healthcare",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"This section is regarding Health Service Utilization",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"healthRecord",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Do you have any health records that belonged to the deceased?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"note",
+        "type":"text",
+        "valdn":"maxlength[200],required",
+        "label":"Summarize the note",
+        "flow":"data.healthRecord=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"treatment",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] receive any treatment for the illness that led to death?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"salts",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] receive oral rehydration salts?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"drip",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] receive (or need) intravenous fluids (drip) treatment?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bloodTrans",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] receive (or need) a blood transfusion?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"oxygenHome",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] receive (or need) oxygen at home?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=15 && age_value<70","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"tube",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] receive (or need) treatment/food through a tube passed through the nose?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"antibiotics",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] receive (or need) any antibiotics?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surgery",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have (or need) any operations/Surgey for the illness?",
+        "flow":"data.treatment=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"surgeryLocation",
+        "type":"text",
+        "valdn":"required",
+        "label":"If yes, the location?",
+        "flow":"data.surgery=='Yes'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cardiacTreatment",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] have (or need) any cardiac/heart treatments?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"None","value":"None","valdn":"","flow":""},
+        
+            {"text":"Angioplasty","value":"Angioplasty","valdn":"","flow":""},
+        
+            {"text":"Bypass","value":"Bypass","valdn":"","flow":""},
+        
+            {"text":"Other cardiac treatments","value":"Other cardiac treatments","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"kidneyDialysis",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did s/he [name] ever have (or need) kidney dialysis?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"Yes","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"No","value":"No","valdn":"","flow":""},
+        
+            {"text":"Don't know/Unknown","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"cancerTreatment",
+        "type":"checkbox",
+        "valdn":"required",
+        "label":"Did s/he [name] have (or need) any cancer treatment?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"None","value":"None","valdn":"","flow":""},
+        
+            {"text":"Chemotherapy","value":"Chemotherapy","valdn":"","flow":""},
+        
+            {"text":"Radiotherapy","value":"Radiotherapy","valdn":"","flow":""},
+        
+            {"text":"Surgery","value":"Surgery","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"medicalHistory","field":"cancer","ref":"deathId","condition":"cancer=='Yes'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"locationCancerMale",
+        "type":"radio",
+        "valdn":"",
+        "label":"Location of the cancer",
+        "flow":"data.cancerTreatment!='None'",
+        "value":"",
+        "items":[
+        
+            {"text":"Mouth","value":"Mouth","valdn":"","flow":""},
+        
+            {"text":"Throat/Lung","value":"Throat/Lung","valdn":"","flow":""},
+        
+            {"text":"Oesophagus","value":"Oesophagus","valdn":"","flow":""},
+        
+            {"text":"Liver","value":"Liver","valdn":"","flow":""},
+        
+            {"text":"Abdomen/Stomach","value":"Abdomen/Stomach","valdn":"","flow":""},
+        
+            {"text":"Prostrate","value":"Prostrate","valdn":"","flow":""},
+        
+            {"text":"Penis","value":"Penis","valdn":"","flow":""},
+        
+            {"text":"Blood","value":"Blood","valdn":"","flow":""},
+        
+            {"text":"Others","value":"Others","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"medicalHistory","field":"cancer","ref":"deathId","condition":"cancer=='Yes'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Male'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"locationCancerFemale",
+        "type":"radio",
+        "valdn":"",
+        "label":"Location of the cancer",
+        "flow":"data.cancerTreatment!='None'",
+        "value":"",
+        "items":[
+        
+            {"text":"Cervix","value":"Cervix","valdn":"","flow":""},
+        
+            {"text":"Breast","value":"Breast","valdn":"","flow":""},
+        
+            {"text":"Ovary","value":"Ovary","valdn":"","flow":""},
+        
+            {"text":"Mouth","value":"Mouth","valdn":"","flow":""},
+        
+            {"text":"Throat/Lung","value":"Throat/Lung","valdn":"","flow":""},
+        
+            {"text":"Oesophagus","value":"Oesophagus","valdn":"","flow":""},
+        
+            {"text":"Liver","value":"Liver","valdn":"","flow":""},
+        
+            {"text":"Abdomen/Stomach","value":"Abdomen/Stomach","valdn":"","flow":""},
+        
+            {"text":"Blood","value":"Blood","valdn":"","flow":""},
+        
+            {"text":"Others","value":"Others","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"medicalHistory","field":"cancer","ref":"deathId","condition":"cancer=='Yes'","whereCondition":""},
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.077","whereCondition":""},
+        
+        {"entity":"death","field":"sex","ref":"deathId","condition":"sex=='Female'","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}

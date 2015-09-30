@@ -1,16 +1,24 @@
 .container
     h3 Today's Progress
-    .col-md-4
-        h4  Enumeration
-        div.myGrid(ui-grid="{data:progress.enum}")
+
+    row.clearfix
+        .col-md-4
+            h4  VA
+            div.myGrid(ui-grid="{data:progress.va}")
 
 
-    .col-md-4
-        h4 Household Questionnaire
-        div.myGrid(ui-grid="{data:progress.hhq}")
+        .col-md-4
+            h4 ESL
+            div.myGrid(ui-grid="{data:progress.esl}")
 
-    .col-md-4
-        h4 Pending Downloads
-        div.myGrid(ui-grid="{data:progress.downloads}")
+        .col-md-4
+            h4 Pending Downloads
+            div.myGrid(ui-grid="{data:progress.downloads}")
 
+
+    //row.clearfix
+    //    .col-md-3
+    //        h4
+    //            a(style="padding-top:5px",href="",ng-click="distributeData()") Distribute Data
+    //
 

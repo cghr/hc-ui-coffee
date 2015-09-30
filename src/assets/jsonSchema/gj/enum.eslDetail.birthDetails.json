@@ -1,0 +1,2067 @@
+{
+"schemaName":"enum.eslDetail.birthDetails",
+"onSave":"",
+"condition":"",
+"success":"",
+"fail":"",
+"crossEntity":"",
+"properties":[
+
+
+        {
+        "name":"datastore",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"birthDetails",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deathId",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"$stateParams.deathId",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"starttime",
+        "type":"hidden",
+        "valdn":"",
+        "label":"",
+        "flow":"",
+        "value":"timestamp",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"હવે, હું તમને જન્મની વિગતો વિશે થોડા પ્રશ્નો પૂછવા માંગુ છું.",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"birthWeight",
+        "type":"radio",
+        "valdn":"required",
+        "label":"જન્મ સમયે બાળકનું વજન શું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"<1500 ગ્રામ","value":"Less than 1500 grams","valdn":"","flow":""},
+        
+            {"text":"1500-2499 ગ્રામ","value":"1500-2499 grams","valdn":"","flow":""},
+        
+            {"text":"2500-3999 ગ્રામ","value":"2500-3999 grams","valdn":"","flow":""},
+        
+            {"text":">4000 ગ્રામ","value":"Greather than 4000 grams","valdn":"","flow":""},
+        
+            {"text":"જન્મ સમયે વજન લેવામાં આવ્યું નથી","value":"Birth weight not taken","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"sizeCompareOtherChild",
+        "type":"radio",
+        "valdn":"required",
+        "label":"તમારા વિસ્તારમાં અન્ય બાળકો સરખામણીએ જન્મ સમયે બાળકનું  વજન કેવું  હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ખૂબ નાનું","value":"Very Small","valdn":"","flow":""},
+        
+            {"text":"સામાન્ય કરતાં નાનું","value":"Smaller than usual","valdn":"","flow":""},
+        
+            {"text":"સરેરાશ","value":"Average","valdn":"","flow":""},
+        
+            {"text":"સરેરાશ કરતાં મોટુ","value":"Larger than average","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"pregDuration",
+        "type":"text",
+        "valdn":"between[1:10],required",
+        "label":"જ્યારે બાળકનો જન્મ થયો ત્યારે ગર્ભાવસ્થા કેટલી લાંબી હતી?(મહિના)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ageFatalIllnessDays",
+        "type":"text",
+        "valdn":"between[0:28],required",
+        "label":"જીવલેણ બીમારી શરૂ થઈ ત્યારે શિશુ/બાળકની ઉંમર કેટલી હતી? (દિવસો)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ageFatalIllness",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"જીવલેણ બીમારી શરૂ થઈ ત્યારે શિશુ/બાળકની ઉંમર કેટલી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.079 && age_value<1","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"ageFatalIllness",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"જીવલેણ બીમારી શરૂ થઈ ત્યારે શિશુ/બાળકની ઉંમર કેટલી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""},
+        
+            {"text":"વર્ષ","value":"Years","valdn":"between[1:120],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=1 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+            "entity":"death",
+            "field":"age_value",
+            "ref":"deathId",
+            "condition":"between[1:{value}],required"
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"singleMultiple",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું શિશુ/બાળક એકલું જન્મ્યું હતું કે એકથી વધારે બાળકો જન્મ્યા હતાં?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"એકલું","value":"Singleton","valdn":"","flow":""},
+        
+            {"text":"એકથી વધારે","value":"Multiple","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"childBornLocation",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળકનો જન્મ ક્યાં થયો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ઘર","value":"Home","valdn":"","flow":""},
+        
+            {"text":"સ્વાસ્થ્ય સુવિધાના રસ્તા પર","value":"On way to Health facility","valdn":"","flow":""},
+        
+            {"text":"PHC/CHC/ગ્રામીણ હૉસ્પિટલ","value":"PHC/CHC/Rural Hospital","valdn":"","flow":""},
+        
+            {"text":"સાર્વજનિક હૉસ્પિટલ","value":"Public Hospital","valdn":"","flow":""},
+        
+            {"text":"ખાનગી હૉસ્પિટલ","value":"Private Hospital","valdn":"","flow":""},
+        
+            {"text":"અન્ય સ્થળે","value":"Other place","valdn":"","flow":""},
+        
+            {"text":"અજ્ઞાત","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherChildBornLocation",
+        "type":"text",
+        "valdn":"required",
+        "label":"જન્મનું સ્થળ સૂચવો",
+        "flow":"data.childBornLocation=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deliveryAttended",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રસૂતિમાં કોણે હાજરી આપી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"તાલીમ ન પામેલ પરંપરાગત બર્થ અટેન્ડન્ટ","value":"Untrained Traditional Birth Attendant","valdn":"","flow":""},
+        
+            {"text":"તાલીમ પામેલ પરંપરાગત બર્થ અટેન્ડન્ટ","value":"Trained Traditional Birth Attendant","valdn":"","flow":""},
+        
+            {"text":"દાયણ/નર્સ","value":"Midwife/Nurse","valdn":"","flow":""},
+        
+            {"text":"ઍલોપેથિક ડૉક્ટર","value":"Allopathic Doctor","valdn":"","flow":""},
+        
+            {"text":"કોઇ નહીં","value":"None","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherDeliveryAttended",
+        "type":"text",
+        "valdn":"required",
+        "label":"પ્રસૂતિમાં કોણે હાજરી આપી હતી તે સૂચવો",
+        "flow":"data.deliveryAttended=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"complications",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળકના જન્મ પહેલાના 3 મહિનામાં, પ્રસવ વેદના પછી અથવા પ્રસૂતિ વખતે કોઇ જટિલ અસરો થઈ હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>0.079 && age_value<1","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abnormalPhysPart",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું બાળકના શરીરનો કોઇપણ ભાગ પ્રસવ વખતે શારીરિક રીતે અસામાન્ય હતો? (દાખલા તરીકે: શરીરનો ભાગ બહુ મોટો કે બહુ નાનો, શરીર પર વધારાનો વિકાસ)",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abnormalities",
+        "type":"radio",
+        "valdn":"required",
+        "label":"કઈ અસામાન્યતાઓ હતી?",
+        "flow":"data.abnormalPhysPart=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"જન્મના સમયે માથાનું કદ બહુ નાનું હતું","value":"Head size very small at time of birth","valdn":"","flow":""},
+        
+            {"text":"જન્મના સમયે માથાનું કદ બહુ મોટું હતું","value":"Head size very large at time of birth","valdn":"","flow":""},
+        
+            {"text":"માથા કે કરોડની પાછળના ભાગ પર કોઇ ગઠ્ઠો કે ખામી","value":"Mass or defect on the back of head or spine","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherAbnormalities",
+        "type":"text",
+        "valdn":"required",
+        "label":"અસામાન્યતા સૂચવો.",
+        "flow":"data.abnormalities=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"blueColor",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું જન્મ સમયે બાળક ભૂરા રંગનું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"everCry",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું બાળક જન્મ બાદ ક્યારેય રડ્યું હતું, ભલે થોડું પણ હોય તો જણાવો.",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"everMove",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળક જન્મ બાદ ક્યારેય હલ્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"everBreathe",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું બાળકે જન્મ બાદ ક્યારેય શ્વાસ લીધો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationCryBreatheAfterBirth",
+        "type":"radio",
+        "valdn":"required",
+        "label":"જન્મ બાદ કેટલા સમય બાદ બાળકે પ્રથમ રુદન કર્યું કે શ્વાસ લીધો?",
+        "flow":"data.everCry=='Yes' || data.everBreathe=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"એક મિનિટ કરતાં ઓછી","value":"Less than a minute","valdn":"","flow":""},
+        
+            {"text":"1 માટે 5 મિનિટ","value":"One minute to 5 mintutes","valdn":"","flow":""},
+        
+            {"text":"6-30 મિનિટ","value":"6-30 minutes","valdn":"","flow":""},
+        
+            {"text":" > 30 મિનિટ","value":"Greather than 30 minutes","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"stopCry",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળકે રડી શકવાની ક્ષમતા ગુમાવી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationStopCryBeforeDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુના કેટલા સમય પહેલાં રડવાનું બંધ કર્યું?",
+        "flow":"data.stopCry=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"1થી ઓછો દિવસ","value":"Less than 1 day","valdn":"","flow":""},
+        
+            {"text":"1 દિવસ કે વધુ","value":"1 day or more","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"bodyInjury",
+        "type":"radio",
+        "valdn":"required",
+        "label":"જન્મ બાદ શિશુ/બાળકના શરીર પર કોઇપણ ઉઝરડા અથવા ઈજાના ચિન્હો હતાં?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<5","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"convulsionsFirstDay",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળકને જીવનના પ્રથમ દિવસમાં જ આંચકીઓ શરૂ થઈ હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"convulsionsSecondDay",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળકને જીવનના બીજા દિવસમાં જ આંચકીઓ શરૂ થઈ હતી?",
+        "flow":"data.convulsionsFirstDay=='No' || data.convulsionsFirstDay== 'Dont know' ",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"હવે, હું તમને બાળકના દૂધ પીવા સંબંધિત થોડી વિગતો પૂછીશ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"firstDaySuckle",
+        "type":"radio",
+        "valdn":"required",
+        "label":"જન્મ બાદ પ્રથમ દિવસ દરમિયાન બાળક માતા દ્વારા કે બોટલથી દૂધ પીવા સક્ષમ હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"everSuckle",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું બાળકે ક્યારેક સામાન્ય રીતે ચૂસવાની ક્રિયા કરી હતી?",
+        "flow":"data.firstDaySuckle=='No' || data.firstDaySuckle=='Dont know' ",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"stopSuckle",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું બાળકે સામાન્ય રીતે ચૂસી શકવાની ક્ષમતા ગુમાવી હતી?",
+        "flow":"data.everSuckle=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationStopSuckleBeforeDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"મૃત્યુ પૂર્વે કેટલા સમય અગાઉ બાળકે ચૂસવાનું બંધ કર્યું?",
+        "flow":"data.everSuckle=='Yes' && data.stopSuckle=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"1થી ઓછો દિવસ","value":"Less than 1 day","valdn":"","flow":""},
+        
+            {"text":"1 દિવસ કે વધુ","value":"1 day or more","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"openMouth",
+        "type":"radio",
+        "valdn":"required",
+        "label":"બાળકે ચૂસવાનું બંધ કર્યું તે સમયે તે પોતાનું મોં ખોલી શકતું હતું?",
+        "flow":"data.everSuckle=='Yes' && data.stopSuckle=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"",
+        "type":"heading",
+        "valdn":"",
+        "label":"ઉપરોક્ત વિગતોની સાથે, હું તમને તમારી ગર્ભાવસ્થા સંબંધિત થોડા પ્રશ્નો પૂછીશ",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hbp",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ગર્ભાવસ્થા દરમિયાન માતાને લોહીના ઊંચા દબાણ અથવા હાઈ બીપીની તકલીફ હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"convultion",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમને/શિશુના માતાને ગર્ભાવસ્થાના છેલ્લાં 3 મહિનાઓ દરમિયાન, અથવા પ્રસવ વેદના કે પ્રસૂતિ દરમિયાન આંચકીઓ આવી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"anemia",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમને/શિશુના માતાને ગર્ભાવસ્થાના છેલ્લાં 3 મહિનાઓ દરમિયાન, અથવા પ્રસવ વેદના કે પ્રસૂતિ દરમિયાન તીવ્ર ઍનિમિયા થયો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"diabetes",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમને/શિશુના માતાને ગર્ભાવસ્થાના છેલ્લાં 3 મહિનાઓ દરમિયાન, અથવા પ્રસવ વેદના કે પ્રસૂતિ દરમિયાન ડાયબિટીસ હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"hiv",
+        "type":"radio",
+        "valdn":"required",
+        "label":"Did the mother ever test positive for HIV?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"abnormalPosition",
+        "type":"radio",
+        "valdn":"required",
+        "label":"ડીલીવરી વખતે બાળકનો  માથા સિવાય નો ભાગ જેવા કે ગુદા, પગની પાનીઓ, બાહુ અથવા હાથપ્રથમ બહાર આવ્યા  હતા ?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"umbilicalCordWrapped",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું જન્મ વખતે ગર્ભનાળ બાળકની ગરદન ફરતે ઘણી વખત (એકથી વધારે વખત) વીંટળાયેલી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"vaginalBleeding",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમને/શિશુના માતાને પ્રસવ વેદના કે પ્રસૂતિ દરમિયાન યોનિમાંથી વધુપડતો રક્તસ્ત્રાવ થયો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"fever",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું તમને/શિશુના માતાને પ્રસવ વેદના દરમિયાન તાવ આવ્યો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"movingStopped",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રસવ વેદના શરૂ થઈ તે પહેલાં બાળક ગર્ભમાં હલનચલન કરતું અટક્યું હતું?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"childLastMove",
+        "type":"select_text",
+        "valdn":"between[1:99],required",
+        "label":"તમે/શિશુના માતાએ પ્રસવ વેદના પહેલાં છેલ્લે ક્યારે બાળકને હલનચલન કરતું અનુભવ્યું હતું? (કલાક / દિવસો)",
+        "flow":"data.movingStopped=='Yes'",
+        "value":"",
+        "items":[
+        
+            {"text":"કલાક","value":"Hours","valdn":"between[1:24],required","flow":""},
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"waterBreak",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રસવ વેદના અગાઉ અથવા પ્રસવ વેદના દરમિયાન પાણીની કોથળી તૂટી હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"પહેલાં","value":"Before","valdn":"","flow":""},
+        
+            {"text":"દરમિયાન","value":"During","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"timeWaterBreak",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રસવ વેદનાથી કેટલા સમય પૂર્વે પાણીની કોથળી તૂટી?",
+        "flow":"data.waterBreak=='Before' ",
+        "value":"",
+        "items":[
+        
+            {"text":"1થી ઓછો દિવસ","value":"Less than 1 day","valdn":"","flow":""},
+        
+            {"text":"1 દિવસ કે વધુ","value":"1 day or more","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"liquidColor",
+        "type":"radio",
+        "valdn":"required",
+        "label":"જ્યારે પાણીની કોથળી તૂટી ત્યારે પ્રવાહી (ગર્ભજળ)નો રંગ શું હતું?",
+        "flow":"data.waterBreak=='Before' || data.waterBreak=='During'",
+        "value":"",
+        "items":[
+        
+            {"text":"લીલો અથવા તપખીરિયો","value":"Green or brown ","valdn":"","flow":""},
+        
+            {"text":"સાફ","value":"Clear","valdn":"","flow":""},
+        
+            {"text":"અન્ય","value":"Other ","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"otherLiquidColor",
+        "type":"text",
+        "valdn":"required",
+        "label":"પ્રવાહીનો (ગર્ભજળ) રંગ સૂચવો.",
+        "flow":"data.liquidColor=='Other'",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"liquidFoulSmell",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું પ્રવાહી (ગર્ભજળ)ની વાસ ખરાબ આવતી હતી?",
+        "flow":"data.waterBreak=='Before' || data.waterBreak=='During'",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"timeLaborDelivery",
+        "type":"text",
+        "valdn":"between[0:72],required",
+        "label":"પ્રસવ વેદના અને પ્રસૂતિમાં કેટલો સમય (કલાક) લાગ્યો હતો?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"deliveryMode",
+        "type":"radio",
+        "valdn":"required",
+        "label":"પ્રસૂતિની પદ્ધત્તિ શું હતી?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"ફોર્સેપ્સ/વૅક્યુમ વિના યોનિ માર્ગે","value":"Vaginal without forceps/vaccum","valdn":"","flow":""},
+        
+            {"text":"ફોર્સેપ્સ સાથે યોનિ માર્ગે","value":"Vaginal with forceps","valdn":"","flow":""},
+        
+            {"text":"વૅક્યુમ સાથે યોનિ માર્ગે","value":"Vaginal with vaccum","valdn":"","flow":""},
+        
+            {"text":"યોનિમાર્ગે ખબર નથી (ફોર્સેપ્સ કે વૅક્યુમનો ઉપયોગ થયો હતો)","value":"Vaginal Dont know (whether forceps or vaccume used)","valdn":"","flow":""},
+        
+            {"text":"સિઝેરિયન સૅક્શન","value":"Caesarean section","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"caesareanDecision",
+        "type":"radio",
+        "valdn":"required",
+        "label":"સિઝેરિયન સૅક્શન કરાવવા માટે તમારા/બાળકના માતા માટે નિર્ણય ક્યારે લેવામાં આવ્યો હતો?",
+        "flow":"data.deliveryMode=='Caesarean section'",
+        "value":"",
+        "items":[
+        
+            {"text":"પ્રસવ વેદનાની શરૂઆત પહેલાં","value":"Before onset of labour","valdn":"","flow":""},
+        
+            {"text":"પ્રસવ વેદનાની શરૂઆત બાદ","value":"After onset of labour","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<0.079","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherAlive",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું માતા હજીપણ જીવિત છે?",
+        "flow":"",
+        "value":"",
+        "items":[
+        
+            {"text":"હા","value":"Yes","valdn":"","flow":""},
+        
+            {"text":"ના","value":"No","valdn":"","flow":""},
+        
+            {"text":"ખબર નથી","value":"Dont know/Unknown","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"motherDeath",
+        "type":"radio",
+        "valdn":"required",
+        "label":"શું પ્રસૂતિ દરમિયાન કે ત્યારબાદ માતાનું મૃત્યુ થયું હતું?",
+        "flow":"data.motherAlive=='No' || data.motherAlive=='Dont know'",
+        "value":"",
+        "items":[
+        
+            {"text":"ડિલિવરી દરમિયાન","value":"During delivery","valdn":"","flow":""},
+        
+            {"text":"ડિલિવરી પછી","value":"After delivery","valdn":"","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        },
+
+
+
+        {
+        "name":"durationMotherDeath",
+        "type":"select_text",
+        "valdn":"required",
+        "label":"પ્રસૂતિ બાદ કેટલા સમય બાદ માતાનું મૃત્યુ થયું?",
+        "flow":"(data.motherAlive=='No' || data.motherAlive=='Dont know' ) && data.motherDeath=='During delivery'",
+        "value":"",
+        "items":[
+        
+            {"text":"દિવસો","value":"Days","valdn":"between[1:31],required","flow":""},
+        
+            {"text":"મહિના","value":"Months","valdn":"between[1:12],required","flow":""}
+        
+        ],
+        "image":"",
+        "lookup":{
+        
+        },
+        "metadata":{
+                
+                },
+        "crossFlow":[
+        
+        {"entity":"death","field":"age_value","ref":"deathId","condition":"age_value>=0 && age_value<15","whereCondition":""}
+        
+        ],
+        "crossCheck":{
+        
+        },
+        "help":""
+        }
+
+
+
+]
+}
